@@ -1,0 +1,30 @@
+在所用页面引入
+<link rel="stylesheet" href="framework/multimeter/css/multimeter.css"/><!--万用表的样式-->
+<script type="text/javascript" src="framework/multimeter/js/angularJs/app.js"></script><!--万用表的app-->
+<script type="text/javascript" src="framework/multimeter/js/angularJs/controller.js"></script><!--万用表的controllers-->
+<script type="text/javascript" src="framework/multimeter/js/angularJs/Service.js"></script><!--万用表的Services-->
+
+在主模块依赖注入multimeterModule模块
+在页面内写入
+ <multimeter></multimeter>
+
+点击出现万用表 ng-controller="multimeterCtrl" ng-click="multimeter();"
+
+页面写入
+<ng-include src="'framework/multimeter/template/multimeterSvg.html'"></ng-include>
+
+热区设置 一律用a标签，页面除了热区别的地方不要用a标签
+wybredPosition="1"     <!--万用表红表笔所在那个控件上（控件代码，本页面不要重复即可，1234做代码即可-->
+wybblackPosition="1"  <!--万用表红表笔所在那个控件上-->
+h_x="90"                 <!--万用表表笔落在热区上的x坐标（即top值）-->
+h_y="350"                  <!--万用表表笔落在热区上的x坐标（即left值）-->
+rqPosition="1047"        <!--万用表表笔落在热区上向仿真模型传的值-->
+h_href="dhxq_normal1"     <!--万用表表笔在那个页面上（值为路由里的state值）-->
+
+要达到万用表随着页面跳转跟着变化，在路由的跳转的controller中依赖注入multimeterService
+$state.go(href);的后边加上multimeterService.Mdata.judgeS(href);
+
+如果想让在热区上的万用表表笔回到原来位置
+$scope.rtnMultimeterPosition（）;
+
+热区的z-index要高于5，小于10

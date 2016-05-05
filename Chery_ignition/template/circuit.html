@@ -1,0 +1,26 @@
+<div ng-include="pageServicePdata.circuitSvg"></div>
+<img src="images/circuit_fire.png" class="circuit_fire_dhxq1_po"/>
+<img src="images/circuit_fire.png" class="circuit_fire_dhxq2_po"/>
+<img src="images/circuit_fire.png" class="circuit_fire_dhxq3_po"/>
+<img src="images/circuit_fire.png" class="circuit_fire_dhxq4_po"/>
+<!--仪表盘-->
+<div ng-include="pageServicePdata.dashboardSrc" ng-show="showOrHide.dashboardShow"></div>
+<!--右侧工具-->
+<div class="sideBar_tool">
+    <div class="sideBar_tool_zdy"></div>
+    <div class="sideBar_tool_wby"></div>
+    <div class="sideBar_tool_yb cursor_pointer" ng-class="{'sideBar_tool_yb_active':showOrHide.dashboardShow}" ng-click="toolShowOrClose(3,1)"></div>
+</div>
+<div class="menu" ng-mouseenter="menuBox(1)" ng-mouseleave="menuBox(0)"></div>
+<div class="menu_pop" ng-show="showOrHide.menuPop" ng-mouseenter="menuBox(1)" ng-mouseleave="menuBox(0)">
+    点火线圈的1号脚为12V电源。2号脚是与控制单元连接的信号线。3号脚为搭铁。
+</div>
+<script>
+    $(function(){
+        setTimeout(function(){
+            circuitLineInit();
+        },600);
+    })
+
+
+</script>

@@ -1,0 +1,134 @@
+/*周玉杰 (zyj) 2015-6-12*/
+/*reset css*/
+@charset "utf-8";
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,blockquote,th,td,p{margin:0;padding:0;border:none;background: none;}
+input,button,select,textarea{outline:none}li{list-style:none}img{border:none}textarea{resize:none}
+body{color:#666;background:#fff;word-break:break-all;word-wrap:break-word;}
+body,input,textarea,button{font-size:14px;font-family:\5FAE\8F6F\96C5\9ED1,Verdana,Arial}
+a{color:#305999;text-decoration:none;outline:none}
+a:hover{color:#090}
+*{word-break: break-word;}
+/*comm===================================================================*/
+.hide{display: none }
+.hideImportant{display: none !important;}
+.cursor_pointer{cursor: pointer;}
+.cursor_move{cursor: move;}
+.cursor_arrow{cursor: auto;}
+.transparent{opacity: 0;}
+.opaque{opacity: 1;}
+.radius{border-radius:2px;}
+.close{width: 24px;height: 24px; position: absolute;font: 18px "微软雅黑"; right: 0px;top: 0px;color: #f1a703;}
+.close:hover{color: #000000;}
+.container{position: relative;left: 0px;top: 0px;width: 1024px;height: 580px; margin: 0px auto;overflow: hidden;}
+.z_index_1{z-index: 1;}
+.z_index_5{z-index: 5;}
+.z_index_6{z-index: 6;}
+.z_index_10{z-index: 10;}
+.z_index_12{z-index: 12;}
+.z_index_13{z-index: 13;}
+.z_index_14{z-index: 14;}
+.z_index_15{z-index: 15;}
+.z_index_16{z-index: 16;}
+.z_index_98{z-index: 98;}
+.z_index_99{z-index: 99;}
+.z_index_100{z-index: 100;}
+/* ===========================================================================================*/
+@font-face {font-family:"UnidreamLED";src:local("UnidreamLED"),url("../font/UnidreamLED.ttf")format("truetype"),url("../font/UnidreamLED.svg#UnidreamLED")format("svg"),url("../font/UnidreamLED.ttf")format("truetype"),url("../font/UnidreamLED.woff")format("woff");}
+/*container===============================================================================================*/
+.container{position: relative;margin: 0 auto;left: 0px;top: 0px;width: 1024px;height: 580px;border: 1px solid #000000;}
+
+/*header*/
+.header{position: relative;width: 100%;height: 50px;background: #f7f7f7;border-bottom:1px solid #cbcbcb;}
+.navi_button{position: absolute;left:20px;bottom: 0px;z-index: 10;}
+.navi_button button.navi_bg{display:inline-block;width:92px;height: 25px;}
+.navi_button button.navi_bg_active{background: url(../images/commIcon/navi_bg.png) no-repeat center;color: #FFFFFF;}
+.sys_button{position: absolute;right:20px;bottom: 0px;}
+.sys_button button.sys_close{display: inline-block;width:40px;height: 30px;text-align: center;}
+.sys_button button.sys_close:hover{color:#c7001d;}
+/*main===================================================================*/
+.main{position: relative;left:0px;top:0px;width: 100%;height:530px;overflow: hidden;}
+.main_template{width: 1024px;height: 580px;}
+
+/*navi===================================================================*/
+.sideBar_navi{position: absolute;left: 15px;top: 30px;z-index: 8;}
+.sideBar_navi .active{background: #343434!important;}
+.sideBar_navi .active:hover{background: #343434!important;text-indent:0px !important;line-height: normal !important;}
+.sideBar_navi div{width: 60px;height: 200px;border-radius: 30px;border:1px solid transparent;background: #b9b9b9;line-height: 48px;}
+.sideBar_navi .navi_1 button{display:block;width: 48px;height: 48px;background: #C7001D;border-radius: 24px;margin: 35px auto;color:#FFFFFF;overflow: hidden;}
+.sideBar_navi .navi_1 button.features_button:hover{background:#C7001D url(../images/commIcon/feature_logo.png) no-repeat center/100%;text-indent: 200px;line-height: 200px;}
+.sideBar_navi .navi_1 button.position_button:hover{background:#C7001D url(../images/commIcon/position_logo.png) no-repeat center/100%;text-indent: 200px;line-height: 200px;}
+.sideBar_navi .navi_2 button{display:block;width: 48px;height: 48px;background: #C7001D;border-radius: 24px;margin: 14px auto;color:#FFFFFF;overflow: hidden;}
+.sideBar_navi_susbox{width: 200px;height: 210px;position: absolute;top: 30px;left: 77px;}
+.sideBar_navi_susbox .box1{background: url(../images/red_pop.png) no-repeat center/100%;width: 220px;height: 35px;position: absolute;top: 43px;left: 0;color: #fff;text-indent: 2em;line-height: 35px;z-index: 8;}
+.sideBar_navi_susbox .box2{background: url(../images/red_pop.png) no-repeat center/ 90% 100%;width: 136px;height: 35px;position: absolute;top: 86px;left: 0;color: #fff;text-indent: 2em;line-height: 35px;}
+.sideBar_navi_susbox .box3{background: url(../images/red_pop.png) no-repeat center/ 90% 100%;width: 136px;height: 35px;position: absolute;top: 148px;left: 0;color: #fff;text-indent: 2em;line-height: 35px;}
+
+/*.sideBar_navi .navi_2 button.normal_button:hover{background:#C7001D url(../images/commIcon/feature_logo.png) no-repeat center/100%;text-indent: 200px;line-height: 200px;}
+.sideBar_navi .navi_2 button.primary_button:hover{background:#C7001D url(../images/commIcon/position_logo.png) no-repeat center/100%;text-indent: 200px;line-height: 200px;}
+.sideBar_navi .navi_2 button.secondary_button:hover{background:#C7001D url(../images/commIcon/feature_logo.png) no-repeat center/100%;text-indent: 200px;line-height: 200px;}*/
+
+/*tool===================================================================*/
+.sideBar_tool{width: 80px;height:260px;position: absolute;top: 30px;right: 0px;}
+.sideBar_tool_zdy{width: 80px;height:81px;position: absolute;top: 0px;right: 0px;background: url(../images/tool/tool_zdy1.png) no-repeat;z-index: 10;}
+.sideBar_tool_wby{width: 80px;height:81px;position: absolute;top: 90px;right: 0px;background: url(../images/tool/tool_wyb1.png) no-repeat;z-index: 10;}
+.sideBar_tool_yb{width: 80px;height:81px;position: absolute;top: 180px;right: 0px;background: url(../images/tool/tool_ybb1.png) no-repeat;z-index: 10;}
+.sideBar_tool_yb_active{background: url(../images/tool/tool_ybb2.png) no-repeat !important;}
+.sideBar_tool_zdy_active{background: url(../images/tool/tool_zdy2.png) no-repeat !important;}
+.sideBar_tool_wyb_active{background: url(../images/tool/tool_wyb2.png) no-repeat !important;}
+/*menu===================================================================*/
+.menu{width: 100px;height:120px;position: absolute;top: 417px;right: 36px;background: url(../images/menu.png) center/50% no-repeat;z-index: 7;}
+.menu_pop{width: 761px;height: 102px;position: absolute;top: 399px;left: 102px;background: url(../images/menu_pop.png) no-repeat;text-indent: 2em;padding: 13px;color: #fff;font-size: 14px;line-height: 22px;}
+.menu_pop1{width: 791px;height:236px;position: absolute;top: 280px;left: 106px;z-index: 11;}
+
+
+/*诊断仪样式===================================================================*/
+.float_right{float: right!important;}
+
+.obdscan_body{width: 385px;height: 235px;position: absolute;top: 30px;left: 538px;border: 2px solid #a0a0a0;border-radius: 5px;padding: 2px;background: #fff;z-index: 8;}
+.obdscan_main{height: 164px;overflow: hidden}
+.obdscan_sidebar{height: 30px;background: #C7001D;font: 14px '微软雅黑';color: #fff; border-radius: 5px;line-height: 30px;text-indent: 2px;}
+.obdscan_menu_left{width: 124px;float: left;}
+.obdscan_menu_left .active{background:#C7001D;color: #fff; }
+.obdscan_menu_arrow{width: 10px;height: 153px;float: left;padding: 5px;}
+.obdscan_menu_arrow span{width: 0; height: 0; border: 10px solid; border-color: transparent transparent transparent #C7001D;display: block;margin-top: 80px;}
+.obdscan_menu_left ul li,.obdscan_menu_right ul li,.obdscan_data_list ul li,.obdscan_data_list1 ul li{background: #dddddd;height: 25px;margin: 2px 0;font: 12px '微软雅黑';color: #000;text-align: left;text-indent: 2em;line-height: 25px;}
+.obdscan_menu_right{width: 240px;float: left;}
+.obdscan_menu_bottom img{float: left ;margin-right: 2px;}
+.obdscan_menu_bottom img:last-child{margin-right: 0;}
+.obdscan_data_list,.obdscan_data_list1{width: 100%}
+.obdscan_data_list ul li{height: 24px;line-height: 24px;text-indent: 0;}
+.obdscan_data_list1 ul li{height: 24px;line-height: 24px;text-indent:2em;}
+.obdscan_data_list span{width: 32%;display: inline-block;text-align: center;}
+.obdscan_data_title{width: 100%;background: #a9a9a9;height: 30px;color: #fff;margin: 2px 0;line-height: 30px;}
+.obdscan_data_title span{width: 32%;display: inline-block;text-align: center;}
+.obdscan_content_text{text-indent: 2em;height: 164px;line-height: 30px;}
+.obdscan_content_text1{width:100%;height: 164px;line-height: 160px;text-align: center;font-size: 18px;font-weight: bold}
+.obdscan_close{width: 20px;height: 20px;position: absolute;top: 0px;right: -7px;cursor: pointer;z-index: 99;color: #fff;}
+
+
+/*封面===================================================================*/
+.front_cover_body{position: relative;left: 0px;top: 0px;width: 1024px;height: 580px; margin: 0px auto;overflow: hidden;}
+.front_cover_btn1{width: 102px;height: 24px;position: absolute;top: 406px;left: 860px;background: url(../images/front_cover_btn1.png)no-repeat;}
+.front_cover_btn1:hover{background: url(../images/front_cover_btn1_1.png)no-repeat;}
+.front_cover_btn2{width: 102px;height: 24px;position: absolute;top: 446px;left: 860px;background: url(../images/front_cover_btn3.png)no-repeat;}
+.front_cover_btn2:hover{background: url(../images/front_cover_btn3_1.png)no-repeat;}
+.front_cover_btn3{width: 150px;height: 35px;position: absolute;top: 486px;left: 810px;background: url(../images/front_cover_btn2.png)no-repeat;cursor: pointer;}
+.front_cover_btn3:hover{background: url(../images/front_cover_btn2_1.png)no-repeat;}
+.front_cover_box1{width: 254px;height: 126px;position: absolute;top: 172px;left: 672px;background: url(../images/front_cover_box.png)no-repeat;color: #000;}
+.front_cover_box1 p{line-height: 25px;padding: 5px 10px 0;}
+/*.front_cover_body*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

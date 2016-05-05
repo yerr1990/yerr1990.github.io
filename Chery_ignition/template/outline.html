@@ -1,0 +1,72 @@
+<div class="principle_body">
+    <audio src="audio/start1.mp3" id="audio1"></audio>
+    <audio src="audio/on.mp3" id="audio2" loop="loop"></audio>
+    <audio src="audio/mal.mp3" id="audio3" loop="loop"></audio>
+    <div ng-show="showOrHide.outlineFeatures">
+        <img src="images/bg_principle.png">
+        <div class="principle_body_part">
+            <img class="principle_lighter z_index_1" src="images/principle_lighter.png"/>
+            <div class="camshaft_valve_left z_index_1">
+                <img class="camshaft_left" src="images/camshaft_left.png" />
+                <img class="valve_left" src="images/valve_left.png" />
+            </div>
+            <div class="camshaft_valve_right z_index_1">
+                <img class="camshaft_right" src="images/camshaft_right.png" />
+                <img class="valve_right" src="images/valve_right.png" />
+            </div>
+            <img class="fillingOil hideImportant" src="images/gifAnimate/fillingOil.gif"/>
+            <img class="oilFire hideImportant" src="images/gifAnimate/oilFire.png" />
+            <img class="inOil hideImportant" src="images/gifAnimate/inOil.gif"/>
+            <img class="exhaustGas hideImportant" src="images/gifAnimate/exhaustGas.gif"/>
+            <img class="principleSpark hideImportant" src="images/spark.png" />
+
+            <div class="shaft_valve">
+                <img class="sparking_plug z_index_1" src="images/sparking_plug.png" />
+                <img class="principle_shaft_stick" src="images/principle_shaft_stick.png" />
+            </div>
+            <img class="principle_shaft" src="images/principle_shaft.png" />
+
+            <img class="tubeWall"  src="images/tubeWall.png"/>
+        </div>
+        <div class="principle_arrow_flow">
+            <i class="flow_arrow_1"></i>
+            <i class="flow_arrow_2"></i>
+            <!--<i class="flow_arrow_3"></i>-->
+            <i class="flow_arrow_4"></i>
+            <!--<i class="flow_arrow_5"></i>-->
+        </div>
+        <div class="menu_pop" ng-show="showOrHide.menuPop" ng-mouseenter="menuBox(1)" ng-mouseleave="menuBox(0)">
+            点火线圈能够产生高电压并将其传递给火花塞，用来点燃气缸内的混合气。按其发展和结构可分为有分电器式、双缸同时点火式和单缸独立点火式嗲火线圈。目前常见的为第三种，即单缸独立点火线圈。
+        </div>
+    </div>
+    <div ng-show="showOrHide.outlinePosition">
+        <img src="images/bg_outline_position.png">
+        <div class="menu_pop" ng-show="showOrHide.menuPop" ng-mouseenter="menuBox(1)" ng-mouseleave="menuBox(0)">
+            单缸独立点火线圈一般安装在垂直于汽缸平面的中轴线上，这样可以使火焰在燃烧室内均匀地传播扩散。
+        </div>
+    </div>
+    <!--仪表盘-->
+    <div ng-include="pageServicePdata.dashboardSrc" ng-show="showOrHide.dashboardShow&&!showOrHide.outlinePosition"></div>
+    <!--右侧工具-->
+    <div class="sideBar_tool">
+        <div class="sideBar_tool_zdy"></div>
+        <div class="sideBar_tool_wby"></div>
+        <div class="sideBar_tool_yb" ng-class="{'sideBar_tool_yb_active':showOrHide.dashboardShow,'cursor_pointer':showOrHide.outlineFeatures}" ng-click="toolShowOrClose(3,1)"></div>
+    </div>
+    <!--左侧导航-->
+    <div class="sideBar_navi">
+        <div class="navi_1">
+            <button class="features_button cursor_pointer" ng-class="{'active':showOrHide.outlineFeatures}" ng-click="toggleInterface('features')" ng-mouseenter="showOrHide.outlineFeaturesBtn=1" ng-mouseleave="showOrHide.outlineFeaturesBtn=0">功能</button>
+            <button class="position_button cursor_pointer" ng-class="{'active':showOrHide.outlinePosition}" ng-click="toggleInterface('position')">位置</button>
+        </div>
+    </div>
+    <div class="menu" ng-mouseenter="menuBox(1)" ng-mouseleave="menuBox(0)"></div>
+    <!--左侧导航悬浮框-->
+    <div class="sideBar_navi_susbox">
+        <span class="box1" ng-show="showOrHide.outlineFeaturesBtn">在工具栏操作仪表可进行演示</span>
+    </div>
+
+</div>
+<script type="text/javascript">
+
+</script>

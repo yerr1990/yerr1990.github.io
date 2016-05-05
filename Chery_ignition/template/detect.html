@@ -1,0 +1,65 @@
+<div class="detect_body">
+    <img src="images/bg_detect.png">
+    <img class="detect_dhxq1_cover" src="images/detect_dhxq1_cover1.png">
+    <span class="detect_rposition" ng-click="dhxqOpen(1);" ng-show="showOrHide.detectBoxtTips"></span>
+    <div class="detect_measure_box" ng-show="showOrHide.detectMeasureBox">
+        <img class="detect_measure" src="images/detect_celiang.png">
+        <span class="detect_measure_close" ng-click="dhxqOpen(0);">X</span>
+        <a class="detect_measure_dot detect_measure_dot1" wybredPosition="1" wybblackPosition="1" rqPosition="1"  h_x="417" h_y="140" h_href="dhxq_normal1"></a>
+        <a class="detect_measure_dot detect_measure_dot2" wybredPosition="2" wybblackPosition="2" rqPosition="2"  h_x="366" h_y="227" h_href="dhxq_normal1"></a>
+        <a class="detect_measure_dot detect_measure_dot3" wybredPosition="3" wybblackPosition="3" rqPosition="3"  h_x="366" h_y="250" h_href="dhxq_normal1"></a>
+        <a class="detect_measure_dot detect_measure_dot4" wybredPosition="4" wybblackPosition="4" rqPosition="4"  h_x="366" h_y="271" h_href="dhxq_normal1"></a>
+        <a class="detect_measure_dot detect_measure_dot5" wybredPosition="5" wybblackPosition="5" rqPosition="5"  h_x="378" h_y="381" h_href="dhxq_normal1"></a>
+        <!--<a class="detect_measure_dot detect_measure_dot6" wybredPosition="6" wybblackPosition="6" rqPosition="6"  h_x="448" h_y="400" h_href="dhxq_normal1"></a>-->
+        <a class="detect_measure_dot detect_measure_dot7" wybredPosition="7" wybblackPosition="7" rqPosition="7"  h_x="378" h_y="418" h_href="dhxq_normal1"></a>
+
+    </div>
+    <!--万用表-->
+    <ng-include src="'framework/multimeter/template/multimeterSvg.html'"></ng-include>
+    <multimeter></multimeter>
+    <!--诊断仪-->
+    <div  ng-include="pageServicePdata.obdscanSrc" ng-show="showOrHide.obdscanShow"></div>
+    <!--仪表盘-->
+    <div ng-include="pageServicePdata.dashboardSrc" ng-show="showOrHide.dashboardShow"></div>
+    <!--右侧工具-->
+    <div class="sideBar_tool">
+        <div class="sideBar_tool_zdy cursor_pointer" ng-class="{'sideBar_tool_zdy_active':showOrHide.obdscanShow}" ng-click="toolShowOrClose(1,1)"></div>
+        <div class="sideBar_tool_wby cursor_pointer" ng-class="{'sideBar_tool_wyb_active':multimeterServiceMdata.multimeterStatus}" ng-controller="multimeterCtrl" ng-click="multimeter();"></div>
+        <div class="sideBar_tool_yb cursor_pointer" ng-class="{'sideBar_tool_yb_active':showOrHide.dashboardShow}" ng-click="toolShowOrClose(3,1)"></div>
+    </div>
+    <!--左侧导航-->
+    <div class="sideBar_navi">
+        <div class="navi_2">
+            <button class="features_button cursor_pointer" ng-class="{'active':showOrHide.detectNormalStatus}" ng-click="toggleInterface('normal')">正常</button>
+            <button class="position_button cursor_pointer" ng-class="{'active':showOrHide.detectMalfunctionStatus1}" ng-click="toggleInterface('malfunction1')" ng-mouseenter="showOrHide.malfunctionBtn1=1" ng-mouseleave="showOrHide.malfunctionBtn1=0">故障一</button>
+            <button class="position_button cursor_pointer" ng-class="{'active':showOrHide.detectMalfunctionStatus2}" ng-click="toggleInterface('malfunction2')" ng-mouseenter="showOrHide.malfunctionBtn2=1" ng-mouseleave="showOrHide.malfunctionBtn2=0">故障二</button>
+        </div>
+    </div>
+    <!--左侧导航悬浮框-->
+    <div class="sideBar_navi_susbox">
+        <span class="box2" ng-show="showOrHide.malfunctionBtn1">初级线圈断路</span>
+        <span class="box3" ng-show="showOrHide.malfunctionBtn2">次级线圈断路</span>
+    </div>
+    <!--菜单按钮-->
+    <div class="menu" ng-mouseenter="menuBox(1)" ng-mouseleave="menuBox(0)"></div>
+    <!--菜单弹出框-->
+    <div class="menu_pop1" ng-show="showOrHide.menuPop" ng-mouseenter="menuBox(1)" ng-mouseleave="menuBox(0)">
+        <img src="images/detect_menu_pop.png">
+    </div>
+
+</div>
+<script>
+
+    $(function(){
+        tipBoxShark();
+    });
+    //点击的框闪烁
+    function tipBoxShark(){
+        clearInterval(detectTimer);
+        detectTimer=setInterval(function(){
+            $(".detect_rposition").fadeOut(500).fadeIn(500);
+        },1000);
+    }
+
+
+</script>

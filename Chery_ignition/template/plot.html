@@ -1,0 +1,65 @@
+<div class="principle_body">
+    <div >
+        <img src="images/bg_principle1.png">
+        <div class="principle_body_part">
+            <img class="principle_lighter z_index_1" src="images/principle_lighter.png"/>
+            <div class="camshaft_valve_left z_index_1">
+                <img class="camshaft_left" src="images/camshaft_left.png" />
+                <img class="valve_left" src="images/valve_left.png" />
+            </div>
+            <div class="camshaft_valve_right z_index_1">
+                <img class="camshaft_right" src="images/camshaft_right.png" />
+                <img class="valve_right" src="images/valve_right.png" />
+            </div>
+            <img class="fillingOil hideImportant" src="images/gifAnimate/fillingOil.gif"/>
+            <img class="oilFire hideImportant" src="images/gifAnimate/oilFire.png" />
+            <img class="inOil hideImportant" src="images/gifAnimate/inOil.gif"/>
+            <img class="exhaustGas hideImportant" src="images/gifAnimate/exhaustGas.gif"/>
+            <img class="principleSpark hideImportant" src="images/spark.png" />
+            <img class="outline_hotspot1 " src="images/outline_hotspot1.png" />
+            <img class="outline_hotspot2 " src="images/outline_hotspot2.png" />
+            <img class="outline_hotspot3 " src="images/outline_hotspot3.png" />
+
+            <div class="shaft_valve">
+                <img class="sparking_plug z_index_1" src="images/sparking_plug.png" />
+                <img class="principle_shaft_stick" src="images/principle_shaft_stick.png" />
+            </div>
+            <img class="principle_shaft" src="images/principle_shaft.png" />
+
+            <img class="tubeWall"  src="images/tubeWall.png"/>
+        </div>
+        <div class="principle_arrow_flow">
+            <!--<i class="flow_arrow_1"></i>-->
+            <i class="flow_arrow_2"></i>
+            <!--<i class="flow_arrow_3"></i>-->
+            <i class="flow_arrow_4"></i>
+            <!--<i class="flow_arrow_5"></i>-->
+        </div>
+
+        <div class="menu_pop" ng-show="showOrHide.menuPop" ng-mouseenter="menuBox(1)" ng-mouseleave="menuBox(0)">
+            为了防止尾气排放超标和三元催化器热损坏，发动机控制单元使用曲轴位置传感器监测发动机转动时速率的偏差来确定缺火，用凸轮轴位置传感器识别缺火的汽缸。当发动机缺火率超过了门限值并有可能导致排放超标时，发动机控制单元开始统计发动机缺货次数。所以，导致曲轴转速变化是由很多原因引起的，比如点火系统，燃油系统和汽缸密封性。
+        </div>
+    </div>
+    <!--仪表盘-->
+    <div ng-include="pageServicePdata.dashboardSrc" ng-show="showOrHide.dashboardShow"></div>
+    <!--右侧工具-->
+    <div class="sideBar_tool">
+        <div class="sideBar_tool_zdy"></div>
+        <div class="sideBar_tool_wby"></div>
+        <div class="sideBar_tool_yb cursor_pointer" ng-class="{'sideBar_tool_yb_active':showOrHide.dashboardShow}" ng-click="toolShowOrClose(3,1)"></div>
+    </div>
+    <div class="menu" ng-mouseenter="menuBox(1)" ng-mouseleave="menuBox(0)"></div>
+
+
+</div>
+<script type="text/javascript">
+  /*  function animateClixk1(){
+        //执行系统原理动画(给了执行口令，开始执行动画才能执行,这里是为了预防点不着火的交互)
+        isRunAnimate=2;
+        //系统原理线路箭头的动画
+//        principleArrowFlowRepeat(parseInt(principleAnimateTime)*2);
+        //系统电路运动动画
+        principleAnimateRunAll1();
+    }*/
+
+</script>

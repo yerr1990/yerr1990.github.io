@@ -1,0 +1,73 @@
+<div class="dashboard_body">
+    <div class="dashboard_pointer1"></div>
+    <div class="dashboard_pointer2"></div>
+    <div class="dashboard_pointer3"></div>
+    <div class="dashboard_pointer4"></div>
+    <div class="dashboard_light"></div>
+    <div class="dashboard_lamp_left1 dashboard_lamp"></div>
+    <div class="dashboard_lamp_left2 dashboard_lamp"></div>
+    <div class="dashboard_lamp_left3 dashboard_lamp"></div>
+    <div class="dashboard_lamp_left4 dashboard_lamp"></div>
+    <div class="dashboard_lamp_left5 dashboard_lamp"></div>
+    <div class="dashboard_lamp_left6 dashboard_lamp"></div>
+
+    <div class="dashboard_lamp_right1 dashboard_lamp"></div>
+    <div class="dashboard_lamp_right2 dashboard_lamp"></div>
+    <div class="dashboard_lamp_right3 dashboard_lamp"></div>
+    <div class="dashboard_lamp_right4 dashboard_lamp"></div>
+    <div class="dashboard_lamp_right5 dashboard_lamp"></div>
+    <div class="dashboard_lamp_right6 dashboard_lamp"></div>
+    <div class="dashboard_lamp_right7 dashboard_lamp"></div>
+    <div class="dashboard_lamp_right8 dashboard_lamp"></div>
+    <div class="dashboard_fire_lock1"></div>
+    <div class="dashboard_fire_lock2" ng-click="ignition()"></div>
+    <div class="dashboard_close" ng-click="toolShowOrClose(3,0)"></div>
+
+</div>
+<script>
+
+    //点火开关打到on档时车灯显示
+    function lightOn(){
+        //   256  34678
+        //所有的车灯都显示
+        $(".dashboard_lamp").show();
+        //中间的屏幕亮
+        $(".dashboard_light").show();
+        //1秒后消失的车灯
+        setTimeout(function(){
+            $(".dashboard_lamp_left2").hide();
+            $(".dashboard_lamp_left5").hide();
+            $(".dashboard_lamp_left6").hide();
+            $(".dashboard_lamp_right3").hide();
+            $(".dashboard_lamp_right4").hide();
+            $(".dashboard_lamp_right6").hide();
+            $(".dashboard_lamp_right7").hide();
+            $(".dashboard_lamp_right8").hide();
+        },1000);
+        //左边的水温打到一半
+        $(".dashboard_pointer3").css("transform","rotate(-44deg)")
+    }
+    //点火开关打到start档时车灯显示
+    function lightStart(){
+        $(".dashboard_lamp_left1").hide();
+        $(".dashboard_lamp_left3").hide();
+        $(".dashboard_lamp_left4").hide();
+        $(".dashboard_lamp_right1").hide();
+        ////左边的指针打到800转
+        $(".dashboard_pointer1").css("transform","rotate(23deg)")
+    }
+    //在lock acc时进行初始化
+    function lightInit(){
+        //关闭指针的定时器
+        clearInterval(dashboardTimer);
+        //所有的车灯都消失
+        $(".dashboard_lamp").hide();
+        //中间的屏幕变暗
+        $(".dashboard_light").hide();
+        //左边的水温恢复初值
+        $(".dashboard_pointer3").css("transform","rotate(0deg)");
+        ////左边的指针恢复初值
+        $(".dashboard_pointer1").css("transform","rotate(0deg)");
+    }
+
+</script>

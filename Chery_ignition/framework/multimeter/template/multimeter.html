@@ -1,0 +1,36 @@
+/**
+* @createDate   2015-08-4 下午05:28:38
+* @author       hao liqiang
+* @email        lq.hao@xiaochejiang.com
+* @version      1.0
+*万用表表身
+*/
+<div class="multimeter-contain" ng-controller="multimeterCtrl" ng-show="multimeterServiceMdata.multimeterStatus">
+    <div id="hhjmultimeterRed_hotspot" class="hhjmultimeterRed_hotspot ui-draggable" ng-show="multimeterServiceMdata.SvgRedStatus"></div>
+    <div id="hhjmultimeterRed" class="multimeterRed" ng-show="multimeterServiceMdata.SvgRedStatus"></div>
+    <div id="hhjmultimeterBlack_hotspot" class="hhjmultimeterBlack_hotspot ui-draggable" ng-show="multimeterServiceMdata.SvgBlackStatus"></div>
+    <div id="hhjmultimeterBlack" class="multimeterBlack" ng-show="multimeterServiceMdata.SvgBlackStatus"></div>
+    <div id="mask-multimeter">
+        <div class="multimeter" id="hehhe">
+            <div class="multimeter-topUnit"  ng-bind="multimeterServiceMdata.multimeterScreenUnit"></div>
+            <div class="multimeter-top" ng-bind="greeting.Out1MultiLogic_x_ToScreen_x_x" id="multimeterShowData" align="left"
+                 ng-show="multimeterServiceMdata.multimeterScreenStatus"></div>
+            <div class="multimeter-topHot" id="multimeter-topHot" ></div>
+            <div class="multimeter-bottom"></div>
+            <div class="multimeter-off"  ng-Click="multimeteroff();"></div>
+            <div class="multimeter-vv"  ng-Click="multimetervv();"></div>
+            <div class="multimeter-v"  ng-Click="multimeterv();"></div>
+            <div class="multimeter-k"  ng-Click="multimeterk();"></div>
+            <div class="multimeter-nofine" ng-Click="multimeternofine();"></div>
+            <div class="multimeter-AA"  ng-Click="multimeterAA();"></div>
+            <div class="multimeter-A"  ng-Click="multimeterA();"></div>
+            <div class="multimeter-mA"  ng-Click="multimetermA();"></div>
+            <div class="multimeter-Red"  ng-Click="skipSpeedy(multimeterServiceMdata.w_multimeter_redHtml);"></div>
+            <div class="multimeter-black"  ng-Click="skipSpeedy(multimeterServiceMdata.w_multimeter_blackHtml);"></div>
+            <div class="multimeter-coe"  ng-Click="closemultimeter();">X</div>
+        </div>
+    </div>
+
+</div>
+
+

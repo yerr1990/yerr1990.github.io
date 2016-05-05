@@ -1,0 +1,24 @@
+<div>
+    <div ng-include="pageServicePdata.principleSvg"></div>
+    <!--仪表盘-->
+    <div ng-include="pageServicePdata.dashboardSrc" ng-show="showOrHide.dashboardShow"></div>
+    <!--右侧工具-->
+    <div class="sideBar_tool">
+        <div class="sideBar_tool_zdy"></div>
+        <div class="sideBar_tool_wby"></div>
+        <div class="sideBar_tool_yb cursor_pointer" ng-class="{'sideBar_tool_yb_active':showOrHide.dashboardShow}" ng-click="toolShowOrClose(3,1)"></div>
+    </div>
+    <div class="menu" ng-mouseenter="menuBox(1)" ng-mouseleave="menuBox(0)"></div>
+    <div class="menu_pop" ng-show="showOrHide.menuPop" ng-mouseenter="menuBox(1)" ng-mouseleave="menuBox(0)">
+        在独立点火系统中，点火线圈直接安装在火花塞上面，取消了传统的点火高压线。点火线圈内部一般包括初级线圈和次级线圈两部分，蓄电池向初级线圈提供12V的低压电，发动机ECU控制初级线圈电路的接通或断开，次级线圈连接火花塞。当初级线圈接通电源时，随着电流的增长线圈四周产生一个很强的磁场，线圈储存了磁场能；当发动机ECU控制初级线圈电路断开时，初级线圈的磁场迅速衰减，次级线圈就会感应出很高的电压，次级线圈产生的高压电击穿火花塞间隙产生电火花，点燃空气-燃油混合气。
+    </div>
+</div>
+
+<script>
+    $(function(){
+        setTimeout(function(){
+            principleLineInit();
+        },500);
+    })
+
+</script>

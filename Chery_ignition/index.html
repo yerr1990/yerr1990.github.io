@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+	<head lang="en">
+		<meta charset="UTF-8">
+		<title>奇瑞点火</title>
+		<link rel="stylesheet" type="text/css" href="css/comm.css" />
+		<link rel="stylesheet" type="text/css" href="css/template.css" />
+		<link rel="stylesheet" href="framework/multimeter/css/multimeter.css"/><!--万用表的样式-->
+		<script src="framework/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="framework/jquery-ui.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="framework/angular-1.3.0.js" type="text/javascript" charset="utf-8"></script>
+		<script src="framework/angular-ui-router.js" type="text/javascript" charset="utf-8"></script>
+	</head>
+
+	<body ng-app="MainModule" ng-controller="MainCtrl">
+	<div class="container position_relative" ng-show="showOrHide.mainbody">
+		<!--<audio id="audio1" src="audio/start1.mp3" ></audio>
+		<audio id="audio2" src="audio/on.mp3" loop="1"></audio>
+		<audio id="audio3" src="audio/mal.mp3" loop="1"></audio>-->
+			<div class="header">
+				<div class="navi_button">
+					<button class="navi_bg cursor_pointer" ng-class="{'navi_bg_active':(templateNo==1)}" ng-click="chargeSrc(1);">概述</button>
+					<button class="navi_bg cursor_pointer" ng-class="{'navi_bg_active':(templateNo==2)}" ng-click="chargeSrc(2);">原理</button>
+					<button class="navi_bg cursor_pointer" ng-class="{'navi_bg_active':(templateNo==3)}" ng-click="chargeSrc(3);">电路</button>
+					<button class="navi_bg cursor_pointer" ng-class="{'navi_bg_active':(templateNo==4)}" ng-click="chargeSrc(4);">检测</button>
+					<button class="navi_bg cursor_pointer" ng-class="{'navi_bg_active':(templateNo==5)}" ng-click="chargeSrc(5);">策略</button>
+				</div>
+				<div class="sys_button">
+					<button class="sys_close cursor_pointer">退出</button>
+				</div>
+			</div>
+			<div class="main">
+				<div class="main_template" ng-include="pageServicePdata.templateSrc[0]" ng-show="(templateNo-1)==0"></div>
+				<div class="main_template" ng-include="pageServicePdata.templateSrc[1]" ng-show="(templateNo-1)==1"></div>
+				<div class="main_template" ng-include="pageServicePdata.templateSrc[2]" ng-show="(templateNo-1)==2"></div>
+				<div class="main_template" ng-include="pageServicePdata.templateSrc[3]" ng-show="(templateNo-1)==3"></div>
+				<div class="main_template" ng-include="pageServicePdata.templateSrc[4]" ng-show="(templateNo-1)==4"></div>
+				<!--&lt;!&ndash;左侧导航&ndash;&gt;
+				<div class="sideBar_navi">
+					<div class="navi_1">
+						<button class="features_button cursor_pointer">功能</button>
+						<button class="position_button cursor_pointer">位置</button>
+					</div>
+					<div class="navi_2 hideImportant">
+						<button class="normal_button cursor_pointer" title="正常">正常</button>
+						<button class="primary_button cursor_pointer" title="初级线圈断路">初级</button>
+						<button class="secondary_button cursor_pointer" title="次级线圈断路">次级</button>
+					</div>
+				</div>-->
+				<!--右侧工具-->
+				<!--<div class="sideBar_tool">
+
+				</div>-->
+				<!--底部显示解释-->
+
+					<div class="footer_info">
+				</div>
+			</div>
+
+		</div>
+		<div class="front_cover_body" ng-show="showOrHide.frontCover">
+			<img src="images/bg_front_cover.png">
+			<div class="front_cover_btn1" ng-mouseenter="showOrHide.front_cover_box1=1;" ng-mouseleave="showOrHide.front_cover_box1=0;"></div>
+			<div class="front_cover_btn2" ng-mouseenter="showOrHide.front_cover_box2=1;" ng-mouseleave="showOrHide.front_cover_box2=0;"></div>
+			<div class="front_cover_btn3" ng-click="showOrHide.frontCover=0;showOrHide.mainbody=1;"></div>
+			<div class="front_cover_box1" ng-show="showOrHide.front_cover_box1">
+				<p>学习目标：</p>
+				<p>能够对点火线圈及其线路故障进行诊断分析与测量</p>
+			</div>
+			<div class="front_cover_box1" ng-show="showOrHide.front_cover_box2">
+				<p>学习内容：</p>
+				<p>点火线圈及其控制线路工作原理</p>
+				<p>点火线圈测量</p>
+				<p>点火线圈故障诊断与分析</p>
+
+			</div>
+
+		</div>
+	</body>
+
+	<script src="js/animate.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/angularjs/controllers.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/angularjs/pageServices.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/angularjs/services.js" type="text/javascript" charset="utf-8"></script>
+	<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="framework/multimeter/js/angularJs/app.js"></script><!--万用表的app-->
+	<script type="text/javascript" src="framework/multimeter/js/angularJs/controller.js"></script><!--万用表的controller-->
+	<script type="text/javascript" src="framework/multimeter/js/angularJs/Service.js"></script><!--万用表的Service-->
+</html>

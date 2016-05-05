@@ -1,0 +1,247 @@
+
+@charset "utf-8";
+@font-face {
+    font-family: "UnidreamLED";
+    src: local("UnidreamLED"),
+    local("UnidreamLED"),
+    url("../font/UnidreamLED.ttf") format("truetype"),
+    url("../font/UnidreamLED.svg#UnidreamLED") format("svg"),
+    url("../font/UnidreamLED.ttf") format("truetype"),
+    url("../font/UnidreamLED.woff") format("woff");
+}
+.multimeter-contain{
+    position: absolute;
+    width:1024px;
+    height: 580px;
+    top: 0px;
+    left: 0px;
+
+    overflow:hidden;
+}
+#mask-multimeter {
+    position: absolute;
+    width:144px;
+    height: 300px;
+    top: 0px;
+    left: 376px;
+    z-index: 11;
+    overflow:hidden;
+}
+.multimeter {
+    position: absolute;
+    left:0px;
+    width: 143px;
+    height: 320px;
+    float: left;
+    overflow: hidden;
+    background: url(../images/multimeter.png) no-repeat 0 0;
+}
+.multimeterRed {
+    position: absolute;
+    width: 27px;
+    height: 251px;
+    top: 17px;
+    left: 515px;
+    z-index:11;
+    background: url(../images/3670412.png) no-repeat 0 0;
+}
+.multimeterBlack {
+    position: absolute;
+    width: 27px;
+    height: 244px;
+    top: 17px;
+    left: 359px;
+    z-index:11;
+    background: url(../images/36704121.png) no-repeat 0 0;
+    overflow: hidden;
+}
+.multimeter-top {
+    position:absolute;
+    width: 105px;
+    height: 90px;
+    top:25px;
+    left:25px;
+    line-height:90px;
+    overflow: hidden;
+    text-align:left;
+    color: #454545;
+    font-size:45px;
+    font-family:"UnidreamLED";
+}
+/* 郝立强 2015 05 17 */
+.multimeter-topUnit{
+    position:absolute;
+    width: 40px;
+    height: 20px;
+    top:87px;
+    right:40px;
+    line-height:20px;
+    overflow: hidden;
+    text-align:right;
+    color: #454545;
+    font-size:14px;
+    font-weight: bold;
+    font-family:"Microsoft YaHei";
+}
+.multimeter-off{
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    top:190px;
+    right:111px;
+    background: #000;
+    opacity: 0;
+}
+.multimeter-vv{
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    top:174px;
+    right:108px;
+    background: #000;
+    opacity: 0;
+}
+.multimeter-v{
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    top:160px;
+    right:99px;
+    background: #000;
+    opacity: 0;
+    cursor: pointer;
+}
+.multimeter-mv{
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    top:149px;
+    right:83px;
+    background: #000;
+    opacity: 0;
+}
+.multimeter-k{
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    top:147px;
+    right:63px;
+    background: #000;
+    opacity: 0;
+    cursor: pointer;
+}
+.multimeter-nofine{
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    top:148px;
+    right:46px;
+    background: #000;
+    opacity: 0;
+}
+.multimeter-AA{
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    top:160px;
+    right:34px;
+    background: #000;
+    opacity: 0;
+}
+.multimeter-A{
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    top:174px;
+    right:19px;
+    background: #000;
+    opacity: 0;
+}
+.multimeter-mA{
+    position:absolute;
+    width: 15px;
+    height: 15px;
+    top:192px;
+    right:19px;
+    background: #000;
+    opacity: 0;
+}
+/* 郝立强 2015 05 17  end */
+.multimeter-bottom {
+    position:absolute;
+    width: 80px;
+    height: 80px;
+    top:159px;
+    left:32px;
+    overflow: hidden;
+    background: url(../images/multimeter_zz.png) no-repeat 0 0;
+    transform-origin:center;
+}
+.multimeter-Red {
+    position:absolute;
+    width: 30px;
+    height: 70px;
+    bottom:12px;
+    right:6px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    background:url(../images/multimeter_r.png) no-repeat 0 0;
+    transform-origin:center;
+}
+.multimeter-black {
+    position:absolute;
+    width: 30px;
+    height: 50px;
+    bottom:20px;
+    right:35px;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+    background:url(../images/multimeter_b.png) no-repeat 0 0;
+    transform-origin:center;
+}
+.multimeter-coe{ width:44px;
+    height:44px;
+    text-align:center;
+    position:absolute;
+    top: 0px;
+    right: 0px;
+    font-size:18px;
+    line-height: 44px;
+    color:#f1a703;
+    cursor:pointer;
+    z-index: 1112;
+    /*background: url(../images/close.png) no-repeat center center;*/
+}
+.multimeter-coe:hover{ 
+	color: #000000;
+}
+#mask-svg{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+}
+
+
+.hhjmultimeterBlack_hotspot{
+    position: absolute;
+    top: 235px;
+    left: 359px;
+    width: 20px;
+    height: 40px;
+    background: #000;
+    opacity: 0;
+    cursor: move;
+    z-index:12;
+}
+.hhjmultimeterRed_hotspot {
+    position: absolute;
+    top: 231px;
+    left: 518px;
+    width: 20px;
+    height: 40px;
+    background: #000;
+    opacity: 0;
+    cursor: move;
+    z-index: 12;
+}
