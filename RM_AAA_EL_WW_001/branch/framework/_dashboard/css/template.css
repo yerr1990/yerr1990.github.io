@@ -1,0 +1,62 @@
+@charset "utf-8";
+
+/*点火面板--------------------------------*/
+.switch-meter .switch {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background: url(../images/switch_base.png) no-repeat center/100%;
+}
+
+.switch-meter .key {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 75px;
+    height: 75px;
+    background: url(../images/switch_key.png) no-repeat center/100%;
+}
+/*点火开关热区样式*/
+.switch-meter .meter .switch span {
+    display: block;
+    background: red;
+    opacity: 0;
+}
+
+.switch-meter .key-lock {
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    left: 0px;
+    top: 18px;
+}
+
+.switch-meter .key-acc {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    left: 14px;
+    top: 1px;
+}
+
+.switch-meter .key-on {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    left: 35px;
+    top: 0px;
+}
+
+.switch-meter .key-start {
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    top: 13px;
+}
+
+/*关闭按钮*/
+
+

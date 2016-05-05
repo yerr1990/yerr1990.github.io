@@ -1,0 +1,97 @@
+<div class="header">
+    <div class="header1">小车匠诊断仪</div>
+</div>
+<div class="pai">
+    <div class="tab_menu">
+        <ul>
+            <li style="border-right: 1px solid #eee" ng-class="{true: 'selected', false: ''}[obdscanServiceZdata.tabBox1]" ng-click="tabMenu('tab1',$event.target)">中国车系</li>
+            <li style="border-right: 1px solid #eee" ng-class="{true: 'selected', false: ''}[obdscanServiceZdata.tabBox2]" style="border-right: 1px solid #eee" ng-click="tabMenu('tab2',$event.target)">欧美车系</li>
+            <li ng-class="{true: 'selected', false: ''}[obdscanServiceZdata.tabBox3]" ng-click="tabMenu('tab3',$event.target)">日韩车系</li>
+        </ul>
+    </div>
+    <div class="tab_box">
+        <div ng-show="obdscanServiceZdata.tabBox1">
+            <ul>
+                <li style="height:50px"><img style="height:25px" src="framework/obdscan/images/dihao.png"/>帝豪</li>
+                <li style="height:50px"><img style="height:25px" src="framework/obdscan/images/tianyi.png"/>天津一汽</li>
+                <li style="height:50px"><img style="height:25px" src="framework/obdscan/images/changcheng.png"/>长城</li>
+                <li style="height:50px"><img style="height:25px" src="framework/obdscan/images/dongnan.png"/>东南</li>
+                <li style="height:50px"><img style="height:25px" src="framework/obdscan/images/lufeng.png"/>陆风</li>
+                <li style="height:50px"><img style="height:25px" src="framework/obdscan/images/xiali.png"/>夏利</li>
+                <li style="height:62px"><img src="framework/obdscan/images/jinbei.png"/>金杯</li>
+                <li style="height:62px"><img src="framework/obdscan/images/qirui.png"/>奇瑞</li>
+                <li style="height:62px"><img src="framework/obdscan/images/huachen.png"/>中华</li>
+                <li style="height:62px"><img src="framework/obdscan/images/jianghuai.png"/>江淮</li>
+                <li style="height:62px"><img src="framework/obdscan/images/lingmu.png"/>铃木</li>
+                <li style="height:62px"><img src="framework/obdscan/images/yiqi.png"/>一汽轿车</li>
+                <li><img src="framework/obdscan/images/jili.png"/>吉利</li>
+                <li><img src="framework/obdscan/images/dongfeng.png"/>东风</li>
+                <li><img src="framework/obdscan/images/changfeng.png"/>长丰</li>
+                <li><img src="framework/obdscan/images/byd.png"/>比亚迪</li>
+                <li><img src="framework/obdscan/images/beijing.png"/>北京</li>
+                <li><img src="framework/obdscan/images/zhongtai.png"/>众泰</li>
+                <li><img src="framework/obdscan/images/changan.png"/>长安</li>
+                <li><img src="framework/obdscan/images/jiangling.png"/>江陵</li>
+                <li><img src="framework/obdscan/images/baojun.png"/>宝骏</li>
+                <li><img src="framework/obdscan/images/hafei.png"/>哈飞</li>
+            </ul>
+        </div>
+        <div ng-show="obdscanServiceZdata.tabBox2">
+            <ul>
+                <li style="height:56px"><img src="framework/obdscan/images/benchi.png"/>奔驰</li>
+                <li style="height:56px"><img src="framework/obdscan/images/kaidilake.png"/>凯迪拉克</li>
+                <li style="height:56px"><img src="framework/obdscan/images/baoma.png"/>宝马</li>
+                <li style="height:56px"><img src="framework/obdscan/images/baoshijie.png"/>保时捷</li>
+                <li style="height:56px"><img src="framework/obdscan/images/aeflmo.png"/>阿尔法罗密欧</li>
+                <li style="height:56px"><img src="framework/obdscan/images/biaozhi.png"/>标志</li>
+                <li style="height:56px"><img src="framework/obdscan/images/bieke.png"/>别克</li>
+                <li style="height:56px"><img src="framework/obdscan/images/dazhong.png"/>大众</li>
+                <li style="height:56px"><img src="framework/obdscan/images/daoqi.png"/>道奇</li>
+                <li style="height:56px"><img src="framework/obdscan/images/xuetielong.png"/>东风雪铁龙</li>
+                <li style="height:56px"><img src="framework/obdscan/images/feiyate.png"/>菲亚特</li>
+                <li style="height:56px"><img src="framework/obdscan/images/leinuo.png"/>雷诺</li>
+                <li style="height:50px"><img src="framework/obdscan/images/jiebao.png"/>捷豹</li>
+                <li style="height:50px"><img src="framework/obdscan/images/kelaisile.png"/>克莱斯勒</li>
+                <li style="height:50px"><img src="framework/obdscan/images/aodi.png"/>奥迪</li>
+                <li style="height:50px"><img src="framework/obdscan/images/fute.png"/>福特</li>
+                <li style="height:50px"><img src="framework/obdscan/images/xuefolan.png"/>雪佛兰</li>
+                <li style="height:50px"><img src="framework/obdscan/images/luhu.png"/>路虎</li>
+                <li><img src="framework/obdscan/images/mingjue.png"/>名爵</li>
+                <li><img src="framework/obdscan/images/mashaladi.png"/>玛莎拉蒂</li>
+                <li><img src="framework/obdscan/images/rongwei.png"/>荣威</li>
+                <li><img src="framework/obdscan/images/sikeda.png"/>斯柯达</li>
+                <li><img src="framework/obdscan/images/woerwo.png"/>沃尔沃</li>
+                <li><img src="framework/obdscan/images/lianhua.png"/>莲花</li>
+            </ul>
+        </div>
+        <div ng-show="obdscanServiceZdata.tabBox3">
+            <ul>
+                <li style="height:62px; padding-top:5px;"><img src="framework/obdscan/images/nisang.png"/>尼桑</li>
+                <li style="height:62px; padding-top:5px;"><img src="framework/obdscan/images/dafa.png"/>大发</li>
+                <li style="height:62px; padding-top:5px;"><img src="framework/obdscan/images/xiandai.png"/>现代</li>
+                <li style="height:62px; padding-top:5px; cursor: pointer" ng-click="changeTemplate('car','pai')"><img src="framework/obdscan/images/fengtian.png"/>丰田</li>
+                <li style="height:62px; padding-top:5px;"><img src="framework/obdscan/images/leisa.png"/>雷克萨斯</li>
+                <li style="height:62px; padding-top:5px;"><img src="framework/obdscan/images/mazida.png"/>马自达</li>
+                <li style="height:62px"><img src="framework/obdscan/images/bentian.png"/>本田</li>
+                <li style="height:62px"><img src="framework/obdscan/images/qiya.png"/>起亚</li>
+                <li style="height:62px"><img src="framework/obdscan/images/sanling.png"/>三菱</li>
+                <li style="height:62px"><img src="framework/obdscan/images/sibalu.png"/>斯巴鲁</li>
+                <li style="height:62px"><img src="framework/obdscan/images/dongben.png"/>东风本田</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" >
+    //<![CDATA[
+/*    var $div_li =$("div.tab_menu ul li");
+    $div_li.click(function(){
+        $(this).addClass("selected")            //当前<li>元素高亮
+                .siblings().removeClass("selected");  //去掉其它同辈<li>元素的高亮
+        var index =  $div_li.index(this);  // 获取当前点击的<li>元素 在 全部li元素中的索引。
+        $("div.tab_box > div")   	//选取子节点。不选取子节点的话，会引起错误。如果里面还有div
+                .eq(index).show()   //显示 <li>元素对应的<div>元素
+                .siblings().hide(); //隐藏其它几个同辈的<div>元素
+    });*/
+    //]]>
+</script>

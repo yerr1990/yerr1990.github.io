@@ -1,0 +1,231 @@
+@charset "utf-8";
+@import "_variables";
+//前缀增加公用方法
+@mixin attribute($attributeName,$value){
+    -webkit-#{$attributeName}:$value;
+    -moz-#{$attributeName}:$value;
+    -ms-#{$attributeName}:$value;
+}
+//弹出全屏的警告框的样式
+@mixin warnAlert($warnName){
+    width: 1025px;
+    height: 529px;
+    position: absolute;
+    left:0px;
+    top:51px;
+    background: rgba(0,0,0,0.5);
+    .#{$warnName}-alert{
+       display:block;
+       width: 300px;
+       height: 200px;
+       background: $colorWarnBackground;
+       margin:150px auto;
+       text-align: center;
+       p{
+          width: 100%;
+          position:relative;
+          top:50px;
+          left:0px;
+          line-height: 24px;
+          font:$fontMicrosoftBlack;
+          color:$colorWhite; 
+       };
+       button{
+           width: 80px;
+           height:30px;
+           background: $colorBlack;
+           color: $colorWhite;
+           position: relative;
+           top: 120px;
+           &:hover{
+               background: $colorWhite;
+               color: $colorBlack;
+           }
+       }
+    }
+}
+/*用于系统原理中的一些宏*/
+@mixin principleUseImg{
+    background-image: url(../images/sprite_principle.png);
+    background-repeat: no-repeat;
+}
+   
+/*用于系统电路中的一些宏*/ 
+@mixin circuitUseImg{
+    background-image: url(../images/sprite_circuit.png);
+    background-repeat: no-repeat;
+}
+/*元件检测的热区公用样式*/
+@mixin interFaceHot($width,$height,$left,$top){
+    width: $width;
+    height: $height;
+    left: $left;
+    top: $top;
+    position:absolute;
+    background: $colorBlack;
+    opacity: 0;  
+}
+/*系统原理和系统电路中元件检测 弹出框 公共样式*/
+@mixin interFaceHotAlert($left,$top){
+    width:135px;
+    height:145px;
+    position: absolute;
+    left: $left;
+    top: $top;
+    color: $colorBlack;
+    background: $colorBodyGray;
+    border: 1px solid black;
+    @at-root .hot-alert-title{
+        position: static !important;
+        display: block;
+        width: 100%;
+        height: 25px;
+        line-height: 25px;
+        text-align: center;
+    }
+    @at-root .hot-alert-body{
+        width: 100%;
+        span{
+            position: static;
+        }
+        button {
+            display:block;
+            width: 73%;
+            height: 27px;
+            margin:8px auto;
+            background: $colorOrange;
+            color: $colorWhite;
+            text-align: center;
+            &:hover{
+               background: $colorButtonHover; 
+            }
+            &.active{
+                background: $colorButtonHover;
+            }
+            &.disable{
+               background:$colorButtonDisable;
+               -ms-text-shadow: 0px 0px 0px transparent;
+               text-shadow: 0px 0px 0px transparent; 
+               &:hover{
+                   background: $colorButtonDisable;
+               }
+            }
+        }
+    }
+}
+/*元件检测 公共样式*/
+@mixin component($left,$top){
+    width: 280px;
+    height: 265px;
+    position: absolute;
+    left: $left;
+    top: $top;
+    border: 1px solid black; 
+}
+/*元件位置 公共样式*/
+@mixin placeImg($left,$top){
+    background: $colorWhite;
+    width:400px;
+    height: 310px;
+    min-height: 310px;
+    position: absolute;
+    left: $left;
+    top: $top;
+    border: 1px solid black;
+}
+/*失效模式 公共样式*/
+@mixin fail($left,$top){
+    width: 375px;
+    height: 245px;
+    position:absolute;
+    left:$left;
+    top: $top;
+    background: $colorBodyGray;
+    border: 1px solid black;
+    font: 12px "微软雅黑";
+    color: $colorBlack;
+    .fail-main{
+        width: 100%;
+        .fail-text{
+           width: 90%;
+           margin:10px auto;
+        }
+        b{
+           text-indent: 18px;
+           font:bold 14px "微软雅黑";
+           line-height: 24px; 
+        }
+        p{
+            text-indent: 18px;
+            line-height: 22px;
+        }
+        img.all{
+            display:inline-block;
+            float:left;
+            margin-right:10px;
+            width: 100%;
+        }
+        img.half{
+            display:inline-block;
+            float:left;
+            margin-right:10px;
+            width: 50%;
+        }
+    }
+}
+/*按钮的公共样式（进入故障和故障清除）*/
+%normalbutton{
+    display:block;
+    width: 78px;
+    height: 25px;
+    position:absolute;
+    background: $colorOrange;
+    color: #FFFFFF;
+    &:hover{
+        background: $colorButtonHover;
+    }
+}
+/*彩色箭头公用方法*/
+@mixin principleArrow($left,$top,$rotate,$color){
+    left: $left;
+    top: $top;
+    @if $rotate{
+        @include attribute(transform,rotate($rotate));
+    };
+    @if $color=="in"{
+        border-bottom: 8px solid $colorArrowIn;
+    };
+    @if $color=="out"{
+        border-bottom: 8px solid $colorArrowOut;
+    };
+    @if $color=="r"{
+        @include principleUseImg();
+        background-position: -73px -99px;
+    };
+    @if $color=="o"{
+        @include principleUseImg();
+        background-position: -140px -99px;
+    };
+    @if $color=="g"{
+        @include principleUseImg();
+        background-position: -109px -99px;
+    }
+}
+/*定位*/
+@mixin abs($width,$height,$top,$left){
+    position: absolute;
+    width:$width;
+    height:$height;
+    top:$top;
+    left:$left;
+};
+@mixin interFaceAlert($left,$top) {
+    width: 135px;
+    height: 145px;
+    position: absolute;
+    left: $left;
+    top: $top;
+    color: #000;
+    background: #e1e1e1;
+    border: 1px solid black;
+}

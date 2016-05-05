@@ -1,0 +1,27 @@
+<button class="close cursor-pointer" ng-click="closeDivAngu();">X</button>
+<div class="alertContent radius">
+	<div class="alert-header">
+		<!--<span class="alert-title" ng-bind="serviceDataPNavi.aTitle"></span>-->
+		<ul class="alert-body-navi">
+			<li class="radius cursor-pointer" ng-repeat="navi in serviceDataPNavi.aAlertNaviBlock" ng-class="{active:(sAlertNaviText==navi)}" ng-click="chargeAlertNavi($index);" ng-bind="navi"></li>
+		</ul>
+	</div>
+	<div class="alert-body">
+		<!--<ul class="alert-body-navi">
+			<li class="radius cursor-pointer" ng-repeat="navi in serviceDataPNavi.aAlertNaviBlock" ng-class="{active:(sAlertNaviText==navi)}" ng-click="chargeAlertNavi(navi);" ng-bind="navi"></li>
+		</ul>-->
+		<!--<span class="alert-title" ng-bind="sAlertNaviText"></span>-->
+		<div class="alert-body-content alert-body-content-test" ng-include="alertBodySrc"></div>
+		
+	</div>
+	<div class="alert-footer" ng-class="{'hide':showOrHide.bShowFooter}">
+		<button class="goCheck radius" ng-controller="dashboardCtrl" ng-class="{true:'cursor-pointer',false:'goDisable'}[showOrHide.isGoCheck]" ng-disabled="(!showOrHide.isGoCheck)" ng-click="goMalfunctionCheck();">进入检测</button>
+		<button class="goClear radius" ng-controller="dashboardCtrl" ng-class="{true:'cursor-pointer',false:'goDisable'}[showOrHide.isGoClear]" ng-disabled="(!showOrHide.isGoClear)" ng-click="ClearMalfunction();">清除故障</button>
+	</div>
+</div>
+
+	
+	
+	
+	
+	

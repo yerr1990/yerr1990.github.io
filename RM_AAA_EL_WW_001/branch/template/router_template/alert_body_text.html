@@ -1,0 +1,13 @@
+<div class="alert-body-text">
+	<span ng-repeat="content in aAlertNaviText">
+		<b ng-repeat="title in content.infoTitle" ng-bind="title"></b>
+		<p ng-repeat="text in content.infoText">
+			<span ng-class="{red:(text[0]=='1_red'),bold:(text[0]=='1_bold')}" ng-bind="text[1]"></span>
+			<span ng-class="{red:(text[0]=='2_red'),bold:(text[0]=='2_bold')}" ng-bind="text[2]"></span>
+			<span ng-class="{red:(text[0]=='3_red'),bold:(text[0]=='3_bold')}" ng-bind="text[3]"></span>
+		</p>
+		<img class="all" ng-class="content.imgSrc[1]" ng-src="{{content.imgSrc[0]}}" ng-show="content.imgSrc[0]"/>
+	</span>
+</div>
+
+

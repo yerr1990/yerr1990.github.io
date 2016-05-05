@@ -1,0 +1,36 @@
+<div class="switch-meter" ng-controller="dashboardCtrl" >
+<div class="switch z-index-12 switch-btn">
+    <div class="key cursor-pointer" onclick="dashboardToggle(1);" ng-click="openSwitchMeter();"></div>
+</div>
+<div class="meter z-index-14 radius dragSource hide-important">
+    <!--id="step3"-->
+    <div class="close cursor-pointer" onclick="dashboardToggle(0);" ng-click="closeSwitchShowBtn();">X</div>
+    <div class="switch">
+        <div class="key" ></div>
+        <span class="key-lock cursor-pointer" ng-mousedown="stallsAngle($event.target,1);"></span>
+        <span class="key-acc cursor-pointer" ng-mousedown="stallsAngle($event.target,2);"></span>
+        <span class="key-on cursor-pointer" ng-mousedown="stallsAngle($event.target,3);"></span>
+        <span class="key-start cursor-pointer" ng-mousedown="stallsAngle($event.target,4);"></span>
+    </div>
+    <div class="pedal">
+        <span class="pedal-brake cursor-move">0</span>
+        <span class="pedal-accelerator cursor-move">16</span>
+    </div>
+    <div class="pointer">
+        <div class="abs pointer-water" ></div>
+        <div class="abs pointer-roate" ></div>
+        <div class="abs pointer-speed" ></div>
+        <div class="abs pointer-oil" ></div>
+    </div>
+    <div class="light">
+        <img class="engineOil " src="framework/dashboard/images/2.png" ng-show="dashboardServiceDout.Out1Dash_x_LED_OilPre_Jud=='1'"/>
+        <img class="abs " src="framework/dashboard/images/3.png" ng-show="dashboardServiceDout.Out1Dash_x_LED_ABS_Jud=='1'"/>
+        <img class="engine "  src="framework/dashboard/images/1.png" ng-show="dashboardServiceDout.Out1Dash_x_LED_MIL_Jud=='1'"/>
+        <img class="airbag " src="framework/dashboard/images/4.png" ng-show="dashboardServiceDout.Out1Dash_x_LED_SafeBag_Jud=='1'"/>
+        <img class="seatBelt " src="framework/dashboard/images/7.png" ng-show="dashboardServiceDout.Out1Dash_x_LED_SafeBelt_Jud=='1'"/>
+        <img class="parking " src="framework/dashboard/images/5.png" ng-show="dashboardServiceDout.Out1Dash_x_LED_Brake_Jud=='1'"/>
+        <img class="battery " src="framework/dashboard/images/6.png" ng-show="dashboardServiceDout.Out1Dash_x_LED_BATTFault_Jud=='1'"/>
+        <img class="monitor " src="framework/dashboard/images/monitor.png" ng-show="dashboardShowmonitor"/>
+    </div>
+</div>
+</div>

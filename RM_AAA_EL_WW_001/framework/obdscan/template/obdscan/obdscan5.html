@@ -1,0 +1,23 @@
+<!--
+	作者：zyj1416357451@sina.com
+	时间：2015-12-01
+	描述：中控锁系统  的  读取数据流
+-->
+<div class="header">
+     <div class="header1">小车匠诊断仪</div>
+     <div class="header2">汽车诊断/中控锁系统/读取数据流</div>
+</div>
+<div class="body">
+	<div class="obdscan-bottom-bell"><div class="ac">门锁控制开关-锁止</div><span ng-show="(obdscanServiceMout.Out1Veh_Dr_SwtDrLck_x_Lck==1)">ON</span><span ng-show="(obdscanServiceMout.Out1Veh_Dr_SwtDrLck_x_Lck==0)">OFF</span></div>
+	<div class="obdscan-bottom-bell"><div class="ac">门锁控制开关-解锁</div><span ng-show="(obdscanServiceMout.Out1Veh_Dr_SwtDrLck_x_ULck==1)">ON</span><span ng-show="(obdscanServiceMout.Out1Veh_Dr_SwtDrLck_x_ULck==0)">OFF</span></div>	
+	<div class="obdscan-bottom-bell"><div class="ac">钥匙操作开关-锁止</div><span ng-show="(obdscanServiceMout.Out1Veh_Dr_SwtKey_x_Lck==1)">ON</span><span ng-show="(obdscanServiceMout.Out1Veh_Dr_SwtKey_x_Lck==0)">OFF</span></div>
+	<div class="obdscan-bottom-bell"><div class="ac">钥匙操作开关-解锁</div><span ng-show="(obdscanServiceMout.Out1Veh_Dr_SwtKey_x_Ulck==1)">ON</span><span ng-show="(obdscanServiceMout.Out1Veh_Dr_SwtKey_x_Ulck==0)">OFF</span></div>
+	<div class="obdscan-bottom-bell"><div class="ac">驾驶员侧车门门锁位置开关</div><span ng-show="(obdscanServiceMout.Out1Veh_Dr_Lck_FrtL_x==0)">ON</span><span ng-show="(obdscanServiceMout.Out1Veh_Dr_Lck_FrtL_x==1)">OFF</span></div>
+	<div class="obdscan-bottom-bell"><div class="ac">乘客次车门门锁位置开</div><span ng-show="(obdscanServiceMout.Out1Veh_Dr_Lck_FrtR_x==0)">ON</span><span ng-show="(obdscanServiceMout.Out1Veh_Dr_Lck_FrtR_x==1)">OFF</span></div>
+	<div class="obdscan-bottom-bell"><div class="ac">右后车门门锁位置开关</div><span ng-show="(obdscanServiceMout.Out1Veh_Dr_Lck_RrL_x==0)">ON</span><span ng-show="(obdscanServiceMout.Out1Veh_Dr_Lck_RrL_x==1)">OFF</span></div>
+	<div class="obdscan-bottom-bell"><div class="ac">左后车门门锁位置开关</div><span ng-show="(obdscanServiceMout.Out1Veh_Dr_Lck_RrR_x==0)">ON</span><span ng-show="(obdscanServiceMout.Out1Veh_Dr_Lck_RrR_x==1)">OFF</span></div>
+	<div class="obdscan-bottom-bell"><div class="ac">驾驶员侧车门门控灯开关</div><span ng-show="(obdscanServiceMout.Out1Veh_Dr_LED_FrtL_x==1)">ON</span><span ng-show="(obdscanServiceMout.Out1Veh_Dr_LED_FrtL_x==0)">OFF</span></div>
+	<div class="obdscan-bottom-bell"><div class="ac">乘客侧车门门控灯开关</div><span ng-show="(obdscanServiceMout.Out1Veh_Dr_LED_FrtR_x==1)">ON</span><span ng-show="(obdscanServiceMout.Out1Veh_Dr_LED_FrtR_x==0)">OFF</span></div>
+	<div class="obdscan-bottom-bell"><div class="ac">右后车门门控灯开关</div><span ng-show="(obdscanServiceMout.Out1Veh_Dr_LED_RrL_x==1)">ON</span><span ng-show="(obdscanServiceMout.Out1Veh_Dr_LED_RrL_x==0)">OFF</span></div>	
+	<div class="obdscan-bottom-bell"><div class="ac">左后车门门控灯开关</div><span ng-show="(obdscanServiceMout.Out1Veh_Dr_LED_RrR_x==1)">ON</span><span ng-show="(obdscanServiceMout.Out1Veh_Dr_LED_RrR_x==0)">OFF</span></div>
+</div>

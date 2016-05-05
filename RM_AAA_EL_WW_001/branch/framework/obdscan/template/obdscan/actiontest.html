@@ -1,0 +1,162 @@
+<div id="obsanbody"   style="position: relative">
+    <div class="header">
+        <div class="header1">小车匠诊断仪</div>
+        <div class="header2">汽车诊断/发动机控制系统/动作测试</div>
+    </div>
+    <div class="body">
+        <div class="obdscan-bottom-bell"><div class="ac">车速</div><span ng-bind="obdscanServiceMout.Out1EngM_x_VehSpeed_x_x"></span>km/h</div>
+        <div class="obdscan-bottom-bell"><div class="ac">发动机转速</div><span ng-bind="obdscanServiceMout.Out1EngM_x_EngSpeed_x_x"></span>rpm</div>
+        <div class="obdscan-bottom-bell"><div class="ac">空气流量计</div><span ng-bind="obdscanServiceMout.Out1EngM_x_MAF_x_x"></span>gm/s</div>
+        <div class="obdscan-bottom-bell"><div class="ac">大气压力</div><span ng-bind="obdscanServiceMout.Out1EngM_x_AtmoPre_x_x"></span>kPa</div>
+        <div class="obdscan-bottom-bell"><div class="ac">冷却液温度</div><span ng-bind="obdscanServiceMout.Out1Sen_x_CoolantTemp_x_x"></span>℃</div>
+        <div class="obdscan-bottom-bell"><div class="ac">进气温度</div><span ng-bind="obdscanServiceMout.Out1Sen_x_IntakeAir_x_x"></span>℃</div>
+        <div class="obdscan-bottom-bell"><div class="ac">蓄电池电压</div><span ng-bind="obdscanServiceMout.Out1Sen_x_BattVolt_x_x"></span>V</div>
+        <div class="obdscan-bottom-bell"><div class="ac">加速踏板位置传感器1</div><span ng-bind="obdscanServiceMout.Out1Sen_x_AccelSensNo1"></span>%</div>
+        <div class="obdscan-bottom-bell"><div class="ac">加速踏板位置传感器2</div><span ng-bind="obdscanServiceMout.Out1Sen_x_AccelSensNo2"></span>%</div>
+        <div class="obdscan-bottom-bell"><div class="ac">节气门位置传感器1</div><span ng-bind="obdscanServiceMout.Out1Sen_x_TpsSensorVlt_x_x"></span>%</div>
+        <div class="obdscan-bottom-bell"><div class="ac">节气门位置传感器2</div><span ng-bind="obdscanServiceMout.Out1Sen_x_TpsSensor2Vlt_x_x"></span>%</div>
+        <div class="obdscan-bottom-bell"><div class="ac">喷油时间</div><span ng-bind="obdscanServiceMout.Out1EngM_x_InjecPort_x_x"></span>ms</div>
+        <div class="obdscan-bottom-bell"><div class="ac">喷油量</div><span ng-bind="obdscanServiceMout.Out1EngM_x_InjecVolCyl_x_x"></span>ml</div>
+        <div class="obdscan-bottom-bell"><div class="ac">炭罐电磁阀占空比</div><span ng-bind="obdscanServiceMout.Out1EngM_x_EvapVSV_x_x"></span>%</div>
+        <div class="obdscan-bottom-bell"><div class="ac">EVAP净化流量</div><span ng-bind="obdscanServiceMout.Out1EngM_x_EvapPurFlow_x_x"></span>%</div>
+        <div class="obdscan-bottom-bell"><div class="ac">净化密度学习值</div><span ng-bind="obdscanServiceMout.Out1EngM_x_PurDenLeaVal_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">清污阀占空比状态</div><span ng-bind="obdscanServiceMout.Out1EngM_x_EvapPurgeVSV_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">目标空燃比</div><span ng-bind="obdscanServiceMout.Out1EngM_x_TarAFRatio_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">空燃比</div><span ng-bind="obdscanServiceMout.Out1EngM_x_AFLamB1S1_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">空燃比传感器电压</div><span ng-bind="obdscanServiceMout.Out1Sen_x_AFSVltB1S1_x_x"></span>V</div>
+        <div class="obdscan-bottom-bell"><div class="ac">空燃比传感器电流</div><span ng-bind="obdscanServiceMout.Out1Sen_x_AFSCurrentB1S1_x_x"></span>mA</div>
+        <div class="obdscan-bottom-bell"><div class="ac">短期燃油修正</div><span ng-bind="obdscanServiceMout.Out1EngM_x_FuelSFT_x_x"></span>%</div>
+        <div class="obdscan-bottom-bell"><div class="ac">长期燃油修正</div><span ng-bind="obdscanServiceMout.Out1EngM_x_FuelLFT_x_x"></span>%</div>
+        <div class="obdscan-bottom-bell"><div class="ac">总燃油修正</div><span ng-bind="obdscanServiceMout.Out1EngM_x_TotalFT1_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">点火提前角</div><span ng-bind="obdscanServiceMout.Out1EngM_x_IgnAdvance_x_x"></span>deg</div>
+        <div class="obdscan-bottom-bell"><div class="ac">制动灯开关</div><span ng-bind="obdscanServiceMout.Out1Sen_x_StopLightSw_x_x"></span></div>
+
+        <div class="obdscan-bottom-bell"><div class="ac">计算负荷</div><span ng-bind="obdscanServiceMout.Out1EngM_x_CalcLoad_x_x"></span>%</div>
+        <div class="obdscan-bottom-bell"><div class="ac">整车负荷</div><span ng-bind="obdscanServiceMout.Out1EngM_x_VehLoad_x_x"></span>%</div>
+        <div class="obdscan-bottom-bell"><div class="ac">发动机运行时间</div><span ng-bind="obdscanServiceMout.Out1EngM_x_EngRunTime_x_x"></span>S</div>
+        <div class="obdscan-bottom-bell"><div class="ac">初始冷却液温度</div><span ng-bind="obdscanServiceMout.Out1Sen_x_InitEngCoolTemp_x_x"></span>℃</div>
+        <div class="obdscan-bottom-bell"><div class="ac">初始进气温度</div><span ng-bind="obdscanServiceMout.Out1Sen_x_InitIntakeAirTemp_x_x"></span>℃</div>
+        <div class="obdscan-bottom-bell"><div class="ac">节气门怠速位置</div><span ng-bind="obdscanServiceMout.Out1Sen_x_TpsIdlePosition_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">节气门计算开启位置</div><span ng-bind="obdscanServiceMout.Out1Sen_x_TpsReqPosition_x_x"></span>V</div>
+        <div class="obdscan-bottom-bell"><div class="ac">节气门传感器位置</div><span ng-bind="obdscanServiceMout.Out1Sen_x_TpsSenPosition_x_x"></span>%</div>
+        <div class="obdscan-bottom-bell"><div class="ac">节气门位置传感器1</div><span ng-bind="obdscanServiceMout.Out1Sen_x_TpsPositionNo1_x_x"></span>V</div>
+        <div class="obdscan-bottom-bell"><div class="ac">节气门位置传感器2</div><span ng-bind="obdscanServiceMout.Out1Sen_x_TpsPositionNo2_x_x"></span>V</div>
+        <div class="obdscan-bottom-bell"><div class="ac">节气门位置指令</div><span ng-bind="obdscanServiceMout.Out1Sen_x_TpsPositionComm_x_x"></span>V</div>
+        <div class="obdscan-bottom-bell"><div class="ac">节气门位置传感器1开启位置</div><span ng-bind="obdscanServiceMout.Out1Sen_x_SensOpenPos1_x_x">V</span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">节气门位置传感器2开启位置</div><span ng-bind="obdscanServiceMout.Out1Sen_x_SensOpenPos2_x_x">V</span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">节气门电机电流</div><span ng-bind="obdscanServiceMout.Out1Sen_x_TpsMCurrent_x_x"></span>A</div>
+        <div class="obdscan-bottom-bell"><div class="ac">节气门电机占空比</div><span ng-bind="obdscanServiceMout.Out1Sen_x_TpsMDuty_x_x"></span>%</div>
+        <div class="obdscan-bottom-bell"><div class="ac">节气门电机开启占空比</div><span ng-bind="obdscanServiceMout.Out1Sen_x_TpsMDutyOpen_x_x"></span>%</div>
+        <div class="obdscan-bottom-bell"><div class="ac">节气门电机关闭占空比</div><span ng-bind="obdscanServiceMout.Out1Sen_x_TpsMDutyClose_x_x"></span>%</div>
+        <div class="obdscan-bottom-bell"><div class="ac">节气门全关时学习值</div><span ng-bind="obdscanServiceMout.Out1Sen_x_TpsFuCloLearn_x_x"></span>V</div>
+        <div class="obdscan-bottom-bell"><div class="ac">燃油泵/速度</div><span ng-bind="obdscanServiceMout.Out1Sen_x_OPSpeedStatus_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">后氧传感器</div><span ng-bind="obdscanServiceMout.Out1Sen_x_O2SB1S2_x_x"></span>V</div>
+        <div class="obdscan-bottom-bell"><div class="ac">气缸列1燃油系统状态</div><span ng-bind="obdscanServiceMout.Out1Sen_x_FuelSysStatus1_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">气缸列2燃油系统状态</div><span ng-bind="obdscanServiceMout.Out1Sen_x_FuelSysStatus2_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">爆震反馈值</div><span ng-bind="obdscanServiceMout.Out1Sen_x_KnockFedbackVal_x_x"></span>deg(CA)</div>
+        <div class="obdscan-bottom-bell"><div class="ac">爆震校正学习值</div><span ng-bind="obdscanServiceMout.Out1Sen_x_KnockCorrLeaVal_x_x"></span>deg(CA)</div>
+        <div class="obdscan-bottom-bell"><div class="ac">前氧传感器温度</div><span ng-bind="obdscanServiceMout.Out1Sen_x_CataTempB1S1_x_x"></span>℃</div>
+        <div class="obdscan-bottom-bell"><div class="ac">后氧传感器温度</div><span ng-bind="obdscanServiceMout.Out1Sen_x_CataTempB1S2_x_x"></span>℃</div>
+        <div class="obdscan-bottom-bell"><div class="ac">起动机信号</div><span ng-bind="obdscanServiceMout.Out1Sen_x_StarterSig_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">起动机控制</div><span ng-bind="obdscanServiceMout.Out1Sen_x_StarterCtrl_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">助力转向机信号</div><span ng-bind="obdscanServiceMout.Out1Sen_x_PowSteerSig_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">起动继电器</div><span ng-bind="obdscanServiceMout.Out1Sen_x_StartRelay_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">动力转向信号（历史）</div><span ng-bind="obdscanServiceMout.Out1Sen_x_PowStSigRec_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">ACC继电器</div><span ng-bind="obdscanServiceMout.Out1Sen_x_ACCRelay_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">空档位置开关信号</div><span ng-bind="obdscanServiceMout.Out1Sen_x_NeuPosSWSig_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">空调信号</div><span ng-bind="obdscanServiceMout.Out1Sen_x_ACSignal_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">节气门关闭位置开关信号</div><span ng-bind="obdscanServiceMout.Out1Sen_x_CloseTpsPosSw_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">燃油切断状态</div><span ng-bind="obdscanServiceMout.Out1Sen_x_FuelCutCond_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">仪表通信</div><span ng-bind="obdscanServiceMout.Out1Sen_x_ImmoCommu_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">电器负荷信号</div><span ng-bind="obdscanServiceMout.Out1Sen_x_ElecLoadSig_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">故障码（包含历史故障）</div><span ng-bind="obdscanServiceMout.Out1Sen_x_CodeIncluHis_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">故障灯点亮后行驶里程</div><span ng-bind="obdscanServiceMout.Out1Sen_x_MilOnRunDis_x_x"></span>Km</div>
+        <div class="obdscan-bottom-bell"><div class="ac">故障灯点亮后行驶时间</div><span ng-bind="obdscanServiceMout.Out1Sen_x_RunTimMilOn_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">故障码清除后行驶时间</div><span ng-bind="obdscanServiceMout.Out1Sen_x_TimAftDTCCle_x_x"></span>min</div>
+        <div class="obdscan-bottom-bell"><div class="ac">故障码清除后行驶里程</div><span ng-bind="obdscanServiceMout.Out1Sen_x_DisFroDTCCle_x_x"></span>Km</div>
+        <div class="obdscan-bottom-bell"><div class="ac">故障码清除后的暖机循环数</div><span ng-bind="obdscanServiceMout.Out1Sen_x_WarCycCleDTC_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">诊断接口端子TC和CG</div><span ng-bind="obdscanServiceMout.Out1Sen_x_TCandTE1_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">点火计数器</div><span ng-bind="obdscanServiceMout.Out1Sen_x_IgnTrigCount_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">一缸失火数</div><span ng-bind="obdscanServiceMout.Out1Sen_x_Cyl1MisCount_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">二缸失火数</div><span ng-bind="obdscanServiceMout.Out1Sen_x_Cyl2MisCount_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">三缸失火数</div><span ng-bind="obdscanServiceMout.Out1Sen_x_Cyl3MisCount_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">四缸失火数</div><span ng-bind="obdscanServiceMout.Out1Sen_x_Cyl4MisCount_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">所有缸失火数</div><span ng-bind="obdscanServiceMout.Out1Sen_x_AllCylMisCount_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">失火时发动机转速</div><span ng-bind="obdscanServiceMout.Out1Sen_x_MisfireRPM_x_x"></span>rpm</div>
+        <div class="obdscan-bottom-bell"><div class="ac">失火时发动机负荷</div><span ng-bind="obdscanServiceMout.Out1Sen_x_MisfireLoad_x_x"></span>g/rev</div>
+        <div class="obdscan-bottom-bell"><div class="ac">发动机缺火极限检测</div><span ng-bind="obdscanServiceMout.Out1Sen_x_MisfireMargin_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">冷却风扇</div><span ng-bind="obdscanServiceMout.Out1Sen_x_ElecFanMotor_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">怠速燃油切断</div><span ng-bind="obdscanServiceMout.Out1Sen_x_IdleFuelCut_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">燃油切断TAU</div><span ng-bind="obdscanServiceMout.Out1Sen_x_FCTAU_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">涡轮输入转速</div><span ng-bind="obdscanServiceMout.Out1Sen_x_SPDNT_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">超速切断开关</div><span ng-bind="obdscanServiceMout.Out1Sen_x_OverCutSw_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">换档杆P档开关状态</div><span ng-bind="obdscanServiceMout.Out1Sen_x_ShSwStPrange_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">换档杆R档开关状态</div><span ng-bind="obdscanServiceMout.Out1Sen_x_ShSwStRrange_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">换档杆2档开关状态</div><span ng-bind="obdscanServiceMout.Out1Sen_x_ShSwSt2range_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">换档杆L档开关状态</div><span ng-bind="obdscanServiceMout.Out1Sen_x_ShSwStLrange_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">换档杆N档开关状态</div><span ng-bind="obdscanServiceMout.Out1Sen_x_ShSwStNrange_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">换档杆D档开关状态</div><span ng-bind="obdscanServiceMout.Out1Sen_x_ShSwStDrange_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">换档杆3档开关状态</div><span ng-bind="obdscanServiceMout.Out1Sen_x_ShSwSt3range_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">ATF油温度</div><span ng-bind="obdscanServiceMout.Out1Sen_x_ATOilTemp_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">变距器锁止状态</div><span ng-bind="obdscanServiceMout.Out1Sen_x_LockUp_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">锁止电磁阀ST状态</div><span ng-bind="obdscanServiceMout.Out1Sen_x_STSoleSt_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">锁止电磁阀状态</div><span ng-bind="obdscanServiceMout.Out1Sen_x_LockUpSoSt_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">换档杆状态</div><span ng-bind="obdscanServiceMout.Out1Sen_x_ShiftSt_x_x"></span></div>
+        <div class="obdscan-bottom-bell"><div class="ac">换档电磁阀SLT状态</div><span ng-bind="obdscanServiceMout.Out1Sen_x_SLTSoleSt_x_x"></span></div>
+    </div>
+
+    <div>
+        <div class="abs tk-1 draghandle" ng-show="obdscanServiceZdata.layerType=='lay1'">
+            <div class="abs title" ng-bind="obdscanServiceZdata.obdscanData[obdscanServiceZdata.actionType][0]"></div>
+            <div class="abs tk-1-zuo"  ng-click="leftAdjust('tmp1','tk-1-zuo');"></div>
+            <div class="abs tk-1-you" ng-click="rightAdjust('tmp1','tk-1-you');"></div>
+            <div class="abs tk-1-cha" ng-click="colsedPoplayer('.tk-1')"></div>
+            <div class="abs tk-1-text">1.5%</div>
+            <div class="abs tk-1-gun" style="left:202px;"></div>
+        </div>
+        <div class="abs tk-2 draghandle" ng-show="obdscanServiceZdata.layerType=='lay2'">
+            <div class="abs title" ng-bind="obdscanServiceZdata.obdscanData[obdscanServiceZdata.actionType][0]"></div>
+            <div class="abs tk-2-cha" ng-click="colsedPoplayer('.tk-2')"></div>
+            <div class="abs tk-2-text"></div>
+            <div class="abs tk-2-zuo" ng-click="adjustData(-12.5)"></div>
+            <div class="abs tk-2-zhong" ng-click="adjustData(0)"></div>
+            <div class="abs tk-2-you" ng-click="adjustData(12.5)"></div>
+        </div>
+
+        <div class="abs tk-3 draghandle" ng-show="obdscanServiceZdata.layerType=='lay3'">
+            <div class="abs title" ng-bind="obdscanServiceZdata.obdscanData[obdscanServiceZdata.actionType][0]"></div>
+            <div class="abs tk-3-cha" ng-click="colsedPoplayer('.tk-3')"></div>
+            <div class="abs tk-3-text"></div>
+            <div class="abs tk-3-zuo" ng-click="switchBtn('tk3','off')"></div>
+            <div class="abs tk-3-you" ng-click="switchBtn('tk3','on')"></div>
+        </div>
+        <div class="abs tk-4 draghandle" ng-show="obdscanServiceZdata.layerType=='lay4'">
+            <div class="abs title" ng-bind="obdscanServiceZdata.obdscanData[obdscanServiceZdata.actionType][0]"></div>
+            <div class="abs tk-4-cha" ng-click="colsedPoplayer('.tk-4')"></div>
+            <div class="abs tk-4-text"></div>
+            <div class="abs tk-4-zuo" ng-click="switchBtn('tk4','off')"></div>
+            <div class="abs tk-4-you" ng-click="switchBtn('tk4','on')"></div>
+            <div>
+                <div style="top:25px;left:10px" ng-click="setInitVal(1)" class="abs tk-4-shu shu1">#1</div>
+                <div style="top:25px;left:73px" ng-click="setInitVal(2)" class="abs tk-4-shu shu2">#2</div>
+                <div style="top:25px;left:136px" ng-click="setInitVal(3)" class="abs tk-4-shu shu3">#3</div>
+                <div style="top:25px;left:199px" ng-click="setInitVal(4)" class="abs tk-4-shu shu4">#4</div>
+                <div style="top:40px;left:10px"  ng-click="setInitVal(5)" class="abs tk-4-shu shu5">#5</div>
+                <div style="top:40px;left:73px"  ng-click="setInitVal(6)" class="abs tk-4-shu shu6">#6</div>
+                <div style="top:40px;left:136px" ng-click="setInitVal(7)" class="abs tk-4-shu shu7">#7</div>
+                <div style="top:40px;left:199px" ng-click="setInitVal(8)" class="abs tk-4-shu shu8">#8</div>
+            </div>
+        </div>
+
+        <div class="abs tk-5 draghandle" ng-show="obdscanServiceZdata.layerType=='lay5'">
+            <div class="abs title" ng-bind="obdscanServiceZdata.obdscanData[obdscanServiceZdata.actionType][0]"></div>
+            <div class="abs tk-5-zuo"  ng-click="leftAdjust('tmp2','tk-5-zuo');"></div>
+            <div class="abs tk-5-you" ng-click="rightAdjust('tmp2','tk-5-you');"></div>
+            <div class="abs tk-5-cha" ng-click="colsedPoplayer('.tk-5')"></div>
+            <div class="abs tk-5-text">0</div>
+            <div class="abs tk-5-gun" style="left:202px;"></div>
+        </div>
+
+    </div>
+
+</div>

@@ -1,0 +1,128 @@
+<div class="circuit-body">
+	<div class="wiper-motor"></div>
+	<div class="svg_position" ng-include="chargeData.circuitBg"></div>
+	<!--
+	circuit-door2-up-switch2
+	车窗2号升的开关
+	-->
+	<!--<div class="line-switch z-index-10">
+		<span class="circuit-switch-1 z-index-1"></span>
+		<span class="circuit-switch-2 z-index-1"></span>
+	</div-->
+	<div class="line-animate">
+		<div class="line-animate-flow">
+			<span class="line-1 height"></span>
+			<span class="line-2 width"></span>
+			<span class="line-3 height"></span>
+			<span class="line-4 height"></span>
+
+			<span class="line-5 width"></span>
+			<span class="line-6 height"></span>
+
+			<span class="line-7 height"></span>
+			<span class="line-8 width"></span>
+			<span class="line-9 height"></span>
+			<!--<span class="line-10 height"></span>
+			<span class="line-11 height"></span>
+			<span class="line-12 height"></span>
+			<span class="line-13 height"></span>
+
+			<span class="line-14 width"></span>
+			<span class="line-15 height"></span>
+			<span class="line-16 width"></span>
+			<span class="line-17 height"></span>
+			<span class="line-18 height"></span>
+
+			<span class="line-19 width"></span>
+			<span class="line-20 height"></span>
+			<span class="line-21 width"></span>
+			<span class="line-22 height"></span>
+			<span class="line-23 height"></span>
+
+			<span class="line-24 width"></span>
+			<span class="line-25 height"></span>
+			<span class="line-26 width"></span>
+			<span class="line-27 height"></span>
+			<span class="line-28 height"></span>-->
+		</div>
+
+		<script>
+		//所有线路先初始化
+			$(".line-animate-flow .height").css("height","0px");
+			$(".line-animate-flow .width").css("width","0px");
+		</script>
+	</div>
+	<div>
+		<!-------------->
+		<div class="circuit-main-switch z-index-10" ng-class="{'cursor-pointer':(!showOrHide.circuitAlertOne)}" ng-click="bodyAlert(1);"></div>
+		<div class="circuit-wiper-motor z-index-10" ng-class="{'cursor-pointer':(!showOrHide.circuitAlertTwo)}" ng-click="bodyAlert(2);"></div>
+		<div class="circuit-spray-motor z-index-10" ng-class="{'cursor-pointer':(!showOrHide.circuitAlertThree)}" ng-click="bodyAlert(3);"></div>
+
+		<!-------------------------->
+		<div class="circuit-mainswitch-alert radius z-index-14" ng-show="showOrHide.circuitAlertOne">
+			<button class="close cursor-pointer" ng-click="sysAlertClose();">X</button>
+			<span class="hot-alert-title">刮水器开关总成</span>
+			<div class="hot-alert-body">
+				<button class="radius component" ng-class="{'disable':(!showOrHide.alertComponent),'cursor-pointer':(showOrHide.alertComponent),'active':showOrHide.circuitAlertComponentActive}" ng-disabled="(!showOrHide.alertComponent)" ng-click="sysAlertComponent('C034');">元件检测</button>
+				<button class="radius place" ng-class="{'disable':(!showOrHide.alertPlace),'cursor-pointer':(showOrHide.alertPlace),'active':showOrHide.circuitAlertPlaceActive}" ng-disabled="(!showOrHide.alertPlace)" ng-click="sysAlertPlace('C035');">车上位置</button>
+				<button class="radius fail" ng-class="{'disable':(!false),'cursor-pointer':(false),'active':showOrHide.circuitAlertFailActive}" ng-disabled="(!false)" ng-click="sysAlertFail('');">失效模式</button>
+			</div>
+		</div>
+		<!-------------->
+		<div class="circuit-wiperMotor-alert radius z-index-14" ng-show="showOrHide.circuitAlertTwo">
+			<button class="close cursor-pointer" ng-click="sysAlertClose();">X</button>
+			<span class="hot-alert-title">刮水电动机</span>
+			<div class="hot-alert-body">
+				<button class="radius component" ng-class="{'disable':(!false),'cursor-pointer':(false),'active':showOrHide.circuitAlertComponentActive}" ng-disabled="(!false)" ng-click="sysAlertComponent('');">元件检测</button>
+				<button class="radius place" ng-class="{'disable':(!showOrHide.alertPlace),'cursor-pointer':(showOrHide.alertPlace),'active':showOrHide.circuitAlertPlaceActive}" ng-disabled="(!showOrHide.alertPlace)" ng-click="sysAlertPlace('C036');">车上位置</button>
+				<button class="radius fail" ng-class="{'disable':(!false),'cursor-pointer':(showOrHide.alertFail),'active':showOrHide.circuitAlertFailActive}" ng-disabled="(!false)" ng-click="sysAlertFail('');">失效模式</button>
+			</div>
+		</div>
+		<!-------------->
+		<div class="circuit-sprayMotor-alert radius z-index-14" ng-show="showOrHide.circuitAlertThree">
+			<button class="close cursor-pointer" ng-click="sysAlertClose();">X</button>
+			<span class="hot-alert-title">喷水电动机</span>
+			<div class="hot-alert-body">
+				<button class="radius component" ng-class="{'disable':(!false),'cursor-pointer':(false),'active':showOrHide.circuitAlertComponentActive}" ng-disabled="(!false)" ng-click="sysAlertComponent('');">元件检测</button>
+				<button class="radius place" ng-class="{'disable':(!showOrHide.alertPlace),'cursor-pointer':(showOrHide.alertPlace),'active':showOrHide.circuitAlertPlaceActive}" ng-disabled="(!showOrHide.alertPlace)" ng-click="sysAlertPlace('C037');">车上位置</button>
+				<button class="radius fail" ng-class="{'disable':(!false),'cursor-pointer':(showOrHide.alertFail),'active':showOrHide.circuitAlertFailActive}" ng-disabled="(!false)" ng-click="sysAlertFail('');">失效模式</button>
+			</div>
+		</div>
+
+		<!--元件测量-->
+		<div class="z-index-10" ng-include="chargeData.circuitComponentSrc" ng-show="showOrHide.circuitComponent"></div>
+		<!--车上位置-->
+		<div class="placeImg radius z-index-10" ng-show="showOrHide.circuitPlace">
+			<button class="close cursor-pointer z-index-1" ng-click="closePlace();">X</button>
+			<img ng-src="{{chargeData.circuitPlaceImgSrc}}"/>
+		</div>
+		<!--失效模式-->
+		<div class="failMode z-index-10" ng-include="chargeData.circuitFailSrc" ng-show="showOrHide.circuitFail"></div>
+		
+		<!--万用表热区-->
+		<div class="circuit-multimeter-hot z-index-5 hide-important">
+			<a id="multimeter-hot1" wybredPosition="1" wybblackPosition="1" rqPosition="3442"  h_left="324" h_top="57"  h_href="dhxq_normal1"></a>
+			<!--主开关-->
+			<a id="multimeter-hot2" wybredPosition="2" wybblackPosition="2" rqPosition="3440"  h_left="370" h_top="57"  h_href="dhxq_normal1"></a>
+			<a id="multimeter-hot3" wybredPosition="3" wybblackPosition="3" rqPosition="3444"  h_left="323" h_top="115"  h_href="dhxq_normal1"></a>
+			<a id="multimeter-hot4" wybredPosition="4" wybblackPosition="4" rqPosition="3446" h_left="367" h_top="116" h_href="dhxq_normal1"></a>
+			<a id="multimeter-hot5" wybredPosition="5" wybblackPosition="5" rqPosition="4" h_left="301" h_top="175" h_href="dhxq_normal1"></a>
+			<a id="multimeter-hot6" wybredPosition="6" wybblackPosition="6" rqPosition="4" h_left="346" h_top="167" h_href="dhxq_normal1"></a>
+
+			<a id="multimeter-hot7" wybredPosition="7" wybblackPosition="7" rqPosition="3448" h_left="346" h_top="185" h_href="dhxq_normal1"></a>
+			<a id="multimeter-hot8" wybredPosition="8" wybblackPosition="8" rqPosition="3450" h_left="303" h_top="241" h_href="dhxq_normal1"></a>
+			<a id="multimeter-hot9" wybredPosition="9" wybblackPosition="9" rqPosition="3452" h_left="346" h_top="233" h_href="dhxq_normal1"></a>
+			<a id="multimeter-hot10" wybredPosition="10" wybblackPosition="10" rqPosition="3454" h_left="346" h_top="251" h_href="dhxq_normal1"></a>
+			<a id="multimeter-hot11" wybredPosition="11" wybblackPosition="11" rqPosition="4" h_left="236" h_top="346" h_href="dhxq_normal1"></a>
+			<!--主电机-->
+			<a id="multimeter-hot12" wybredPosition="12" wybblackPosition="12" rqPosition="3456" h_left="303" h_top="340" h_href="dhxq_normal1"></a>
+			<a id="multimeter-hot13" wybredPosition="13" wybblackPosition="13" rqPosition="4" h_left="329" h_top="388" h_href="dhxq_normal1"></a>
+
+
+			<a id="multimeter-hot14" wybredPosition="14" wybblackPosition="14" rqPosition="4" h_left="346" h_top="167" h_href="dhxq_normal1"></a>
+			<a id="multimeter-hot15" wybredPosition="15" wybblackPosition="15" rqPosition="4" h_left="346" h_top="167" h_href="dhxq_normal1"></a>
+			<a id="multimeter-hot16" wybredPosition="16" wybblackPosition="16" rqPosition="4" h_left="346" h_top="167" h_href="dhxq_normal1"></a>
+			<a id="multimeter-hot17" wybredPosition="17" wybblackPosition="17" rqPosition="1" h_left="346" h_top="167" h_href="dhxq_normal1"></a>
+		</div>
+	</div>
+</div>

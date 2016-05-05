@@ -1,0 +1,37 @@
+<div class="alert-body-question">
+	<p class="question" ng-bind="chargeData.jQuestion.questionTitle"></p>
+	<ul class="answerChoice choiceFour ">
+		<li><button id="A" class="radius cursor-pointer" ng-click="answerToActive($event.target)">{{chargeData.jQuestion.choice1[0]}}<br/>{{chargeData.jQuestion.choice1[1]}}</button></li>
+		<li><button id="B" class="radius cursor-pointer" ng-click="answerToActive($event.target)">{{chargeData.jQuestion.choice2[0]}}<br/>{{chargeData.jQuestion.choice2[1]}}</button></li>
+		<li><button id="C" class="radius cursor-pointer" ng-click="answerToActive($event.target)">{{chargeData.jQuestion.choice3[0]}}<br/>{{chargeData.jQuestion.choice3[1]}}</button></li>
+		<li ng-show="chargeData.jQuestion.choice4[0]"><button id="D" class="radius cursor-pointer" onclick="answerToActive(id)">{{chargeData.jQuestion.choice4[0]}}<br/>{{chargeData.jQuestion.choice4[1]}}</button></li>
+	</ul>
+	<!--<span class="answer-judge answer-judge-wrong" ng-show="showOrHide.answerWrong">错误，正确答案是{{chargeData.jQuestion.trueAnswer}}</span>-->
+	<span class="answer-judge answer-judge-wrong" ng-show="showOrHide.answerWrong">正确答案是{{chargeData.jQuestion.trueAnswer}}</span>
+	<span class="answer-judge" ng-show="showOrHide.answerCurrect">回答正确</span>
+	<div class="question-footer">
+		<div class="chargeQuesetion">
+			<button class="question-pre radius cursor-pointer" ng-click="preQuestion();">上一题</button>
+			<button class="question-next radius cursor-pointer" ng-click="nextQuestion();">下一题</button>
+		</div>	
+		<button class="question-submit radius cursor-pointer" ng-click="questionSubmit()">提交</button>
+	</div>	
+</div>
+<script type="text/javascript">
+	//检测用户提交的答案，加上相应的触发样式
+	answerCheck();
+	//判断下一步上一步按钮的置灰与否
+	isShowPreONext();
+</script>
+
+
+
+
+
+
+
+
+
+
+
+

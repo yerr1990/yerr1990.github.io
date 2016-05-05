@@ -1,0 +1,30 @@
+������ҳ������
+<link rel="stylesheet" href="framework/multimeter/css/multimeter.css"/><!--���ñ����ʽ-->
+<script type="text/javascript" src="framework/multimeter/js/angularJs/app.js"></script><!--���ñ��app-->
+<script type="text/javascript" src="framework/multimeter/js/angularJs/controller.js"></script><!--���ñ��controllers-->
+<script type="text/javascript" src="framework/multimeter/js/angularJs/Service.js"></script><!--���ñ��Services-->
+
+����ģ������ע��multimeterModuleģ��
+��ҳ����д��
+ <multimeter></multimeter>
+
+����������ñ� ng-controller="multimeterCtrl" ng-click="multimeter();"
+
+ҳ��д��
+<ng-include src="'framework/multimeter/template/multimeterSvg.html'"></ng-include>
+
+�������� һ����a��ǩ��ҳ����������ĵط���Ҫ��a��ǩ
+wybredPosition="1"     <!--���ñ���������Ǹ��ؼ��ϣ��ؼ����룬��ҳ�治Ҫ�ظ����ɣ�1234�����뼴��-->
+wybblackPosition="1"  <!--���ñ���������Ǹ��ؼ���-->
+h_left="350"                  <!--���ñ������������ϵ�x��꣨��leftֵ��-->
+h_top="90"                 <!--���ñ������������ϵ�x��꣨��topֵ��-->
+rqPosition="1047"        <!--���ñ������������������ģ�ʹ���ֵ-->
+h_href="dhxq_normal1"     <!--���ñ������Ǹ�ҳ���ϣ�ֵΪ·�����stateֵ��-->
+
+Ҫ�ﵽ���ñ�����ҳ����ת���ű仯����·�ɵ���ת��controller������ע��multimeterService
+$state.go(href);�ĺ�߼���multimeterService.Mdata.judgeS(href);
+
+��������������ϵ����ñ��ʻص�ԭ��λ��
+$scope.rtnMultimeterPosition����;
+
+�����z-indexҪ����5��С��10

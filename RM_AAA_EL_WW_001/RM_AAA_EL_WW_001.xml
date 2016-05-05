@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fault>
+	<metadata>
+		<schema>XCJ</schema>
+		<schemaversion>1.0</schemaversion>
+	</metadata>
+	<name>雨刮系统</name>
+	<courseNumber>RM_AAA_EL_WW_001</courseNumber>
+	<type>emu</type>
+	<types>emuCourseWare</types>
+	<purpose>技术方案测试</purpose>
+	<require>无</require>
+	<keyword>学习系统</keyword>
+	<language>中文</language>
+	<version>V0.1</version>
+	<description>无</description>
+	<client>PC</client>
+	<entry>RM_AAA_EL_WW_001/index.html</entry>
+	<handles>
+		<handle id='HA001' discription='结构原理 '/>
+		<handle id='HA002' discription='诊断测量 '/>
+		<handle id='HA003' discription='故障排除 '/>
+		<handle id='HA004' discription='知识拓展 '/>
+		<handle id='HA005' discription='技能测试 '/>
+		<handle id='HA006' discription='点火开关ON '/>
+		<handle id='HA007' discription='点火开关ST '/>
+		<handle id='HA008' discription='万用表使用'/>
+		<handle id='HA009' discription='诊断仪使用 '/>
+		<handle id='HA010' discription='试题1 '/>
+		<handle id='HA011' discription='试题2 '/>
+		<handle id='HA012' discription='试题3 '/>
+		<handle id='HA013' discription='试题4 '/>
+		<handle id='HA014' discription='试题5 '/>
+		<handle id='HA015' discription='试题6 '/>
+		<handle id='HA016' discription='试题7 '/>
+		<handle id='HA017' discription='试题8 '/>
+		<handle id='HA018' discription='试题9 '/>
+		<handle id='HA019' discription='试题10 '/>
+		<handle id='HA020' discription='提交试题 '/>
+		<handle id='HA021' discription='系统原理 '/>
+		<handle id='HA022' discription='系统组成 '/>
+		<handle id='HA023' discription='系统电路 '/>
+		<handle id='HA024' discription='电路测量 '/>
+		
+		<!--<handle id='HB025' discription='故障2 '/>-->
+		<handle id='HB026' discription='进入故障1 '/>
+		<!--<handle id='HB027' discription='进入故障2 '/>-->
+		
+		<handle id='HC028' discription='点击刮水器开关总成 '/>
+		<handle id='HC029' discription='点击刮水器电动机 '/>
+		<handle id='HC030' discription='点击喷水电动机 '/>
+		<!--<handle id='HC031' discription='驾驶员侧电动机 '/>-->
+		<!--<handle id='HC032' discription='右前侧车窗电动机 '/>-->
+		<!--<handle id='HC033' discription='左后侧车窗电动机 '/>-->
+	
+		<handle id='HC034' discription='点击刮水器开关总成 元件检测 '/>
+
+		<handle id='HC035' discription='点击刮水器开关总成 车上位置 '/>
+		<handle id='HC036' discription='点击刮水器电动机 车上位置 '/>
+		<handle id='HC037' discription='点击喷水电动机 车上位置 '/>
+		
+
+		<handle id='HD040' discription='系统电路 单步刮水'/>
+		<handle id='HD041' discription='系统电路 雨刮关闭 '/>
+		<handle id='HD042' discription='系统电路 低速刮水 '/>
+		<handle id='HD043' discription='系统电路 高速刮水'/>
+		<handle id='HD042' discription='系统电路 间歇刮水 '/>
+		<handle id='HD043' discription='系统电路 喷水'/>
+
+		<handle id='HD046' discription='系统组成 刮水器开关总成'/>
+		<handle id='HD047' discription='系统组成 雨刷电动机 '/>
+		<handle id='HD048' discription='系统组成 喷水电动机 '/>
+		<handle id='HD049' discription='系统组成 刮水器连杆机构'/>
+
+		<handle id='HD053' discription='元件测量 刮水器开关总成 '/>
+		<handle id='HD054' discription='元件测量 刮水器电动机'/>
+		<handle id='HD055' discription='元件测量 喷水电动机和泵总成'/>
+
+
+		<handle id='HE059' discription='万用表 刮水器开关 '/>
+		<handle id='HE060' discription='万用表 刮水器电动机 '/>
+		<handle id='HE061' discription='万用表 喷水电动机 '/>
+		<!--<handle id='HE062' discription='万用表 主电机电压 测量 '/>-->
+		<!--<handle id='HE063' discription='万用表 M2电机电压 测量 '/>-->
+		<!--<handle id='HE064' discription='万用表 M3电机电压 测量 '/>-->
+
+	</handles>
+	<progresses>
+		<progress id='A001' hid='HA001' discription='结构原理 ' rate="1"/>
+		<progress id='A002' hid='HA002' discription='诊断测量 ' rate="1"/>
+		<progress id='A003' hid='HA003' discription='故障排除 ' rate="1"/>
+		<progress id='A004' hid='HA004' discription='知识拓展 ' rate="1"/>
+		<progress id='A005' hid='HA005' discription='技能测试 ' rate="1"/>
+		<progress id='A006' hid='HA006' discription='点火开关ON ' rate="1"/>
+		<progress id='A007' hid='HA007' discription='点火开关ST ' rate="1"/>
+		<progress id='A008' hid='HA008' discription='万用表使用' rate="1"/>
+		<progress id='A009' hid='HA009' discription='诊断仪使用 ' rate="1"/>
+		<progress id='A010' hid='HA010' discription='试题1 ' rate="1"/>
+		<progress id='A011' hid='HA011' discription='试题2 ' rate="1"/>
+		<progress id='A012' hid='HA012' discription='试题3 ' rate="1"/>
+		<progress id='A013' hid='HA013' discription='试题4 ' rate="1"/>
+		<progress id='A014' hid='HA014' discription='试题5 ' rate="1"/>
+		<progress id='A015' hid='HA015' discription='试题6 ' rate="1"/>
+		<progress id='A016' hid='HA016' discription='试题7 ' rate="1"/>
+		<progress id='A017' hid='HA017' discription='试题8 ' rate="1"/>
+		<progress id='A018' hid='HA018' discription='试题9 ' rate="1"/>
+		<progress id='A019' hid='HA019' discription='试题10 ' rate="1"/>
+		<progress id='A020' hid='HA020' discription='提交试题 ' rate="1"/>
+		<progress id='A021' hid='HA021' discription='系统原理 ' rate="1"/>
+		<progress id='A022' hid='HA022' discription='系统组成 ' rate="1"/>
+		<progress id='A023' hid='HA023' discription='系统电路 ' rate="1"/>
+		<progress id='A024' hid='HA024' discription='电路测量 ' rate="1"/>
+	
+		<!--<progress id='A001' hid='HB025' discription='故障2 '/>-->
+		<progress id='B026' hid='HB026' discription='进入故障1 ' rate="1"/>
+		<!--<progress id='A001' hid='HB027' discription='进入故障2 '/>-->
+		
+		<progress id='C028' hid='HC028' discription='点击刮水器开关总成 ' rate="1"/>
+		<progress id='C029' hid='HC029' discription='点击刮水器电动机 ' rate="1"/>
+		<progress id='C030' hid='HC030' discription='点击喷水电动机 ' rate="1"/>
+		<!--<progress id='A001' hid='HC031' discription='驾驶员侧电动机 '/>-->
+		<!--<progress id='A001' hid='HC032' discription='右前侧车窗电动机 '/>-->
+		<!--<progress id='A001' hid='HC033' discription='左后侧车窗电动机 '/>-->
+	
+		<progress id='C034' hid='HC034' discription='点击刮水器开关总成 元件检测 ' rate="1"/>
+
+		<progress id='C035' hid='HC035' discription='点击刮水器开关总成 车上位置 ' rate="1"/>
+		<progress id='C036' hid='HC036' discription='点击刮水器电动机 车上位置 ' rate="1"/>
+		<progress id='C037' hid='HC037' discription='点击喷水电动机 车上位置 ' rate="1"/>
+		
+
+		<progress id='D040' hid='HD040' discription='系统电路 单步刮水' rate="1"/>
+		<progress id='D041' hid='HD041' discription='系统电路 雨刮关闭 ' rate="1"/>
+		<progress id='D042' hid='HD042' discription='系统电路 低速刮水 ' rate="1"/>
+		<progress id='D043' hid='HD043' discription='系统电路 高速刮水' rate="1"/>
+		<progress id='D044' hid='HD042' discription='系统电路 间歇刮水 ' rate="1"/>
+		<progress id='D045' hid='HD043' discription='系统电路 喷水' rate="1"/>
+
+		<progress id='D046' hid='HD046' discription='系统组成 刮水器开关总成' rate="1"/>
+		<progress id='D047' hid='HD047' discription='系统组成 雨刷电动机 ' rate="1"/>
+		<progress id='D048' hid='HD048' discription='系统组成 喷水电动机 ' rate="1"/>
+		<progress id='D049' hid='HD049' discription='系统组成 刮水器连杆机构' rate="1"/>
+
+		<progress id='D053' hid='HD053' discription='元件测量 刮水器开关总成 ' rate="1"/>
+		<progress id='D054' hid='HD054' discription='元件测量 刮水器电动机' rate="1"/>
+		<progress id='D055' hid='HD055' discription='元件测量 喷水电动机和泵总成' rate="1"/>
+
+
+		<progress id='E059' hid='HE059' discription='万用表 刮水器开关 ' rate="1"/>
+		<progress id='E060' hid='HE060' discription='万用表 刮水器电动机 ' rate="1"/>
+		<progress id='E061' hid='HE061' discription='万用表 喷水电动机 ' rate="1"/>
+		<!--<progress id='A001' hid='HE062' discription='万用表 主电机电压 测量 '/>-->
+		<!--<progress id='A001' hid='HE063' discription='万用表 M2电机电压 测量 '/>-->
+		<!--<progress id='A001' hid='HE064' discription='万用表 M3电机电压 测量 '/>-->
+	</progresses>
+	
+</fault>

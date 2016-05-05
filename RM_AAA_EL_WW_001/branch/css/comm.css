@@ -1,0 +1,644 @@
+@charset "UTF-8";
+/*用于系统原理中的一些宏*/
+/*用于系统电路中的一些宏*/
+/*元件检测的热区公用样式*/
+/*系统原理和系统电路中元件检测 弹出框 公共样式*/
+/*元件检测 公共样式*/
+/*元件位置 公共样式*/
+/*失效模式 公共样式*/
+/*按钮的公共样式（进入故障和故障清除）*/
+.alertContent .alert-footer .goCheck, .alertContent .alert-footer .goClear {
+  display: block;
+  width: 78px;
+  height: 25px;
+  position: absolute;
+  background: #f1a703;
+  color: #FFFFFF; }
+  .alertContent .alert-footer .goCheck:hover, .alertContent .alert-footer .goClear:hover {
+    background: #1a1a1a; }
+
+/*彩色箭头公用方法*/
+/*定位*/
+/*reset css*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td, p {
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: none; }
+
+input, button, select, textarea {
+  outline: none; }
+
+li {
+  list-style: none; }
+
+img {
+  border: none; }
+
+textarea {
+  resize: none; }
+
+body {
+  color: #666;
+  background: #fff;
+  word-break: break-all;
+  word-wrap: break-word; }
+
+body, input, textarea, button {
+  font-size: 14px;
+  font-family: \5FAE\8F6F\96C5\9ED1,Verdana,Arial; }
+
+a {
+  color: #305999;
+  text-decoration: none;
+  outline: none; }
+
+a:hover {
+  color: #090; }
+
+* {
+  word-break: break-word; }
+
+/*comm======================================================================*/
+.hide {
+  display: none; }
+
+.hide-important {
+  display: none !important; }
+
+.cursor-pointer {
+  cursor: pointer; }
+
+.cursor-move {
+  cursor: move; }
+
+.cursor-arrow {
+  cursor: auto; }
+
+.transparent {
+  opacity: 0; }
+
+.opaque {
+  opacity: 1; }
+
+.radius {
+  border-radius: 2px; }
+
+.close {
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  font: 18px "microsoft yahei";
+  right: 0px;
+  top: 0px;
+  color: #f1a703; }
+  .close:hover {
+    color: #000000; }
+
+.z-index-1 {
+  z-index: 1; }
+
+.z-index-2 {
+  z-index: 2; }
+
+.z-index-3 {
+  z-index: 3; }
+
+.z-index-5 {
+  z-index: 5; }
+
+.z-index-6 {
+  z-index: 6; }
+
+.z-index-10 {
+  z-index: 10; }
+
+.z-index-12 {
+  z-index: 12; }
+
+.z-index-13 {
+  z-index: 13; }
+
+.z-index-14 {
+  z-index: 14; }
+
+.z-index-15 {
+  z-index: 15; }
+
+.z-index-16 {
+  z-index: 16; }
+
+.z-index-50 {
+  z-index: 50; }
+
+.z-index-98 {
+  z-index: 98; }
+
+.z-index-99 {
+  z-index: 99; }
+
+.z-index-100 {
+  z-index: 100; }
+
+body {
+  width: 1024px;
+  height: 580px;
+  position: relative;
+  left: 0px;
+  top: 0px; }
+
+.container {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 1024px;
+  height: 580px;
+  margin: 0px auto;
+  overflow: hidden; }
+
+/*header==================================================================*/
+.header {
+  position: relative;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 50px;
+  border-bottom: 1px solid #c9c9c9;
+  background: #f8f8f8; }
+  .header button {
+    display: inline-block;
+    position: relative;
+    top: 26px;
+    left: 20px;
+    width: 92px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px; }
+  .header .sys-button {
+    width: 82px;
+    height: 25px;
+    position: absolute;
+    top: 26px;
+    right: 20px;
+    text-align: center; }
+    .header .sys-button:after {
+      content: '';
+      clear: both; }
+    .header-help {
+      border-right: 1px solid black; }
+  .header span {
+    float: left;
+    width: 40px; }
+    .header span:hover {
+      color: #fdb513; }
+  .header-navi-bg {
+    background: url(../images/comm_icon/navi_bg.png) no-repeat;
+    color: #FFFFFF; }
+
+/*main==========================================================================================================================*/
+.main {
+  width: 100%;
+  height: 530px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  background: url(../images/body_bg.png) no-repeat center/100%;
+  overflow: hidden; }
+
+/*navi-------------------------------------------------------------------------------------*/
+.sideBar-navi {
+  width: 162px;
+  height: 290px;
+  position: absolute;
+  top: 25px;
+  left: -137px; }
+  .sideBar-navi .sideBar-navi-button {
+    width: 25px;
+    height: 111px;
+    position: absolute;
+    top: 75px;
+    right: 0px;
+    background: url(../images/comm_icon/navi_btn_bg_out.png) no-repeat center; }
+  .sideBar-navi .sideBar-navi-panel {
+    width: 137px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: #e1e1e1;
+    box-shadow: -8px 2px 8px #65696a; }
+    .sideBar-navi .sideBar-navi-panel ul {
+      display: block;
+      width: 105px;
+      height: 246px;
+      margin: 25px auto; }
+      .sideBar-navi .sideBar-navi-panel ul li {
+        display: block;
+        width: 105px;
+        height: 30px;
+        margin-bottom: 23px; }
+        .sideBar-navi .sideBar-navi-panel ul li button {
+          width: 100%;
+          height: 100%;
+          position: relative;
+          left: 0px;
+          top: 0px;
+          background: #f1a703;
+          color: #FFFFFF;
+          line-height: 30px; }
+          .sideBar-navi .sideBar-navi-panel ul li button i {
+            display: block;
+            width: 7px;
+            height: 7px;
+            position: absolute;
+            left: 12px;
+            top: 11.5px;
+            border-radius: 7px;
+            background: #FFFFFF; }
+        .sideBar-navi .sideBar-navi-panel ul li.active button {
+          background: #1a1a1a; }
+
+/*tool-------------------------------------------------------------------------------------*/
+.sideBar-tool {
+  width: 162px;
+  height: 290px;
+  position: absolute;
+  top: 25px;
+  right: -137px; }
+  .sideBar-tool .sideBar-tool-button {
+    width: 25px;
+    height: 111px;
+    position: absolute;
+    top: 75px;
+    left: 0px;
+    background: url(../images/comm_icon/tool_btn_bg_out.png) no-repeat center; }
+  .sideBar-tool .sideBar-tool-panel {
+    width: 137px;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background: #e1e1e1;
+    box-shadow: 8px 2px 8px #65696a; }
+    .sideBar-tool .sideBar-tool-panel ul {
+      display: block;
+      width: 110.5px;
+      height: 240px;
+      margin: 25px auto; }
+      .sideBar-tool .sideBar-tool-panel ul li {
+        width: 50px;
+        height: 50px;
+        margin: 0px 2.5px 13px;
+        float: left;
+        /*tool active*/ }
+        .sideBar-tool .sideBar-tool-panel ul li button {
+          display: block;
+          width: 100%;
+          height: 100%;
+          border: 1px solid #f1a703;
+          /*tool img*/
+          background-image: url(../images/tool/sprite_tool.png);
+          background-repeat: no-repeat; }
+          .right-diagnostic {
+            background-position: -1px -108px; }
+
+          .right-multimeter {
+            background-position: -55px 0px; }
+
+          .right-vacuumPump {
+            background-position: -110px -110px; }
+
+          .right-airGun {
+            background-position: -163px -110px; }
+
+          .right-wireCutter {
+            background-position: -216px -110px; }
+
+          .right-pinchClamp {
+            background-position: -271px -110px; }
+
+          .right-cylinderPressure {
+            background-position: -324px -110px; }
+
+          .right-fuelPressure {
+            background-position: -379px -110px; }
+        .sideBar-tool .sideBar-tool-panel ul li.active .right-diagnostic {
+          background-position: -1px -54px; }
+        .sideBar-tool .sideBar-tool-panel ul li.active .right-multimeter {
+          background-position: -55px -54px; }
+
+/*系统弹出框 =====================================================================================================*/
+.alert-contain {
+  width: 462px;
+  height: 302px;
+  position: absolute;
+  left: 25%;
+  top: 20%;
+  border: 1px solid black;
+  background: #e1e1e1;
+  color: #000000; }
+  .alert-contain .close {
+    right: 2px;
+    top: 2px; }
+
+/*清除故障弹出警告框 =====================================================================================================*/
+/*此功能不可用  弹出警告框 ==========================================================================================================*/
+.resistanceWarn {
+  width: 1025px;
+  height: 529px;
+  position: absolute;
+  left: 0px;
+  top: 51px;
+  background: rgba(0, 0, 0, 0.5); }
+  .resistanceWarn .resistanceWarn-alert {
+    display: block;
+    width: 300px;
+    height: 200px;
+    background: #212121;
+    margin: 150px auto;
+    text-align: center; }
+    .resistanceWarn .resistanceWarn-alert p {
+      width: 100%;
+      position: relative;
+      top: 50px;
+      left: 0px;
+      line-height: 24px;
+      font: 14px "microsoft yahei";
+      color: #FFFFFF; }
+    .resistanceWarn .resistanceWarn-alert button {
+      width: 80px;
+      height: 30px;
+      background: #000000;
+      color: #FFFFFF;
+      position: relative;
+      top: 120px; }
+      .resistanceWarn .resistanceWarn-alert button:hover {
+        background: #FFFFFF;
+        color: #000000; }
+
+/*故障工作状态和正常工作状态标示框*/
+.worker-state {
+  display: block;
+  width: 120px;
+  height: 23px;
+  position: absolute;
+  left: 850px;
+  top: 34px;
+  text-align: center;
+  line-height: 23px;
+  color: #FFFFFF; }
+
+.worker-state-normal {
+  background: #64af1a; }
+
+.worker-state-malfunction {
+  background: #f86f6f; }
+
+/*弹出小页面的模板=======================================================================================================*/
+.alertContent .alert-header {
+  height: 30px;
+  border-bottom: 1px solid #000000; }
+  .alertContent .alert-header ul.alert-body-navi {
+    display: block;
+    width: 93%;
+    height: 21px;
+    position: absolute;
+    left: 10px;
+    top: 9px;
+    text-align: left; }
+    .alertContent .alert-header ul.alert-body-navi li {
+      display: inline-block;
+      width: 81px;
+      height: 21px;
+      line-height: 21px;
+      background: transparent;
+      color: #000000;
+      text-align: center; }
+      .alertContent .alert-header ul.alert-body-navi li.active {
+        background: url(../images/comm_icon/alert_nabvi_btn.png) no-repeat center/100%;
+        color: #FFFFFF; }
+.alertContent .alert-body {
+  width: 100%;
+  height: 271px; }
+  .alertContent .alert-body .alert-body-content {
+    margin-top: 10px;
+    width: 100%;
+    height: 225px;
+    overflow-x: hidden;
+    overflow-y: auto; }
+  .alertContent .alert-body .alert-body-content-test {
+    height: 225px; }
+.alertContent .alert-footer {
+  width: 100%;
+  height: 30px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  /*置灰样式*/ }
+  .alertContent .alert-footer .goCheck {
+    left: 60px;
+    top: 0px; }
+  .alertContent .alert-footer .goClear {
+    right: 60px;
+    top: 0px; }
+  .alertContent .alert-footer .goDisable {
+    background: #7e7e7e; }
+    .alertContent .alert-footer .goDisable:hover {
+      background: #7e7e7e; }
+
+/*元件测量（选择跳转的模板）------------------*/
+.alert-body-choice {
+  width: 90%;
+  margin: 0px auto;
+  font-size: 12px;
+  line-height: 22px; }
+  .alert-body-choice p {
+    text-indent: 24px; }
+  .alert-body-choice b {
+    font-weight: normal; }
+  .alert-body-choice span {
+    padding: 0px 24px;
+    color: #305999;
+    text-decoration: underline;
+    cursor: pointer;
+    text-indent: 24px; }
+  .alert-body-choice img.systemComposition {
+    width: 100%; }
+  .systemCompositionBig {
+    width: 1024px;
+    height: 529px;
+    position: absolute;
+    top: 52px;
+    left: 3px; }
+    .systemCompositionBig img {
+      width: 1024px;
+      height: 529px; }
+
+/*弹出框里面点击链接的信息解释页面--------------------------*/
+.alert-body-info {
+  width: 90%;
+  margin: 0px auto; }
+  .alert-body-info span {
+    width: 100%; }
+  .alert-body-info b {
+    display: block;
+    text-indent: 18px;
+    font-size: 12px;
+    line-height: 22px; }
+  .alert-body-info p {
+    text-indent: 18px;
+    font-size: 12px;
+    line-height: 22px;
+  }
+.alert-body-info span p span.bold {
+  font-weight: bold; }
+  .alert-body-info img.all {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    width: 100%; }
+  .alert-body-info img.half {
+    display: inline-block;
+    float: left;
+    margin-right: 10px;
+    width: 50%; }
+  .alert-body-info .goBack {
+    display: block;
+    width: 70px;
+    height: 25px;
+    position: absolute;
+    right: 50px;
+    bottom: 2px;
+    background: #f1a703;
+    text-align: center;
+    line-height: 25px;
+    color: #FFFFFF; }
+    .alert-body-info .goBack:hover {
+      background: rgba(0, 0, 0, 0.8); }
+
+/*文本内容------------------*/
+.alert-body-text {
+  width: 90%;
+  margin: 0px auto; }
+  .alert-body-text span {
+    display: inline-block; }
+    .alert-body-text span b {
+      display: block;
+      text-indent: 18px;
+      font-size: 12px;
+      line-height: 22px; }
+    .alert-body-text span p {
+      text-indent: 18px;
+      font-size: 12px;
+      line-height: 22px; }
+      .alert-body-text span p span {
+        display: inline; }
+        .alert-body-text span p span.red {
+          color: #FF0000; }
+        .alert-body-text span p span.bold {
+          font-weight: bold; }
+    .alert-body-text span img.all {
+      display: inline-block;
+      float: left;
+      margin-right: 10px;
+      width: 100%; }
+    .alert-body-text span img.half {
+      display: inline-block;
+      float: left;
+      margin-right: 10px;
+      width: 50%; }
+
+/*选择题---------------------*/
+.alert-body-question {
+  width: 90%;
+  margin: 0px auto;
+  /*题目的*/
+  /*选项的样式*/
+  /*最后答案的样式*/
+  /*最后答案答错的样式*/
+  /*下面提交等按钮样式*/ }
+  .alert-body-question .question {
+    font-size: 12px;
+    line-height: 22px; }
+  .alert-body-question ul.answerChoice {
+    height: 35px;
+    min-height: 35px; }
+    .alert-body-question ul.answerChoice li {
+      height: 35px;
+      width: 100%;
+      min-height: 35px; }
+      .alert-body-question ul.answerChoice li button {
+        width: 100%;
+        padding: 0px;
+        text-align: left;
+        text-indent: 18px;
+        line-height: 30px;
+        color: #000000;
+        font-size: 12px; }
+        .alert-body-question ul.answerChoice li button:hover {
+          background: #7e7e7e;
+          color: #FFFFFF; }
+        .alert-body-question ul.answerChoice li button.active {
+          background: #7e7e7e;
+          color: #FFFFFF; }
+  .alert-body-question .answer-judge {
+    display: block;
+    width: 100%;
+    height: 30px;
+    position: absolute;
+    left: 0px;
+    bottom: 30px;
+    line-height: 30px;
+    text-align: center; }
+  .alert-body-question .answer-judge-wrong {
+    color: #ff0000; }
+  .alert-body-question .question-footer {
+    width: 100%;
+    height: 44px;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    font-size: 12px; }
+    .alert-body-question .question-footer button {
+      width: 100px;
+      height: 24px;
+      margin: 0px 2px;
+      background: #F1A703;
+      color: #FFFFFF;
+      line-height: 24px; }
+      .alert-body-question .question-footer button.question-submit {
+        position: absolute;
+        right: 0px;
+        bottom: 0px;
+        margin: 10px;
+        background: #f1a703; }
+      .alert-body-question .question-footer button:hover {
+        background: #1a1a1a; }
+      .alert-body-question .question-footer button.disable {
+        background: #7e7e7e; }
+    .alert-body-question .question-footer .chargeQuesetion {
+      width: 215px;
+      margin: 10px auto; }
+
+/*# sourceMappingURL=comm.css.map */
+/*lock---------------------------------------------------------------*/
+.bottomBar-lock{position: absolute;left: 0px;bottom: -63px;width: 115px;height: 90px;}
+.bottomBar-lock .bottomBar-lock-button{position:relative;left:0px;top:0px;width: 105px;height: 26px;margin-left: 4px;background: #F1A703 url(../images/comm_icon/lock_icon_up.png) no-repeat 8px 5px;color: #FFFFFF;line-height: 26px;text-indent: 14px;}
+.bottomBar-lock .bottomBar-lock-panel{position:relative;left: 23px;top:0px;width: 56%;height: 64px;text-align: center;}
+.bottomBar-lock .bottomBar-lock-panel ul li{display:inline-block;width: 55px;height: 55px;margin: 3px;border: #F1A703 solid 1px;background: #ccc;}
+.bottomBar-lock .bottomBar-lock-panel ul li button{width:100%;height:100%;color: #000000;font:12px "microsoft yahei";}
+.bottomBar-lock .bottomBar-lock-panel ul li .door-switch{background: url(../images/door_switch_icon.png) no-repeat center/100%;}
+/*.bottomBar-lock .bottomBar-lock-panel ul li .wifi-switch{background: url(../images/wifi_switch_icon.png) no-repeat center/100%;}*/
+/*.bottomBar-lock .bottomBar-lock-panel ul li .key-switch{background: url(../images/key_switch_icon.png) no-repeat center/100%;}*/
+.bottomBar-lock ul li.active button.door-switch{background: url(../images/door_switch_icon_active.png) no-repeat center/100%;}
+/*.bottomBar-lock ul li.active button.wifi-switch{background: url(../images/wifi_switch_icon_active.png) no-repeat center/100%;}*/
+/*.bottomBar-lock ul li.active button.key-switch{background: url(../images/key_switch_icon_active.png) no-repeat center/100%;}*/
+/*lock panel*/
+.door-switch-panel,.wifi-switch-panel,.key-switch-panel{position: absolute;left: 4px;top: 292px;/* overflow: hidden; */opacity: 1;}
+.switch-panel-mask{position:absolute;left:0px;top:0px;width: 0%;height: 100%;background: #CCCCCC;opacity: 0.3;}
+/*door*/
+.door-switch-panel{width: 275px;height: 160px;background: #e1e1e1;border: 1px solid #fdb513;}
+.door-switch-panel img{/* display: block; *//* margin: 47px auto; */}
+.door-switch-panel span{display:inline-block;position: absolute; width: 60px;height: 54px;}
+.door-switch-panel span.door-switch-panel-open{left: 18px;top: 43px;}
+.door-switch-panel span.door-switch-panel-lock{left: 80px;top: 43px;}

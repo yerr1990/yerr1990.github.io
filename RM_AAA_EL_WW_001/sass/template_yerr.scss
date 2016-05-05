@@ -1,0 +1,600 @@
+@import "_mixin","_variables";
+@charset "utf-8";
+/*系统电路图=========================================================================================================================================================*/
+.circuit-body {
+  height: 530px;
+  //    background: url(../images/bg_circuit.png) no-repeat center/100%;
+  span, div {
+    display: block;
+  }
+  /* 电路svg样式*/
+  .svg_position{
+    @include abs(auto,auto,30px,99px)
+  }
+  .wiper-motor{
+    @include abs(60px,60px,345px,679px);
+    background: url(../images/wiper_motor.png) no-repeat;
+  }
+  /*线路动画*/
+  .line-animate {
+    span {
+      position: absolute;
+      background: $colorLineRed;
+    }
+    .width {
+      height: 2px;
+    }
+    .height {
+      width: 2px;
+    }
+    span.line-1 {
+      height: 62px;
+      left: 840px;
+      bottom: 423px;
+    }
+    span.line-2 {
+      width: 132px;
+      right: 183px;
+      top: 45px;
+    }
+    span.line-3 {
+      height: 29px;
+      left: 708px;
+      top: 45px;
+    }
+    span.line-4 {
+      height: 19px;
+      left: 709px;
+      top: 100px;
+    }
+    span.line-5 {
+      width: 244px;
+      right: 313px;
+      top: 116px;
+    }
+    span.line-6 {
+      height: 26px;
+      left: 781px;
+      top: 46px;
+    }
+    span.line-7 {
+      height: 358px;
+      left: 781px;
+      top: 102px;
+    }
+    span.line-8 {
+      width: 244px;
+      right: 241px;
+      top: 460px;
+    }
+    span.line-9 {
+      height: 28px;
+      left: 539px;
+      top: 433px;
+    }
+  }
+
+  /*弹出框热区*/
+  .circuit-main-switch{
+    @include abs(155px,311px,122px,145px);
+  }
+  .circuit-wiper-motor{
+    @include abs(60px,70px,348px,679px);
+  }
+  .circuit-spray-motor{
+    @include abs(50px,69px,386px,523px);
+  }
+  /*弹出框样式位置*/
+  .circuit-mainswitch-alert {
+    @include interFaceAlert(237px,183px)
+  }
+  .circuit-wiperMotor-alert {
+    @include interFaceAlert(525px,342px)
+  }
+  .circuit-sprayMotor-alert {
+    @include interFaceAlert(300px,340px)
+  }
+  .hot-alert-title {
+    position: static !important;
+    display: block;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+  }
+  .hot-alert-body {
+    width: 100%;
+    span {
+      position: static;
+    }
+    button {
+      display: block;
+      width: 73%;
+      height: 27px;
+      margin: 8px auto;
+      background: #f1a703;
+      color: #FFFFFF;
+      text-align: center;
+      &:hover {
+        background: #1a1a1a;
+      }
+    }
+    button.active {
+      background: #1a1a1a;
+    }
+    button.disable {
+      background: #7e7e7e;
+      -ms-text-shadow: 0px 0px 0px transparent;
+      text-shadow: 0px 0px 0px transparent;
+      &:hover {
+        background: #7e7e7e;
+      }
+    }
+  }
+
+  /*弹出框-车上位置---------------------*/
+  .placeImg{
+    @include placeImg(438px,31px);//元件检测的  车上位置  样式，两个个参数分别是left，top
+    img{
+      display:block;
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+  }
+
+  /*弹出框-失效模式---------------------*/
+  .failMode{
+    @include fail(132px,75px);//元件检测的  失效模式  样式，两个个参数分别是left，top
+  }
+  //}
+  a{
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background: url(../images/comm_icon/measureHot.png) no-repeat center;
+  }
+  .circuit-multimeter-hot {
+    height: 530px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    @at-root a#multimeter-hot1 {
+      left: 457px;
+      top: 107px;
+    }
+    @at-root a#multimeter-hot2 {
+      left: 457px;
+      top: 177px;
+    }
+    @at-root a#multimeter-hot3{
+      left: 457px;
+      top: 199px;
+    }
+    @at-root a#multimeter-hot4 {
+      left: 457px;
+      top: 227px;
+    }
+    @at-root a#multimeter-hot5 {
+      left: 457px;
+      top: 381px;
+    }
+    @at-root a#multimeter-hot6 {
+      left: 336px;
+      top: 431px;
+    }
+
+    @at-root a#multimeter-hot7 {
+      left: 610px;
+      top: 316px;
+    }
+    @at-root a#multimeter-hot8 {
+      left: 646px;
+      top: 316px;
+    }
+    @at-root a#multimeter-hot9 {
+      left: 673px;
+      top: 316px;
+    }
+    @at-root a#multimeter-hot10 {
+      left: 700px;
+      top: 316px;
+    }
+    @at-root a#multimeter-hot11 {
+      left: 611px;
+      top: 414px;
+    }
+
+    @at-root a#multimeter-hot12 {
+      left: 530px;
+      top: 393px;
+    }
+    @at-root a#multimeter-hot13 {
+      left: 530px;
+      top: 431px;
+    }
+    @at-root a#multimeter-hot14 {
+      left: 336px;
+      top: 468px;
+    }
+    @at-root a#multimeter-hot15 {
+      left: 611px;
+      top: 468px;
+    }
+    @at-root a#multimeter-hot16 {
+      left: 831px;
+      top: 468px;
+    }
+    @at-root a#multimeter-hot17 {
+      left: 831px;
+      top: 301px;
+    }
+  }
+  .component-multimeter-hot {
+    height: 530px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    @at-root a#multimeter-hot61 {
+      top: 280px;
+      left: 434px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center;
+    }
+    @at-root a#multimeter-hot62 {
+      top: 280px;
+      left: 451px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center;
+    }
+    @at-root a#multimeter-hot63 {
+      top: 280px;
+      left: 470px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center;
+    }
+    @at-root a#multimeter-hot64 {
+      top: 280px;
+      left: 488px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center;
+    }
+    @at-root a#multimeter-hot65 {
+      top: 280px;
+      left: 529px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center;
+    }
+    @at-root a#multimeter-hot66 {
+      top: 280px;
+      left: 552px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center;
+    }
+  }
+
+
+}
+/*系统原理图=======================================================================================================================================================*/
+.principle-body {
+  height: 530px;
+  background: url(../images/bg_principle.png) no-repeat center/100%;
+  img {
+    position: absolute;
+  }
+  span, div {
+    display: block;
+  }
+  .scroll-con{
+    @include abs(22px,10px,373px,826px);
+    overflow: hidden;
+    background: url(../images/principle_scroll.png) no-repeat ;
+  }
+  .principle-scroll{
+    @include abs(20px,8px,1px,1px);
+    background: url(../images/principle_scroll1.png) no-repeat ;
+  }
+
+  .principle-water-spout{
+    @include abs(10px,17px,135px,250px);
+    background: url(../images/principle_water_spout.png) no-repeat ;
+  }
+  .principle-water1{
+    display: none;
+    @include abs(72px,146px,167px,195px);
+    background: url(../images/principle_water.png) no-repeat ;
+  }
+  .principle-water2{
+    display: none;
+    @include abs(72px,146px,167px,350px);
+    background: url(../images/principle_water.png) no-repeat ;
+  }
+  .principle-handle{
+    @include abs(196px,196px,33px,693px);
+    background: url(../images/principle_handle.png) no-repeat ;
+  }
+  .principle-motor{
+    @include abs(51px,51px,390px,812px);
+    background: url(../images/principle_motor.png) no-repeat ;
+  }
+  .principle-motor1{
+    @include abs(68px,69px,381px,804px);
+    background: url(../images/principle_motor1.png) no-repeat ;
+  }
+  .principle-motor2{
+    @include abs(25px,25px,382px,826px);
+    background: url(../images/principle_motor2.png) no-repeat ;
+  }
+  .principle-wiper{
+    .left-wiper{
+      @include abs(189px,211px,201px,190px);
+      transform: rotate(-50deg);
+      -ms-transform: rotate(-50deg);
+      background: url(../images/principle_left_wiper.png) no-repeat ;
+    }
+    .red{
+      @include abs(1px,1px,331px,311px);
+      z-index: 10;
+      background: red;
+    }
+    .red1{
+      @include abs(1px,1px,331px,392px);
+      z-index: 10;
+      background: red;
+    }
+    .left-lever{
+      @include abs(170px,8px,327px,309px);
+      transform: rotate(0deg);
+      background: url(../images/principle_left_lever.png) no-repeat ;
+    }
+    .center-motor{
+      @include abs(62px,62px,300px,334px);
+      background: url(../images/principle_center_motor.png) no-repeat ;
+    }
+    .right-wiper{
+      @include abs(189px,211px,201px,352px);
+      transform: rotate(-50deg);
+      -ms-transform: rotate(-50deg);
+      background: url(../images/principle_right_wiper.png) no-repeat ;
+    }
+    .right-lever{
+      @include abs(168px,8px,327px,309px);
+      transform: rotate(0deg);
+      background: url(../images/principle_right_lever.png) no-repeat ;
+    }
+  }
+  .line{
+    div{
+      //      background: #f00;
+    }
+    .line-1-1{
+      @include abs(2px,183px,145px,834px);
+    }
+    .line-1-2{
+      @include abs(2.5px,129px,149px,814.5px);
+    }
+    .line-1-3{
+      @include abs(143px,2px,276px,674px);
+    }
+
+  }
+
+  /*车上位置元件检测的热区*/
+  .principle-main-switch{
+    @include abs(115px,71px,106px,785px);
+  }
+  .principle-wiper-motor{
+    @include abs(190px,142px,317px,693px);
+  }
+  .principle-spray-motor{
+    @include abs(194px,75px,241px,565px);
+  }
+  /*车上位置元件检测弹出框*/
+  .principle-mainswitch-alert {
+    @include interFaceAlert(675px,38px)
+  }
+  .principle-wiperMotor-alert {
+    @include interFaceAlert(534px,322px)
+  }
+  .principle-sprayMotor-alert {
+    @include interFaceAlert(732px,184px)
+  }
+  .hot-alert-title {
+    position: static !important;
+    display: block;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center;
+  }
+  .hot-alert-body {
+    width: 100%;
+    span {
+      position: static;
+    }
+    button {
+      display: block;
+      width: 73%;
+      height: 27px;
+      margin: 8px auto;
+      background: #f1a703;
+      color: #FFFFFF;
+      text-align: center;
+      &:hover {
+        background: #1a1a1a;
+      }
+    }
+    button.active {
+      background: #1a1a1a;
+    }
+    button.disable {
+      background: #7e7e7e;
+      -ms-text-shadow: 0px 0px 0px transparent;
+      text-shadow: 0px 0px 0px transparent;
+      &:hover {
+        background: #7e7e7e;
+      }
+    }
+
+  }
+
+  /*弹出框-车上位置---------------------*/
+  .placeImg{
+    @include placeImg(136px,58px);//元件检测的  车上位置  样式，两个个参数分别是left，top
+    img{
+      display:block;
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+    }
+  }
+
+  /*弹出框-失效模式---------------------*/
+  .failMode{
+    @include fail(559px,75px);//元件检测的  失效模式  样式，两个个参数分别是left，top
+  }
+  //}
+
+  /*原理测量热区*/
+  a{
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background: url(../images/comm_icon/measureHot.png) no-repeat center;
+  }
+  .component-multimeter-hot {
+    height: 530px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    @at-root a#multimeter-hot51 {
+      top: 280px;
+      left: 434px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center;
+    }
+    @at-root a#multimeter-hot52 {
+      top: 280px;
+      left: 451px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center;
+    }
+    @at-root a#multimeter-hot53 {
+      top: 280px;
+      left: 470px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center;
+    }
+    @at-root a#multimeter-hot54 {
+      top: 280px;
+      left: 488px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center;
+    }
+    @at-root a#multimeter-hot55 {
+      top: 280px;
+      left: 529px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center;
+    }
+    @at-root a#multimeter-hot56 {
+      top: 280px;
+      left: 552px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center;
+    }
+
+  }
+}
+/*主界面的按钮=======================================================================================================================================================*/
+
+/*弹出框-元件检测---------------------*/
+.component-alert-component-1{
+  @include component(386px,67px);//元件检测的  元件检测  样式，两个个参数分别是left，top
+  background: #FFFFFF url(../images/component_alert_component_1.png) no-repeat bottom/100%;
+  .component-handle{
+    @include abs(200px,64px,45px,12px);
+    background: url(../images/component_handle.png) no-repeat center/100%;
+  }
+  .test-btn{
+    background: url(../images/btn_normal.png) no-repeat;
+    img{
+      width: 32px;
+      height: 20px;
+    }
+  }
+  .btn-active{
+    background: url(../images/btn_active.png) no-repeat;
+  }
+  .mist1{
+    @include abs(32px,20px,18px,223px);
+  }
+  .off1{
+    @include abs(32px,20px,40px,223px);
+  }
+  .int1{
+    @include abs(32px,20px,62px,223px);
+  }
+  .lo1{
+    @include abs(32px,20px,84px,223px);
+  }
+  .hi1{
+    @include abs(32px,20px,106px,223px);
+  }
+  .spray1{
+    @include abs(32px,20px,128px,223px);
+  }
+}
+.component-alert-component-2{
+  @include component(205px,105px);
+  background: #FFFFFF url(../images/component_alert_component_2.png) no-repeat bottom/100%;
+}
+.component-alert-component-3{
+  @include component(476px,99px);
+  background: #FFFFFF url(../images/component_alert_component_3.png) no-repeat bottom/100%;
+}
+.component-alert-component-4{
+  @include component(180px,200px);
+  background: #FFFFFF url(../images/component_alert_component_4.png) no-repeat bottom/100%;
+}
+.component-alert-component-5{
+  @include component(180px,200px);
+  background: #FFFFFF url(../images/component_alert_component_5.png) no-repeat bottom/100%;
+}
+.component-alert-component-6{
+  @include component(325px,110px);
+  background: #FFFFFF url(../images/component_alert_component_6.png) no-repeat bottom/100%;
+}
+
+/*index页面==================================================================================================*/
+.wiper-btn{
+  .wiper-handle{
+    @include abs(399px,67px,38px,-186px);
+    background: url(../images/wiper_handle.png) no-repeat;
+  }
+  .wiper-cover{
+    @include abs(23px,76px,35px,10px);
+    background: url(../images/wiper_cover.png) no-repeat;
+  }
+  .handle-btn{
+    background: url(../images/btn_normal.png) no-repeat;
+    img{
+      width: 32px;
+      height: 20px;
+    }
+  }
+  .btn-active{
+    background: url(../images/btn_active.png) no-repeat;
+  }
+  .mist{
+    @include abs(32px,20px,20px,223px);
+  }
+  .off{
+    @include abs(32px,20px,42px,223px);
+  }
+  .int{
+    @include abs(32px,20px,64px,223px);
+  }
+  .lo{
+    @include abs(32px,20px,86px,223px);
+  }
+  .hi{
+    @include abs(32px,20px,108px,223px);
+  }
+  .spray{
+    @include abs(32px,20px,130px,223px);
+  }
+}
+

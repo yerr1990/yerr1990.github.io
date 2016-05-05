@@ -1,0 +1,224 @@
+<div class="header">
+    <div class="header1">小车匠诊断仪</div>
+    <div class="header2">汽车诊断/驾驶员门马达/当前故障码</div>
+</div>
+<div class="body">
+    <ul class="car-list">
+    	<div class="eregerer" ng-show="(obdscanServiceMout.Out1Sen_MAF_THA_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_MAF_THALow_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_MAF_THAHign_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_MAF_Code_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_MAF_Low_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_MAF_High_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_PVSV_Circuit_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_APP_DCircuit_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_APP_DLow_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_APP_DHigh_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_APP_E_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_APP_ELow_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_APP_EHigh_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_APP_DandEVltCorr_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_APP_DPerf_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_AF_Low_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_AF_Hign_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_AF_SignalThick_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_AF_SignalThin_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_AF_PumpCurr_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_AF_PumpCurrLow_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_AF_PumpCurrHigh_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_AF_GNDLow_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_AF_GNDHighLow_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_AF_ResSlow_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_TPS_ACircuit_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_TPS_ALow_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_TPS_AHigh_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_TPS_BCircuit_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_TPS_BLow_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_TPS_BHigh_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_TPS_ABVltCorr_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_TPS_APerf_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_TPS_MLow_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_TPS_MHigh_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_TPS_MCtrlOpenPos_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_TPS_MCtrlClosePos_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_TPS_MPerf_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_TPS_MPerf1_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_Cool_x_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_Cool_Low_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_Cool_High_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_Cool_Perf_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_ICAM_x_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_ICAM_ALow_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_ICAM_AHigh_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_ECAM_x_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_ECAM_BLow_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_ECAM_BHigh_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_4Cyl_Misfire_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_3Cyl_Misfire_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_2Cyl_Misfire_x_x=='0')&&
+        (obdscanServiceMout.Out1_1Cyl_Misfire_Code=='0')&&
+        (obdscanServiceMout.Out1Sen_ManyCyl_Misfire_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_System_TooThin_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_IC_ConnOne_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_IC_ConnTwo_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_IC_ConnThree_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_IC_ConnFour_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_Crank_x_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_Knock_1BHigh_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_Knock_1BLow_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_Oxgen_HeatCtrlLow_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_CAM_Aactutor_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_CAM_AtimAdv_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_CAM_Bactutor_x_x=='0')&&
+        (obdscanServiceMout.Out1Sen_CAM_BtimAdv_x_x=='0')&&
+        (obdscanServiceMout.Out1DFC_OilPropVlv_x_x_x=='0')&&
+        (obdscanServiceMout.Out1DFC_APP_x_x_x=='0')&&
+        (obdscanServiceMout.Out1PW_DrSiDoor_ECU_Com_x=='0')">系统正常</div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1DFC_OilPropVlv_x_x_x!='0'"> P0251 进油计量比例阀驱动开路
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1DFC_APP_x_x_x!='0'"> P0122 加速踏板位置1信号超低限
+        </div>
+        
+        
+        <div class="eregerer" ng-show="obdscanServiceMint.In1OBD_x_ClearCode_x_x!='0'"> 故障码已清除
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_MAF_THA_x_x!='0'"> P0110 进气温度电路故障
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_MAF_THALow_x_x!='0'"> P0112 进气温度电路低输入
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_MAF_THAHign_x_x!='0'"> P0113 进气温度电路高输入
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_MAF_Code_x_x!='0'"> P0100 质量或体积空气流量电路
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_MAF_Low_x_x!='0'"> P0102 质量或体积空气流量电路低输入
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_MAF_High_x_x!='0'"> P0103 质量或体积空气流量电路高输入
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_PVSV_Circuit_x_x!='0'"> P0443 燃油蒸气排放控制系统清污控制阀电路
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_APP_DCircuit_x_x!='0'"> P2120 节气门/ 踏板位置传感器/ 开关“D”电路
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_APP_DLow_x_x!='0'"> P2122 节气门/ 踏板位置传感器/ 开关“D”电路低输入
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_APP_DHigh_x_x!='0'"> P2123 节气门/ 踏板位置传感器/ 开关“D”电路高输入
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_APP_E_x_x!='0'"> P2125 节气门/ 踏板位置传感器/ 开关“E”电路
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_APP_ELow_x_x!='0'"> P2127 节气门/ 踏板位置传感器/ 开关“E”电路低输入
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_APP_EHigh_x_x!='0'"> P2128 节气门/ 踏板位置传感器/ 开关“E”电路高输入
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_APP_DandEVltCorr_x_x!='0'"> P2138 节气门/ 踏板位置传感器/ 开关“D” / “E”电压相关性
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_APP_DPerf_x_x!='0'"> P2121 节气门/ 踏板位置传感器/ 开关“D”电路范围/ 性能
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_AF_Low_x_x!='0'"> P0031 氧 (A/F) 传感器加热器控制电路低电位 (B1 S1)
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_AF_Hign_x_x!='0'"> P0032 氧 (A/F) 传感器加热器控制电路高电位 (B1 S1)
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_AF_SignalThick_x_x!='0'"> P2196 氧 (A/F) 传感器信号始终偏浓 (B1 S1)
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_AF_SignalThin_x_x!='0'"> P2195 氧 (A/F) 传感器信号始终偏稀 (B1 S1)
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_AF_PumpCurr_x_x!='0'"> P2237 氧 (A/F) 传感器泵电流电路/ 断路 (B1 S1)
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_AF_PumpCurrLow_x_x!='0'"> P2238 氧 (A/F) 传感器泵电流电路低电位 (B1 S1)
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_AF_PumpCurrHigh_x_x!='0'"> P2239 氧 (A/F) 传感器泵电流电路高电位 (B1 S1)
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_AF_GNDLow_x_x!='0'"> P2252 氧 (A/F) 传感器参考搭铁电路低电位 (B1 S1)
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_AF_GNDHighLow_x_x!='0'"> P2253 氧 (A/F) 传感器参考搭铁电路高电位 (B1 S1)
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_AF_ResSlow_x_x!='0'"> P2A00 A/F 传感器电路响应迟缓 (B1 S1)
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_TPS_ACircuit_x_x!='0'"> P0120 节气门/ 踏板位置传感器/ 开关“A”电路故障
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_TPS_ALow_x_x!='0'"> P0122 节气门/ 踏板位置传感器/ 开关“A”电路低输入
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_TPS_AHigh_x_x!='0'"> P0123 节气门/ 踏板位置传感器/ 开关“A”电路高输入
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_TPS_BCircuit_x_x!='0'"> P0220 节气门/ 踏板位置传感器/ 开关“B”电路
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_TPS_BLow_x_x!='0'"> P0222 节气门/ 踏板位置传感器/ 开关“B”电路低输入
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_TPS_BHigh_x_x!='0'"> P0223 节气门/ 踏板位置传感器/ 开关“B”电路高输入
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_TPS_ABVltCorr_x_x!='0'"> P2135 节气门/ 踏板位置传感器/ 开关“A” / “B”电压相关性
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_TPS_APerf_x_x!='0'"> P0121 节气门/ 踏板位置传感器/ 开关“A”电路范围/ 性能故障
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_TPS_MLow_x_x!='0'"> P2102 节气门执行器控制电动机电路低电位
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_TPS_MHigh_x_x!='0'"> P2103 节气门执行器控制电动机电路高电位
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_TPS_MCtrlOpenPos_x_x!='0'"> P2111 节气门执行器控制系统 - 卡在打开位置
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_TPS_MCtrlClosePos_x_x!='0'"> P2112 节气门执行器控制系统 - 卡在关闭位置
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_TPS_MPerf_x_x!='0'"> P2118 节气门执行器控制电动机电流范围/ 性能
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_TPS_MPerf1_x_x!='0'"> P2119 节气门执行器控制节气门体范围/ 性能
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_Cool_x_x_x!='0'"> P0115 发动机冷却液温度电路故障
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_Cool_Low_x_x!='0'"> P0117 发动机冷却液温度电路低输入
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_Cool_High_x_x!='0'"> P0118 发动机冷却液温度电路高输入
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_Cool_Perf_x_x!='0'"> P0116 发动机冷却液温度电路范围/ 性能故障
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_ICAM_x_x_x!='0'"> P0340 凸轮轴位置传感器电路故障
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_ICAM_ALow_x_x!='0'"> P0342 凸轮轴位置传感器“A”电路低输入（B1 或单个传感器）
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_ICAM_AHigh_x_x!='0'"> P0343 凸轮轴位置传感器“A”电路高输入（B1 或单个传感器）
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_ECAM_x_x_x!='0'"> P0365 凸轮轴位置传感器“B”电路 (B1)
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_ECAM_BLow_x_x!='0'"> P0367 凸轮轴位置传感器“B”电路低输入 (B1)
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_ECAM_BHigh_x_x!='0'"> P0368 凸轮轴位置传感器“B”电路高输入 (B1)
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_4Cyl_Misfire_x_x!='0'"> P0304 检测到 4 号气缸缺火
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_3Cyl_Misfire_x_x!='0'"> P0303 检测到 3 号气缸缺火
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_2Cyl_Misfire_x_x!='0'"> P0302 检测到 2 号气缸缺火
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1_1Cyl_Misfire_Code!='0'"> P0301 检测到 1 号气缸缺火
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_ManyCyl_Misfire_x_x!='0'"> P0300 检测到随机/ 多个气缸缺火
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_System_TooThin_x_x!='0'"> P0171 系统过稀 (B1)
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_IC_ConnOne_x_x!='0'"> P0351 点火线圈“A”初级/ 次级电路
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_IC_ConnTwo_x_x!='0'"> P0352 点火线圈“B”初级/ 次级电路
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_IC_ConnThree_x_x!='0'"> P0353 点火线圈“C”初级/ 次级电路
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_IC_ConnFour_x_x!='0'"> P0354 点火线圈“D”初级/ 次级电路
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_Crank_x_x_x!='0'"> P0335 曲轴位置传感器“A”电路
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_Knock_1BHigh_x_x!='0'"> P0328 爆震传感器 1 电路高输入 （B1 或单个传感器）
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_Knock_1BLow_x_x!='0'"> P0327 爆震传感器 1 电路低输入 （B1 或单个传感器）
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_Oxgen_HeatCtrlLow_x_x!='0'"> P0037 氧传感器加热器控制电路低电位 (B1 S2)
+        </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_CAM_Aactutor_x_x!='0'"> P0010 凸轮轴位置 “A”执行器电路 (B1)
+        </div>
+      <!--  <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_CAM_AtimAdv_x_x!='0'"> P0011 凸轮轴位置 “A” - 正时过于提前或系统性能 (B1)
+        </div>-->
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_CAM_Bactutor_x_x!='0'"> P0013 凸轮轴位置 “B”执行器电路 / 断路 (B1)
+    </div>
+        <div class="eregerer" ng-show="obdscanServiceMout.Out1PW_DrSiDoor_ECU_Com_x!='0'">B2321 驾驶员侧车门 ECU 通信终止
+        </div>
+
+      <!--  <div class="eregerer" ng-show="obdscanServiceMout.Out1Sen_CAM_BtimAdv_x_x!='0'"> P0014 凸轮轴位置 “B” - 正时过于提前或系统性能 (B1)</div>
+-->
+
+    </ul>
+</div>

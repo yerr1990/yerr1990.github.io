@@ -1,0 +1,26 @@
+<!--
+	作者：zyj1416357451@sina.com
+	时间：2015-12-01
+	描述：发动机控制系统  的  读取数据流
+-->
+
+<div class="header">
+     <div class="header1">小车匠诊断仪</div>
+     <div class="header2">汽车诊断/驾驶员门马达/读取数据流</div>
+</div>
+<div class="body">
+<!--	<div class="obdscan-bottom-bell"><div class="ac">加速踏板位置传感器1</div><span ng-bind="obdscanServiceMout.Out1Dia_APP_PP_Fir_x"></span>V</div>
+    <div class="obdscan-bottom-bell"><div class="ac">加速踏板位置传感器2</div><span ng-bind="obdscanServiceMout.Out1Dia_APP_PP_Sec_x"></span>V</div>
+    <div class="obdscan-bottom-bell"><div class="ac">计算的加速踏板位置</div><span ng-bind="obdscanServiceMout.Out1Dia_APP_x_x_x"></span>%</div>    
+    <div class="obdscan-bottom-bell"><div class="ac">发动机转速</div><span ng-bind="obdscanServiceMout.Out1Dia_x_RPM_x_x"></span>r/min</div>
+    <div class="obdscan-bottom-bell"><div class="ac">实际共轨压力</div><span ng-bind="obdscanServiceMout.Out1Dia_RailP_Real_x_x"></span>Mpa</div>
+    <div class="obdscan-bottom-bell"><div class="ac">额定共轨压力</div><span ng-bind="obdscanServiceMout.Out1Dia_RailP_Rated_x_x"></span>Mpa</div>
+    <div class="obdscan-bottom-bell"><div class="ac">进油计量比例阀脉冲占空比</div><span ng-bind="obdscanServiceMout.Out1Dia_rOilPropVlv_x_x_x"></span>%</div>
+    <div class="obdscan-bottom-bell"><div class="ac">进油计量比例阀电流</div><span ng-bind="obdscanServiceMout.Out1Dia_aOilPropVlv_x_x_x"></span>mA</div>
+	<div class="obdscan-bottom-bell"><div class="ac">主喷射持续时间</div><span ng-bind="obdscanServiceMout.Out1Dia_tFlInj_M_x_x"></span>us</div>
+    <div class="obdscan-bottom-bell"><div class="ac">喷油量</div><span ng-bind="obdscanServiceMout.Out1Dia_qFlInj_x_x_x"></span>mg/cy</div>
+    <div class="obdscan-bottom-bell"><div class="ac">蓄电池电压</div><span ng-bind="obdscanServiceMout.Out1Dia_vBatt_x_x_x"></span>V</div>-->
+    <div class="obdscan-bottom-bell"><div class="ac">驾驶员车门电动车窗自动开关信号</div><span ng-show="(obdscanServiceMout.Out1PW_DrDoor_Auto_SW_x==1)">ON</span><span ng-show="(obdscanServiceMout.Out1PW_DrDoor_Auto_SW_x==0)">OFF</span></div>
+    <div class="obdscan-bottom-bell"><div class="ac">驾驶员车门电动车窗手动上升开关信号</div><span ng-show="(obdscanServiceMout.Out1PW_DrDoor_Manul_Up_x==1)">ON</span><span ng-show="(obdscanServiceMout.Out1PW_DrDoor_Manul_Up_x==0)">OFF</span></div>
+    <div class="obdscan-bottom-bell"><div class="ac">驾驶员车门电动车窗手动下降开关信号</div><span ng-show="(obdscanServiceMout.Out1PW_DrDoor_Manul_Down_x==1)">ON</span><span ng-show="(obdscanServiceMout.Out1PW_DrDoor_Manul_Down_x==0)">OFF</span></div>
+</div>

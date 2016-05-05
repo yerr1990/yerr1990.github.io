@@ -1,0 +1,13 @@
+/**
+* @createDate   2015-08-4 下午05:28:38
+* @author       hao liqiang
+* @email        lq.hao@xiaochejiang.com
+* @version      1.0
+*万用表表身
+*/
+<div id="mask-svg" ng-controller="multimeterCtrl" ng-show="multimeterServiceMdata.SvgStatus">
+    <svg width='1024' height='708' version='1.1' xmlns='http://www.w3.org/2000/svg' id='svg'>
+        <path d='M440 100 C440 100 420 37 403 375' style='fill:none;stroke:#d83747;stroke-width:5' id='path_Red' ng-show="multimeterServiceMdata.SvgRedStatus" />
+        <path d='M282 100 C282 100 302 37 376 375 ' style='fill:none;stroke:#656261;stroke-width:5' id='path_black' ng-show="multimeterServiceMdata.SvgBlackStatus" />
+    </svg>
+</div>

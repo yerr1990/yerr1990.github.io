@@ -1,0 +1,44 @@
+<!--系统电路  的链接跳转 这里系统原理改系统电路，单词不改-->
+<div class="alert-body-choice" ng-show="showOrHide.alertLinkPrincipleInfo">
+	<p></p>
+	<!--<b>功能</b>-->
+	<p>
+		电动雨刮电路原理如图所示，将点火开关到ON档或ST，蓄电池为雨刷开关总成2#端子和喷洗器电动机2#提供12V电源。操作雨刷开关总成到相应档位后，可以实现以下功能：<br />
+		<!--<div class="sysPrinciple-front">-->
+			<span ng-click="goInclude('sysPrinciple-0');">单步刮水</span><br />
+			<span ng-click="goInclude('sysPrinciple-1');">雨刮关闭</span><br />
+			<span ng-click="goInclude('sysPrinciple-2');">间歇刮水</span><br />
+			<span ng-click="goInclude('sysPrinciple-3');">低速刮水</span><br />
+		<!--</div>-->
+
+		<!--<div class="sysPrinciple-behind">-->
+			<span ng-click="goInclude('sysPrinciple-4');">高速刮水</span><br />
+			<span ng-click="goInclude('sysPrinciple-5');">喷水</span><br />
+
+		<!--</div>-->
+	</p>
+</div>
+<!--系统组成  的链接跳转-->
+<div class="alert-body-choice" ng-show="showOrHide.alertLinkComponentsInfo">
+	<p>
+		电动雨刮系统主要由以下部件组成：
+	</p>
+		<span ng-click="goInclude('sysComposition-0');">刮水器开关总成</span><br />
+		<span ng-click="goInclude('sysComposition-1');">刮水电动机</span><br />
+		<span ng-click="goInclude('sysComposition-2');">喷水电动机</span><br />
+		<span ng-click="goInclude('sysComposition-3');">刮水器连杆机构</span>
+
+	<P>刮水片总成等</P>
+	<!--<img class="systemComposition" onclick="toBigImg();" src="images/systemComposition.jpg"/>-->
+</div>
+<!--元件检测  的链接跳转-->
+<div class="alert-body-choice" ng-show="showOrHide.alertLinkMeasuringInfo">
+	<P>元件测量：</P>
+	<span ng-click="goInclude('diagnosisMeasurements-0');">刮水器开关总成</span><br />
+	<span ng-click="goInclude('diagnosisMeasurements-1');">刮水器电动机</span><br />
+	<span ng-click="goInclude('diagnosisMeasurements-2');">喷水电动机和泵总成</span><br />
+	<!--<span ng-click="goInclude('diagnosisMeasurements-3');">驾驶员侧电动机</span><br />
+	<span ng-click="goInclude('diagnosisMeasurements-4');">右前侧车窗电动机</span><br />
+	<span ng-click="goInclude('diagnosisMeasurements-5');">左后侧车窗电动机-->
+</div>
+

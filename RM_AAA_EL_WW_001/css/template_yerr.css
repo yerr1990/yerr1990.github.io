@@ -1,0 +1,768 @@
+@charset "UTF-8";
+/*用于系统原理中的一些宏*/
+/*用于系统电路中的一些宏*/
+/*元件检测的热区公用样式*/
+/*系统原理和系统电路中元件检测 弹出框 公共样式*/
+/*元件检测 公共样式*/
+/*元件位置 公共样式*/
+/*失效模式 公共样式*/
+/*按钮的公共样式（进入故障和故障清除）*/
+/*彩色箭头公用方法*/
+/*定位*/
+/*系统电路图=========================================================================================================================================================*/
+.circuit-body {
+  height: 530px;
+  /* 电路svg样式*/
+  /*线路动画*/
+  /*弹出框热区*/
+  /*弹出框样式位置*/
+  /*弹出框-车上位置---------------------*/
+  /*弹出框-失效模式---------------------*/ }
+  .circuit-body span, .circuit-body div {
+    display: block; }
+  .circuit-body .svg_position {
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 30px;
+    left: 99px; }
+  .circuit-body .wiper-motor {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    top: 345px;
+    left: 679px;
+    background: url(../images/wiper_motor.png) no-repeat; }
+  .circuit-body .line-animate span {
+    position: absolute;
+    background: #ff0000; }
+  .circuit-body .line-animate .width {
+    height: 2px; }
+  .circuit-body .line-animate .height {
+    width: 2px; }
+  .circuit-body .line-animate span.line-1 {
+    height: 62px;
+    left: 840px;
+    bottom: 423px; }
+  .circuit-body .line-animate span.line-2 {
+    width: 132px;
+    right: 183px;
+    top: 45px; }
+  .circuit-body .line-animate span.line-3 {
+    height: 29px;
+    left: 708px;
+    top: 45px; }
+  .circuit-body .line-animate span.line-4 {
+    height: 19px;
+    left: 709px;
+    top: 100px; }
+  .circuit-body .line-animate span.line-5 {
+    width: 244px;
+    right: 313px;
+    top: 116px; }
+  .circuit-body .line-animate span.line-6 {
+    height: 26px;
+    left: 781px;
+    top: 46px; }
+  .circuit-body .line-animate span.line-7 {
+    height: 358px;
+    left: 781px;
+    top: 102px; }
+  .circuit-body .line-animate span.line-8 {
+    width: 244px;
+    right: 241px;
+    top: 460px; }
+  .circuit-body .line-animate span.line-9 {
+    height: 28px;
+    left: 539px;
+    top: 433px; }
+  .circuit-body .circuit-main-switch {
+    position: absolute;
+    width: 155px;
+    height: 311px;
+    top: 122px;
+    left: 145px; }
+  .circuit-body .circuit-wiper-motor {
+    position: absolute;
+    width: 60px;
+    height: 70px;
+    top: 348px;
+    left: 679px; }
+  .circuit-body .circuit-spray-motor {
+    position: absolute;
+    width: 50px;
+    height: 69px;
+    top: 386px;
+    left: 523px; }
+  .circuit-body .circuit-mainswitch-alert {
+    width: 135px;
+    height: 145px;
+    position: absolute;
+    left: 237px;
+    top: 183px;
+    color: #000;
+    background: #e1e1e1;
+    border: 1px solid black; }
+  .circuit-body .circuit-wiperMotor-alert {
+    width: 135px;
+    height: 145px;
+    position: absolute;
+    left: 525px;
+    top: 342px;
+    color: #000;
+    background: #e1e1e1;
+    border: 1px solid black; }
+  .circuit-body .circuit-sprayMotor-alert {
+    width: 135px;
+    height: 145px;
+    position: absolute;
+    left: 300px;
+    top: 340px;
+    color: #000;
+    background: #e1e1e1;
+    border: 1px solid black; }
+  .circuit-body .hot-alert-title {
+    position: static !important;
+    display: block;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center; }
+  .circuit-body .hot-alert-body {
+    width: 100%; }
+    .circuit-body .hot-alert-body span {
+      position: static; }
+    .circuit-body .hot-alert-body button {
+      display: block;
+      width: 73%;
+      height: 27px;
+      margin: 8px auto;
+      background: #f1a703;
+      color: #FFFFFF;
+      text-align: center; }
+      .circuit-body .hot-alert-body button:hover {
+        background: #1a1a1a; }
+    .circuit-body .hot-alert-body button.active {
+      background: #1a1a1a; }
+    .circuit-body .hot-alert-body button.disable {
+      background: #7e7e7e;
+      -ms-text-shadow: 0px 0px 0px transparent;
+      text-shadow: 0px 0px 0px transparent; }
+      .circuit-body .hot-alert-body button.disable:hover {
+        background: #7e7e7e; }
+  .circuit-body .placeImg {
+    background: #FFFFFF;
+    width: 400px;
+    height: 310px;
+    min-height: 310px;
+    position: absolute;
+    left: 438px;
+    top: 31px;
+    border: 1px solid black; }
+    .circuit-body .placeImg img {
+      display: block;
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px; }
+  .circuit-body .failMode {
+    width: 375px;
+    height: 245px;
+    position: absolute;
+    left: 132px;
+    top: 75px;
+    background: #e1e1e1;
+    border: 1px solid black;
+    font: 12px "微软雅黑";
+    color: #000000; }
+    .circuit-body .failMode .fail-main {
+      width: 100%; }
+      .circuit-body .failMode .fail-main .fail-text {
+        width: 90%;
+        margin: 10px auto; }
+      .circuit-body .failMode .fail-main b {
+        text-indent: 18px;
+        font: bold 14px "微软雅黑";
+        line-height: 24px; }
+      .circuit-body .failMode .fail-main p {
+        text-indent: 18px;
+        line-height: 22px; }
+      .circuit-body .failMode .fail-main img.all {
+        display: inline-block;
+        float: left;
+        margin-right: 10px;
+        width: 100%; }
+      .circuit-body .failMode .fail-main img.half {
+        display: inline-block;
+        float: left;
+        margin-right: 10px;
+        width: 50%; }
+  .circuit-body a {
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background: url(../images/comm_icon/measureHot.png) no-repeat center; }
+  .circuit-body .circuit-multimeter-hot {
+    height: 530px;
+    position: absolute;
+    left: 0px;
+    top: 0px; }
+    a#multimeter-hot1 {
+      left: 457px;
+      top: 107px; }
+    a#multimeter-hot2 {
+      left: 457px;
+      top: 177px; }
+    a#multimeter-hot3 {
+      left: 457px;
+      top: 199px; }
+    a#multimeter-hot4 {
+      left: 457px;
+      top: 227px; }
+    a#multimeter-hot5 {
+      left: 457px;
+      top: 381px; }
+    a#multimeter-hot6 {
+      left: 336px;
+      top: 431px; }
+    a#multimeter-hot7 {
+      left: 610px;
+      top: 316px; }
+    a#multimeter-hot8 {
+      left: 646px;
+      top: 316px; }
+    a#multimeter-hot9 {
+      left: 673px;
+      top: 316px; }
+    a#multimeter-hot10 {
+      left: 700px;
+      top: 316px; }
+    a#multimeter-hot11 {
+      left: 611px;
+      top: 414px; }
+    a#multimeter-hot12 {
+      left: 530px;
+      top: 393px; }
+    a#multimeter-hot13 {
+      left: 530px;
+      top: 431px; }
+    a#multimeter-hot14 {
+      left: 336px;
+      top: 468px; }
+    a#multimeter-hot15 {
+      left: 611px;
+      top: 468px; }
+    a#multimeter-hot16 {
+      left: 831px;
+      top: 468px; }
+    a#multimeter-hot17 {
+      left: 831px;
+      top: 301px; }
+  .circuit-body .component-multimeter-hot {
+    height: 530px;
+    position: absolute;
+    left: 0px;
+    top: 0px; }
+    a#multimeter-hot61 {
+      top: 280px;
+      left: 434px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center; }
+    a#multimeter-hot62 {
+      top: 280px;
+      left: 451px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center; }
+    a#multimeter-hot63 {
+      top: 280px;
+      left: 470px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center; }
+    a#multimeter-hot64 {
+      top: 280px;
+      left: 488px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center; }
+    a#multimeter-hot65 {
+      top: 280px;
+      left: 529px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center; }
+    a#multimeter-hot66 {
+      top: 280px;
+      left: 552px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center; }
+
+/*系统原理图=======================================================================================================================================================*/
+.principle-body {
+  height: 530px;
+  background: url(../images/bg_principle.png) no-repeat center/100%;
+  /*车上位置元件检测的热区*/
+  /*车上位置元件检测弹出框*/
+  /*弹出框-车上位置---------------------*/
+  /*弹出框-失效模式---------------------*/
+  /*原理测量热区*/ }
+  .principle-body img {
+    position: absolute; }
+  .principle-body span, .principle-body div {
+    display: block; }
+  .principle-body .scroll-con {
+    position: absolute;
+    width: 22px;
+    height: 10px;
+    top: 373px;
+    left: 826px;
+    overflow: hidden;
+    background: url(../images/principle_scroll.png) no-repeat; }
+  .principle-body .principle-scroll {
+    position: absolute;
+    width: 20px;
+    height: 8px;
+    top: 1px;
+    left: 1px;
+    background: url(../images/principle_scroll1.png) no-repeat; }
+  .principle-body .principle-water-spout {
+    position: absolute;
+    width: 10px;
+    height: 17px;
+    top: 135px;
+    left: 250px;
+    background: url(../images/principle_water_spout.png) no-repeat; }
+  .principle-body .principle-water1 {
+    display: none;
+    position: absolute;
+    width: 72px;
+    height: 146px;
+    top: 167px;
+    left: 195px;
+    background: url(../images/principle_water.png) no-repeat; }
+  .principle-body .principle-water2 {
+    display: none;
+    position: absolute;
+    width: 72px;
+    height: 146px;
+    top: 167px;
+    left: 350px;
+    background: url(../images/principle_water.png) no-repeat; }
+  .principle-body .principle-handle {
+    position: absolute;
+    width: 196px;
+    height: 196px;
+    top: 33px;
+    left: 693px;
+    background: url(../images/principle_handle.png) no-repeat; }
+  .principle-body .principle-motor {
+    position: absolute;
+    width: 51px;
+    height: 51px;
+    top: 390px;
+    left: 812px;
+    background: url(../images/principle_motor.png) no-repeat; }
+  .principle-body .principle-motor1 {
+    position: absolute;
+    width: 68px;
+    height: 69px;
+    top: 381px;
+    left: 804px;
+    background: url(../images/principle_motor1.png) no-repeat; }
+  .principle-body .principle-motor2 {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    top: 382px;
+    left: 826px;
+    background: url(../images/principle_motor2.png) no-repeat; }
+  .principle-body .principle-wiper .left-wiper {
+    position: absolute;
+    width: 189px;
+    height: 211px;
+    top: 201px;
+    left: 190px;
+    transform: rotate(-50deg);
+    -ms-transform: rotate(-50deg);
+    background: url(../images/principle_left_wiper.png) no-repeat; }
+  .principle-body .principle-wiper .red {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: 331px;
+    left: 311px;
+    z-index: 10;
+    background: red; }
+  .principle-body .principle-wiper .red1 {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    top: 331px;
+    left: 392px;
+    z-index: 10;
+    background: red; }
+  .principle-body .principle-wiper .left-lever {
+    position: absolute;
+    width: 170px;
+    height: 8px;
+    top: 327px;
+    left: 309px;
+    transform: rotate(0deg);
+    background: url(../images/principle_left_lever.png) no-repeat; }
+  .principle-body .principle-wiper .center-motor {
+    position: absolute;
+    width: 62px;
+    height: 62px;
+    top: 300px;
+    left: 334px;
+    background: url(../images/principle_center_motor.png) no-repeat; }
+  .principle-body .principle-wiper .right-wiper {
+    position: absolute;
+    width: 189px;
+    height: 211px;
+    top: 201px;
+    left: 352px;
+    transform: rotate(-50deg);
+    -ms-transform: rotate(-50deg);
+    background: url(../images/principle_right_wiper.png) no-repeat; }
+  .principle-body .principle-wiper .right-lever {
+    position: absolute;
+    width: 168px;
+    height: 8px;
+    top: 327px;
+    left: 309px;
+    transform: rotate(0deg);
+    background: url(../images/principle_right_lever.png) no-repeat; }
+  .principle-body .line .line-1-1 {
+    position: absolute;
+    width: 2px;
+    height: 183px;
+    top: 145px;
+    left: 834px; }
+  .principle-body .line .line-1-2 {
+    position: absolute;
+    width: 2.5px;
+    height: 129px;
+    top: 149px;
+    left: 814.5px; }
+  .principle-body .line .line-1-3 {
+    position: absolute;
+    width: 143px;
+    height: 2px;
+    top: 276px;
+    left: 674px; }
+  .principle-body .principle-main-switch {
+    position: absolute;
+    width: 115px;
+    height: 71px;
+    top: 106px;
+    left: 785px; }
+  .principle-body .principle-wiper-motor {
+    position: absolute;
+    width: 190px;
+    height: 142px;
+    top: 317px;
+    left: 693px; }
+  .principle-body .principle-spray-motor {
+    position: absolute;
+    width: 194px;
+    height: 75px;
+    top: 241px;
+    left: 565px; }
+  .principle-body .principle-mainswitch-alert {
+    width: 135px;
+    height: 145px;
+    position: absolute;
+    left: 675px;
+    top: 38px;
+    color: #000;
+    background: #e1e1e1;
+    border: 1px solid black; }
+  .principle-body .principle-wiperMotor-alert {
+    width: 135px;
+    height: 145px;
+    position: absolute;
+    left: 534px;
+    top: 322px;
+    color: #000;
+    background: #e1e1e1;
+    border: 1px solid black; }
+  .principle-body .principle-sprayMotor-alert {
+    width: 135px;
+    height: 145px;
+    position: absolute;
+    left: 732px;
+    top: 184px;
+    color: #000;
+    background: #e1e1e1;
+    border: 1px solid black; }
+  .principle-body .hot-alert-title {
+    position: static !important;
+    display: block;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center; }
+  .principle-body .hot-alert-body {
+    width: 100%; }
+    .principle-body .hot-alert-body span {
+      position: static; }
+    .principle-body .hot-alert-body button {
+      display: block;
+      width: 73%;
+      height: 27px;
+      margin: 8px auto;
+      background: #f1a703;
+      color: #FFFFFF;
+      text-align: center; }
+      .principle-body .hot-alert-body button:hover {
+        background: #1a1a1a; }
+    .principle-body .hot-alert-body button.active {
+      background: #1a1a1a; }
+    .principle-body .hot-alert-body button.disable {
+      background: #7e7e7e;
+      -ms-text-shadow: 0px 0px 0px transparent;
+      text-shadow: 0px 0px 0px transparent; }
+      .principle-body .hot-alert-body button.disable:hover {
+        background: #7e7e7e; }
+  .principle-body .placeImg {
+    background: #FFFFFF;
+    width: 400px;
+    height: 310px;
+    min-height: 310px;
+    position: absolute;
+    left: 136px;
+    top: 58px;
+    border: 1px solid black; }
+    .principle-body .placeImg img {
+      display: block;
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px; }
+  .principle-body .failMode {
+    width: 375px;
+    height: 245px;
+    position: absolute;
+    left: 559px;
+    top: 75px;
+    background: #e1e1e1;
+    border: 1px solid black;
+    font: 12px "微软雅黑";
+    color: #000000; }
+    .principle-body .failMode .fail-main {
+      width: 100%; }
+      .principle-body .failMode .fail-main .fail-text {
+        width: 90%;
+        margin: 10px auto; }
+      .principle-body .failMode .fail-main b {
+        text-indent: 18px;
+        font: bold 14px "微软雅黑";
+        line-height: 24px; }
+      .principle-body .failMode .fail-main p {
+        text-indent: 18px;
+        line-height: 22px; }
+      .principle-body .failMode .fail-main img.all {
+        display: inline-block;
+        float: left;
+        margin-right: 10px;
+        width: 100%; }
+      .principle-body .failMode .fail-main img.half {
+        display: inline-block;
+        float: left;
+        margin-right: 10px;
+        width: 50%; }
+  .principle-body a {
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background: url(../images/comm_icon/measureHot.png) no-repeat center; }
+  .principle-body .component-multimeter-hot {
+    height: 530px;
+    position: absolute;
+    left: 0px;
+    top: 0px; }
+    a#multimeter-hot51 {
+      top: 280px;
+      left: 434px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center; }
+    a#multimeter-hot52 {
+      top: 280px;
+      left: 451px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center; }
+    a#multimeter-hot53 {
+      top: 280px;
+      left: 470px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center; }
+    a#multimeter-hot54 {
+      top: 280px;
+      left: 488px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center; }
+    a#multimeter-hot55 {
+      top: 280px;
+      left: 529px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center; }
+    a#multimeter-hot56 {
+      top: 280px;
+      left: 552px;
+      background: url(../images/comm_icon/measureHot1.png) no-repeat center; }
+
+/*主界面的按钮=======================================================================================================================================================*/
+/*弹出框-元件检测---------------------*/
+.component-alert-component-1 {
+  width: 280px;
+  height: 265px;
+  position: absolute;
+  left: 386px;
+  top: 67px;
+  border: 1px solid black;
+  background: #FFFFFF url(../images/component_alert_component_1.png) no-repeat bottom/100%; }
+  .component-alert-component-1 .component-handle {
+    position: absolute;
+    width: 200px;
+    height: 64px;
+    top: 45px;
+    left: 12px;
+    background: url(../images/component_handle.png) no-repeat center/100%; }
+  .component-alert-component-1 .test-btn {
+    background: url(../images/btn_normal.png) no-repeat; }
+    .component-alert-component-1 .test-btn img {
+      width: 32px;
+      height: 20px; }
+  .component-alert-component-1 .btn-active {
+    background: url(../images/btn_active.png) no-repeat; }
+  .component-alert-component-1 .mist1 {
+    position: absolute;
+    width: 32px;
+    height: 20px;
+    top: 18px;
+    left: 223px; }
+  .component-alert-component-1 .off1 {
+    position: absolute;
+    width: 32px;
+    height: 20px;
+    top: 40px;
+    left: 223px; }
+  .component-alert-component-1 .int1 {
+    position: absolute;
+    width: 32px;
+    height: 20px;
+    top: 62px;
+    left: 223px; }
+  .component-alert-component-1 .lo1 {
+    position: absolute;
+    width: 32px;
+    height: 20px;
+    top: 84px;
+    left: 223px; }
+  .component-alert-component-1 .hi1 {
+    position: absolute;
+    width: 32px;
+    height: 20px;
+    top: 106px;
+    left: 223px; }
+  .component-alert-component-1 .spray1 {
+    position: absolute;
+    width: 32px;
+    height: 20px;
+    top: 128px;
+    left: 223px; }
+
+.component-alert-component-2 {
+  width: 280px;
+  height: 265px;
+  position: absolute;
+  left: 205px;
+  top: 105px;
+  border: 1px solid black;
+  background: #FFFFFF url(../images/component_alert_component_2.png) no-repeat bottom/100%; }
+
+.component-alert-component-3 {
+  width: 280px;
+  height: 265px;
+  position: absolute;
+  left: 476px;
+  top: 99px;
+  border: 1px solid black;
+  background: #FFFFFF url(../images/component_alert_component_3.png) no-repeat bottom/100%; }
+
+.component-alert-component-4 {
+  width: 280px;
+  height: 265px;
+  position: absolute;
+  left: 180px;
+  top: 200px;
+  border: 1px solid black;
+  background: #FFFFFF url(../images/component_alert_component_4.png) no-repeat bottom/100%; }
+
+.component-alert-component-5 {
+  width: 280px;
+  height: 265px;
+  position: absolute;
+  left: 180px;
+  top: 200px;
+  border: 1px solid black;
+  background: #FFFFFF url(../images/component_alert_component_5.png) no-repeat bottom/100%; }
+
+.component-alert-component-6 {
+  width: 280px;
+  height: 265px;
+  position: absolute;
+  left: 325px;
+  top: 110px;
+  border: 1px solid black;
+  background: #FFFFFF url(../images/component_alert_component_6.png) no-repeat bottom/100%; }
+
+/*index页面==================================================================================================*/
+.wiper-btn .wiper-handle {
+  position: absolute;
+  width: 399px;
+  height: 67px;
+  top: 38px;
+  left: -186px;
+  background: url(../images/wiper_handle.png) no-repeat; }
+.wiper-btn .wiper-cover {
+  position: absolute;
+  width: 23px;
+  height: 76px;
+  top: 35px;
+  left: 10px;
+  background: url(../images/wiper_cover.png) no-repeat; }
+.wiper-btn .handle-btn {
+  background: url(../images/btn_normal.png) no-repeat; }
+  .wiper-btn .handle-btn img {
+    width: 32px;
+    height: 20px; }
+.wiper-btn .btn-active {
+  background: url(../images/btn_active.png) no-repeat; }
+.wiper-btn .mist {
+  position: absolute;
+  width: 32px;
+  height: 20px;
+  top: 20px;
+  left: 223px; }
+.wiper-btn .off {
+  position: absolute;
+  width: 32px;
+  height: 20px;
+  top: 42px;
+  left: 223px; }
+.wiper-btn .int {
+  position: absolute;
+  width: 32px;
+  height: 20px;
+  top: 64px;
+  left: 223px; }
+.wiper-btn .lo {
+  position: absolute;
+  width: 32px;
+  height: 20px;
+  top: 86px;
+  left: 223px; }
+.wiper-btn .hi {
+  position: absolute;
+  width: 32px;
+  height: 20px;
+  top: 108px;
+  left: 223px; }
+.wiper-btn .spray {
+  position: absolute;
+  width: 32px;
+  height: 20px;
+  top: 130px;
+  left: 223px; }
+
+/*# sourceMappingURL=template_yerr.css.map */

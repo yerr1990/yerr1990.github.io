@@ -1,0 +1,242 @@
+@charset "utf-8";
+
+
+/*收缩按钮--------------------------------*/
+.switch-meter .switch {
+    width: 75px;
+    height: 75px;
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+    background: url(../images/switch_base.png) no-repeat center/100%;
+}
+
+.switch-meter .key {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 75px;
+    height: 75px;
+    background: url(../images/switch_key.png) no-repeat center/100%;
+}
+
+/*展开面板--------------------------------*/
+.switch-meter .meter {
+    width: 417px;
+    height: 156px;
+    position: absolute;
+    left: 602px;
+    top: 420px;
+    background: url(../images/meter.png) no-repeat center/100%;
+}
+
+.switch-meter .meter .switch {
+    right: 2px;
+    bottom: 78px;
+}
+
+/*点火开关热区样式*/
+.switch-meter .meter .switch span {
+    display: block;
+    background: red;
+    opacity: 0;
+}
+
+.switch-meter .key-lock {
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    left: 0px;
+    top: 18px;
+    z-index: 2;
+}
+
+.switch-meter .key-acc {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    left: 14px;
+    top: 1px;
+    z-index: 2;
+}
+
+.switch-meter .key-on {
+    width: 23px;
+    height: 23px;
+    position: absolute;
+    left: 35px;
+    top: 0px;
+    z-index: 2;
+}
+
+.switch-meter .key-start {
+    width: 20px;
+    height: 30px;
+    position: absolute;
+    right: 0px;
+    top: 13px;
+    z-index: 2;
+}
+
+/*关闭按钮*/
+.switch-meter .meter .close {
+    right: -5px;
+    top: -5px;
+    width:20px;
+    height: 20px;
+}
+
+/*踏板控制*/
+.pedal {
+    width: 79px;
+    height: 76px;
+    position: absolute;
+    right: -5px;
+    bottom: 4px;
+}
+
+.pedal span {
+    display: block;
+    position: absolute;
+    text-align: center;
+    font: 12px "微软雅黑";
+    color: black;
+}
+
+.pedal .pedal-brake {
+    width: 33px;
+    height: 22px;
+    left: 0px;
+    top: 0px;
+    margin-top: 4px;
+    background: url(../images/pedal_brake.png) no-repeat center;
+}
+
+.pedal .pedal-accelerator {
+    width: 22px;
+    height: 34px;
+    right: 11px;
+    top: 0px;
+    background: url(../images/pedal_accelerator.png) no-repeat center;
+}
+
+/*指针*/
+.pointer {
+    width: 350px;
+    height: 157px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 1;
+}
+.pointer div{position: absolute;}
+.pointer img {
+    display: block;
+    position: absolute;
+}
+
+.pointer-water {
+    width: 14px;
+    height: 34px;
+    left: 28px;
+    top: 103px;
+    background: url(../images/pointer_water.png) no-repeat;
+}
+
+.pointer-roate {
+    width: 92px;
+    height: 72px;
+    left: 61px;
+    top: 50px;
+    background: url(../images/pointer_roate.png) no-repeat;
+}
+
+.pointer-speed {
+    width: 74px;
+    height: 90px;
+    left: 195px;
+    top: 42px;
+    background: url(../images/pointer_speed.png) no-repeat;
+}
+
+.pointer-oil {
+    width: 16px;
+    height: 37px;
+    left: 303px;
+    top: 101px;
+    background: url(../images/pointer_oil.png) no-repeat ;
+}
+
+/*指示灯*/
+.light {
+    width: 340px;
+    height: 151px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+
+.light img {
+    display: block;
+    /*width: 14px;*/
+    position: absolute;
+}
+
+.light .engineOil {
+    left: 8px;
+    top: 75px;
+
+   /* background: url(../images/2.png) no-repeat center/10%;*/
+}
+
+.light  .abs {
+    left: 15px;
+    top: 40px;
+
+   /* background: url(../images/drive_panel/3.png) no-repeat center/10%;*/
+}
+
+.light .engine {
+    left: 51px;
+    top: 10px;
+
+   /* background: url(../images/1.png) no-repeat;*/
+}
+
+.light  .airbag {
+    left: 161px;
+    top: 15px;
+
+   /* background: url(../images/4.png) no-repeat;*/
+}
+
+.light  .seatBelt {
+    left: 306px;
+    top: 67px;
+
+    /*background: url(../images/7.png) no-repeat;*/
+}
+
+.light  .parking {
+    left: 306px;
+    top: 37px;
+
+   /* background: url(../images/5.png) no-repeat;*/
+}
+
+.light  .battery {
+    left: 276px;
+    top: 10px;
+
+   /* background: url(../images/6.png) no-repeat;*/
+}
+
+.light  .monitor {
+    width: 187px;
+    left: 77px;
+    top: 89px;
+
+    /*ackground: url(../images/monitor.png) no-repeat;*/
+}
+
+

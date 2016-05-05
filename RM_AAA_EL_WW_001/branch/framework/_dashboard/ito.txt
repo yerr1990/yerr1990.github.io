@@ -1,0 +1,9 @@
+在所用页面引入
+<link rel="stylesheet" href="framework/dashboard/css/template.css" /><!--仪表的样式-->
+<script type="text/javascript" src="framework/dashboard/js/controller.js" ></script><!--仪表的controller-->
+<script type="text/javascript" src="framework/dashboard.js/Service.js" ></script><!--仪表的Service-->
+
+
+在主模块依赖注入dashboardModule模块
+
+<dashboard></dashboard>

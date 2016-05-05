@@ -1,0 +1,1156 @@
+@charset "UTF-8";
+/*用于系统原理中的一些宏*/
+/*用于系统电路中的一些宏*/
+/*元件检测的热区公用样式*/
+/*系统原理和系统电路中元件检测 弹出框 公共样式*/
+/*元件检测 公共样式*/
+/*元件位置 公共样式*/
+/*失效模式 公共样式*/
+/*按钮的公共样式（进入故障和故障清除）*/
+/*彩色箭头公用方法*/
+/*定位*/
+/*系统电路图=========================================================================================================================================================*/
+.circuit-body {
+  height: 530px;
+  background: url(../images/bg_circuit.png) no-repeat center/100%;
+  /*线路开关*/ }
+  .circuit-body span, .circuit-body div {
+    display: block; }
+  .circuit-body .line-switch span {
+    width: 2px;
+    position: absolute;
+    background-image: url(../images/sprite_circuit.png);
+    background-repeat: no-repeat;
+    background-position: 0px 24px;
+    -webkit-transform: rotate(-20deg);
+    -moz-transform: rotate(-20deg);
+    -ms-transform: rotate(-20deg); }
+  .circuit-body .line-switch span.circuit-switch-1 {
+    height: 48px;
+    left: 281px;
+    top: 140px; }
+  .circuit-body .line-switch span.circuit-switch-2 {
+    height: 42px;
+    left: 385px;
+    top: 99px; }
+  .circuit-body .line-animate-relay span.line-8 {
+    height: 80px;
+    left: 364px;
+    top: 143px;
+    background: #817325; }
+  .circuit-body .line-animate-equeous span.line-9 {
+    height: 54px;
+    left: 490px;
+    top: 168px;
+    background: #0070c0; }
+  .circuit-body .line-animate-inOli span {
+    height: 77px;
+    top: 145px;
+    background: #817325; }
+  .circuit-body .line-animate-inOli span.line-10 {
+    left: 639px; }
+  .circuit-body .line-animate-inOli span.line-11 {
+    left: 667px;
+    background: #7030a0; }
+  .circuit-body .line-animate-commRail span {
+    height: 89px;
+    top: 133px; }
+  .circuit-body .line-animate-commRail span.line-12 {
+    left: 743px;
+    background: #817325; }
+  .circuit-body .line-animate-commRail span.line-13 {
+    left: 784px;
+    background: #1ad041; }
+  .circuit-body .line-animate-commRail span.line-14 {
+    left: 830px;
+    background: #f6135f; }
+  .circuit-body .line-animate-accelerator span {
+    height: 86px;
+    top: 336px;
+    background: #817325; }
+  .circuit-body .line-animate-accelerator span.line-15 {
+    left: 357px;
+    background: #f6135f; }
+  .circuit-body .line-animate-accelerator span.line-16 {
+    left: 381px;
+    background: #1ad041; }
+  .circuit-body .line-animate-accelerator span.line-17 {
+    left: 404px;
+    background: #817325; }
+  .circuit-body .line-animate-accelerator span.line-18 {
+    left: 435px;
+    background: #f6135f; }
+  .circuit-body .line-animate-accelerator span.line-19 {
+    left: 458px;
+    background: #0070c0; }
+  .circuit-body .line-animate-accelerator span.line-20 {
+    left: 482px;
+    background: #817325; }
+  .circuit-body .line-animate-injector span {
+    height: 70px;
+    top: 336px; }
+  .circuit-body .line-animate-injector span.line-21 {
+    left: 571px;
+    background: #fff100; }
+  .circuit-body .line-animate-injector span.line-22 {
+    left: 600px;
+    background: #ff0000; }
+  .circuit-body .line-animate-injector span.line-23 {
+    left: 647px;
+    background: #fff100; }
+  .circuit-body .line-animate-injector span.line-24 {
+    left: 676px;
+    background: #ff0000; }
+  .circuit-body .line-animate-injector span.line-25 {
+    left: 723px;
+    background: #fff100; }
+  .circuit-body .line-animate-injector span.line-26 {
+    left: 752px;
+    background: #ff0000; }
+  .circuit-body .line-animate-injector span.line-27 {
+    left: 798px;
+    background: #fff100; }
+  .circuit-body .line-animate-injector span.line-28 {
+    left: 827px;
+    background: #ff0000; }
+
+/*系统电路元件----------------------------------------------------------------------------------------*/
+/*进油计量比例阀*/
+.circuit-intoOil {
+  width: 45px;
+  height: 27px;
+  left: 632px;
+  top: 115px;
+  position: absolute;
+  background: #000000;
+  opacity: 0; }
+.circuit-intoOil-alert {
+  width: 135px;
+  height: 145px;
+  position: absolute;
+  left: 584px;
+  top: 151px;
+  color: #000000;
+  background: #e1e1e1;
+  border: 1px solid black; }
+  .hot-alert-title {
+    position: static !important;
+    display: block;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center; }
+  .hot-alert-body {
+    width: 100%; }
+    .hot-alert-body span {
+      position: static; }
+    .hot-alert-body button {
+      display: block;
+      width: 73%;
+      height: 27px;
+      margin: 8px auto;
+      background: #f1a703;
+      color: #FFFFFF;
+      text-align: center; }
+      .hot-alert-body button:hover {
+        background: #1a1a1a; }
+      .hot-alert-body button.active {
+        background: #1a1a1a; }
+      .hot-alert-body button.disable {
+        background: #7e7e7e;
+        -ms-text-shadow: 0px 0px 0px transparent;
+        text-shadow: 0px 0px 0px transparent; }
+        .hot-alert-body button.disable:hover {
+          background: #7e7e7e; }
+/*加速踏板位置传感器*/
+.circuit-acceleratorPedal {
+  width: 136px;
+  height: 51px;
+  left: 352px;
+  top: 424px;
+  position: absolute;
+  background: #000000;
+  opacity: 0; }
+.circuit-acceleratorPedal-alert {
+  width: 135px;
+  height: 145px;
+  position: absolute;
+  left: 454px;
+  top: 335px;
+  color: #000000;
+  background: #e1e1e1;
+  border: 1px solid black; }
+  .hot-alert-title {
+    position: static !important;
+    display: block;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center; }
+  .hot-alert-body {
+    width: 100%; }
+    .hot-alert-body span {
+      position: static; }
+    .hot-alert-body button {
+      display: block;
+      width: 73%;
+      height: 27px;
+      margin: 8px auto;
+      background: #f1a703;
+      color: #FFFFFF;
+      text-align: center; }
+      .hot-alert-body button:hover {
+        background: #1a1a1a; }
+      .hot-alert-body button.active {
+        background: #1a1a1a; }
+      .hot-alert-body button.disable {
+        background: #7e7e7e;
+        -ms-text-shadow: 0px 0px 0px transparent;
+        text-shadow: 0px 0px 0px transparent; }
+        .hot-alert-body button.disable:hover {
+          background: #7e7e7e; }
+/*共轨压力传感器*/
+.circuit-railSensor {
+  width: 103px;
+  height: 26px;
+  left: 734px;
+  top: 104px;
+  position: absolute;
+  background: #000000;
+  opacity: 0; }
+.circuit-railSensor-alert {
+  width: 135px;
+  height: 145px;
+  position: absolute;
+  left: 723px;
+  top: 147px;
+  color: #000000;
+  background: #e1e1e1;
+  border: 1px solid black; }
+  .hot-alert-title {
+    position: static !important;
+    display: block;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center; }
+  .hot-alert-body {
+    width: 100%; }
+    .hot-alert-body span {
+      position: static; }
+    .hot-alert-body button {
+      display: block;
+      width: 73%;
+      height: 27px;
+      margin: 8px auto;
+      background: #f1a703;
+      color: #FFFFFF;
+      text-align: center; }
+      .hot-alert-body button:hover {
+        background: #1a1a1a; }
+      .hot-alert-body button.active {
+        background: #1a1a1a; }
+      .hot-alert-body button.disable {
+        background: #7e7e7e;
+        -ms-text-shadow: 0px 0px 0px transparent;
+        text-shadow: 0px 0px 0px transparent; }
+        .hot-alert-body button.disable:hover {
+          background: #7e7e7e; }
+/*喷油器*/
+.circuit-injector {
+  width: 48px;
+  height: 23px;
+  left: 564px;
+  top: 408px;
+  position: absolute;
+  background: #000000;
+  opacity: 0; }
+.circuit-injector-copy-1 {
+  width: 48px;
+  height: 23px;
+  left: 639px;
+  top: 408px;
+  position: absolute;
+  background: #000000;
+  opacity: 0; }
+.circuit-injector-copy-2 {
+  width: 48px;
+  height: 23px;
+  left: 715px;
+  top: 408px;
+  position: absolute;
+  background: #000000;
+  opacity: 0; }
+.circuit-injector-copy-3 {
+  width: 48px;
+  height: 23px;
+  left: 790px;
+  top: 408px;
+  position: absolute;
+  background: #000000;
+  opacity: 0; }
+.circuit-injector-alert {
+  width: 135px;
+  height: 145px;
+  position: absolute;
+  left: 629px;
+  top: 250px;
+  color: #000000;
+  background: #e1e1e1;
+  border: 1px solid black; }
+  .hot-alert-title {
+    position: static !important;
+    display: block;
+    width: 100%;
+    height: 25px;
+    line-height: 25px;
+    text-align: center; }
+  .hot-alert-body {
+    width: 100%; }
+    .hot-alert-body span {
+      position: static; }
+    .hot-alert-body button {
+      display: block;
+      width: 73%;
+      height: 27px;
+      margin: 8px auto;
+      background: #f1a703;
+      color: #FFFFFF;
+      text-align: center; }
+      .hot-alert-body button:hover {
+        background: #1a1a1a; }
+      .hot-alert-body button.active {
+        background: #1a1a1a; }
+      .hot-alert-body button.disable {
+        background: #7e7e7e;
+        -ms-text-shadow: 0px 0px 0px transparent;
+        text-shadow: 0px 0px 0px transparent; }
+        .hot-alert-body button.disable:hover {
+          background: #7e7e7e; }
+/*系统原理图=======================================================================================================================================================*/
+.principle-body {
+  height: 530px;
+  background: url(../images/bg_principle.png) no-repeat center/100%;
+  /*核心动画，发动机缸运动*/
+  /*高压油泵齿轮*/
+  /*油路*/
+  /*三角箭头*/
+  /*彩色箭头*/
+  /*元件检测===============================================*/
+  /*高压油泵*/
+  /*进油计量比例阀*/
+  /*加速踏板位置传感器*/
+  /*燃油共轨*/
+  /*共轨压力传感器*/
+  /*喷油器*/
+  /*弹出框-元件检测---------------------*/
+  /*弹出框-车上位置---------------------*/
+  /*弹出框-失效模式---------------------*/ }
+  .principle-body img {
+    position: absolute; }
+  .principle-body span, .principle-body div {
+    display: block; }
+  .principle-body-engine {
+    width: 160px;
+    height: 312px;
+    position: absolute;
+    right: 325px;
+    top: 150px; }
+    .principle-body-engine div, .principle-body-engine span {
+      position: absolute; }
+    .principle-body-engine div.left-outValve {
+      width: 74px;
+      height: 98px;
+      right: 73px;
+      top: 35px; }
+      .principle-body-engine div.left-outValve img.engine-left-valve {
+        width: 45px;
+        left: 18px;
+        top: 28px; }
+      .principle-body-engine div.left-outValve span.engine-left-cover {
+        width: 53px;
+        height: 67px;
+        left: 0px;
+        top: 4px;
+        background-image: url(../images/sprite_principle.png);
+        background-repeat: no-repeat;
+        background-position: 0px 0px; }
+    .principle-body-engine div.right-inValve {
+      width: 65px;
+      height: 98px;
+      right: 20px;
+      top: 35px; }
+      .principle-body-engine div.right-inValve img.engine-right-valve {
+        width: 45px;
+        right: 12px;
+        top: 28px; }
+      .principle-body-engine div.right-inValve span.engine-right-camshaft {
+        width: 18px;
+        height: 14px;
+        right: 9px;
+        top: 20px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg);
+        background-image: url(../images/sprite_principle.png);
+        background-repeat: no-repeat;
+        background-position: 0px -101px; }
+    .principle-body-engine div.engine-vat {
+      width: 50px;
+      height: 146px;
+      left: 55px;
+      top: 130px; }
+      .principle-body-engine div.engine-vat span.engine-vat-pole {
+        width: 15px;
+        height: 138px;
+        left: 17px;
+        top: -45px;
+        background-image: url(../images/sprite_principle.png);
+        background-repeat: no-repeat;
+        background-position: -279px 63px;
+        -webkit-transform: rotate(0deg);
+        -moz-transform: rotate(0deg);
+        -ms-transform: rotate(0deg); }
+      .principle-body-engine div.engine-vat span.engine-vat-camshaft {
+        width: 50px;
+        height: 42px;
+        left: 0px;
+        top: 0px;
+        background-image: url(../images/sprite_principle.png);
+        background-repeat: no-repeat;
+        background-position: -91px 0px; }
+    .principle-body-engine div.engine-turbo {
+      width: 79px;
+      height: 79px;
+      left: 42px;
+      top: 205px;
+      background-image: url(../images/sprite_principle.png);
+      background-repeat: no-repeat;
+      background-position: -172px  0px; }
+    .principle-body-engine div.engine-gas {
+      width: 50px;
+      height: 50px;
+      border-radius: 20px 0px 0px 20px; }
+      .principle-body-engine div.engine-gas span.engine-gas-in {
+        width: 113px;
+        height: 58px;
+        left: 23px;
+        top: 108px;
+        background-image: url(../images/sprite_principle.png);
+        background-repeat: no-repeat;
+        background-position: -725px 1px; }
+      .principle-body-engine div.engine-gas span.engine-oil-spray {
+        width: 50px;
+        height: 42px;
+        left: 55px;
+        top: 124px;
+        background-image: url(../images/sprite_principle.png);
+        background-repeat: no-repeat;
+        background-position: -1030px  0px; }
+      .principle-body-engine div.engine-gas span.engine-gas-fire {
+        width: 50px;
+        height: 42px;
+        left: 55px;
+        top: 124px;
+        background-image: url(../images/sprite_principle.png);
+        background-repeat: no-repeat;
+        background-position: -642px  0px; }
+      .principle-body-engine div.engine-gas span.engine-gas-out {
+        width: 113px;
+        height: 58px;
+        left: 23px;
+        top: 108px;
+        background-image: url(../images/sprite_principle.png);
+        background-repeat: no-repeat;
+        background-position: -898px 0px; }
+  .principle-body-pump {
+    width: 14px;
+    height: 74px;
+    position: absolute;
+    left: 247px;
+    top: 110px;
+    border: 1px solid #000000;
+    overflow: hidden; }
+    .principle-body-pump span {
+      display: block;
+      width: 14px;
+      height: 150px;
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      background-image: url(../images/sprite_principle.png);
+      background-repeat: no-repeat;
+      background-position: -360px -1px; }
+  .principle-body-road div, .principle-body-road span {
+    position: absolute; }
+  .principle-body-road .oil-road {
+    position: relative;
+    height: 530px; }
+    .principle-body-road .oil-road .height {
+      width: 3px; }
+    .principle-body-road .oil-road .width {
+      height: 3px; }
+  .principle-body-road .high-oil span {
+    background: #ff0000;
+    border-radius: 3px; }
+  .principle-body-road .high-oil .oil-rail {
+    width: 174px;
+    height: 58px;
+    left: 447px;
+    top: 73px;
+    background-image: url(../images/sprite_principle.png);
+    background-repeat: no-repeat;
+    background-position: -432px -5px; }
+  .principle-body-road .high-oil .oil-road-1 {
+    height: 31px;
+    left: 320px;
+    bottom: 448px; }
+  .principle-body-road .high-oil .oil-road-2 {
+    width: 183px;
+    left: 321px;
+    bottom: 477.6px; }
+  .principle-body-road .high-oil .oil-road-3 {
+    height: 20px;
+    left: 502px;
+    top: 49px; }
+  .principle-body-road .high-oil .oil-road-4 {
+    height: 83px;
+    left: 604px;
+    top: 135px; }
+  .principle-body-road .return-oil span {
+    background: #f1a703;
+    border-radius: 3px; }
+  .principle-body-road .return-oil .oil-road-1 {
+    height: 11px;
+    left: 351px;
+    bottom: 412px; }
+  .principle-body-road .return-oil .oil-road-2 {
+    width: 55px;
+    left: 353px;
+    bottom: 421px; }
+  .principle-body-road .return-oil .oil-road-3 {
+    height: 310px;
+    left: 406px;
+    top: 109px; }
+  .principle-body-road .return-oil .oil-road-4 span {
+    width: 3px;
+    height: 0px;
+    right: -620px;
+    bottom: -178px; }
+  .principle-arrow-flow i {
+    display: block;
+    position: absolute;
+    width: 0px;
+    height: 0px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg); }
+  .principle-arrow-flow i.flow-arrow-1 {
+    left: 831px;
+    top: 255px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    border-bottom: 8px solid #ff0000; }
+  .principle-arrow-flow i.flow-arrow-2 {
+    left: 841px;
+    top: 255px;
+    border-bottom: 8px solid #1ad041; }
+  .principle-arrow-flow i.flow-arrow-3 {
+    left: 851px;
+    top: 255px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    border-bottom: 8px solid #ff0000; }
+  .principle-arrow-flow i.flow-arrow-4 {
+    left: 861px;
+    top: 255px;
+    border-bottom: 8px solid #1ad041; }
+  .principle-arrow-flow i.flow-arrow-5 {
+    left: 872px;
+    top: 255px;
+    border-bottom: 8px solid #1ad041; }
+  .principle-arrow-flow i.flow-arrow-6 {
+    left: 882px;
+    top: 255px;
+    border-bottom: 8px solid #1ad041; }
+  .principle-arrow-flow i.flow-arrow-7 {
+    left: 892px;
+    top: 255px;
+    border-bottom: 8px solid #1ad041; }
+  .principle-arrow-flow i.flow-arrow-8 {
+    left: 902px;
+    top: 255px;
+    border-bottom: 8px solid #1ad041; }
+  .principle-arrow-color span {
+    display: block;
+    position: absolute;
+    width: 12px;
+    height: 20px;
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg); }
+  .principle-arrow-color div {
+    position: absolute;
+    overflow: hidden; }
+  .principle-arrow-color div.color-arrow-1 {
+    width: 12px;
+    height: 177px;
+    top: 227px;
+    left: 376px; }
+    .principle-arrow-color div.color-arrow-1 span {
+      left: 0px;
+      top: 177px;
+      background-image: url(../images/sprite_principle.png);
+      background-repeat: no-repeat;
+      background-position: -109px -99px; }
+  .principle-arrow-color div.color-arrow-2 {
+    width: 37px;
+    height: 12px;
+    top: 223px;
+    left: 347px; }
+    .principle-arrow-color div.color-arrow-2 span {
+      left: 40px;
+      top: -4px;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      background-image: url(../images/sprite_principle.png);
+      background-repeat: no-repeat;
+      background-position: -109px -99px; }
+  .principle-arrow-color div.color-arrow-3 {
+    width: 12px;
+    height: 52px;
+    top: 162px;
+    left: 377px; }
+    .principle-arrow-color div.color-arrow-3 span {
+      left: 0px;
+      top: 52px;
+      background-image: url(../images/sprite_principle.png);
+      background-repeat: no-repeat;
+      background-position: -109px -99px; }
+  .principle-arrow-color div.color-arrow-4 {
+    width: 12px;
+    height: 40px;
+    top: 58px;
+    left: 327px; }
+    .principle-arrow-color div.color-arrow-4 span {
+      left: 0px;
+      top: 40px;
+      background-image: url(../images/sprite_principle.png);
+      background-repeat: no-repeat;
+      background-position: -73px -99px; }
+  .principle-arrow-color div.color-arrow-5 {
+    width: 165px;
+    height: 12px;
+    top: 55px;
+    left: 331px; }
+    .principle-arrow-color div.color-arrow-5 span {
+      left: -15px;
+      top: -4px;
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      background-image: url(../images/sprite_principle.png);
+      background-repeat: no-repeat;
+      background-position: -73px -99px; }
+  .principle-arrow-color div.color-arrow-6 {
+    width: 12px;
+    height: 78px;
+    top: 110px;
+    left: 587px; }
+    .principle-arrow-color div.color-arrow-6 span {
+      left: 0px;
+      top: -20px;
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      background-image: url(../images/sprite_principle.png);
+      background-repeat: no-repeat;
+      background-position: -73px -99px; }
+  .principle-arrow-color div.color-arrow-7 {
+    width: 162px;
+    height: 12px;
+    top: 151px;
+    left: 425px; }
+    .principle-arrow-color div.color-arrow-7 span {
+      left: 165px;
+      top: -4px;
+      -webkit-transform: rotate(-90deg);
+      -moz-transform: rotate(-90deg);
+      -ms-transform: rotate(-90deg);
+      background-image: url(../images/sprite_principle.png);
+      background-repeat: no-repeat;
+      background-position: -140px -99px; }
+  .principle-arrow-color div.color-arrow-8 {
+    width: 68px;
+    height: 12px;
+    top: 91px;
+    left: 354px; }
+    .principle-arrow-color div.color-arrow-8 span {
+      left: -15px;
+      top: -4px;
+      -webkit-transform: rotate(90deg);
+      -moz-transform: rotate(90deg);
+      -ms-transform: rotate(90deg);
+      background-image: url(../images/sprite_principle.png);
+      background-repeat: no-repeat;
+      background-position: -140px -99px; }
+  .principle-arrow-color div.color-arrow-9 {
+    width: 12px;
+    height: 298px;
+    top: 95px;
+    left: 413px; }
+    .principle-arrow-color div.color-arrow-9 span {
+      left: 0px;
+      top: -20px;
+      -webkit-transform: rotate(180deg);
+      -moz-transform: rotate(180deg);
+      -ms-transform: rotate(180deg);
+      background-image: url(../images/sprite_principle.png);
+      background-repeat: no-repeat;
+      background-position: -140px -99px; }
+  .principle-highPump {
+    width: 112px;
+    height: 94px;
+    left: 247px;
+    top: 103px;
+    position: absolute;
+    background: #000000;
+    opacity: 0; }
+  .principle-highPump-alert {
+    width: 135px;
+    height: 145px;
+    position: absolute;
+    left: 100px;
+    top: 28px;
+    color: #000000;
+    background: #e1e1e1;
+    border: 1px solid black; }
+    .hot-alert-title {
+      position: static !important;
+      display: block;
+      width: 100%;
+      height: 25px;
+      line-height: 25px;
+      text-align: center; }
+    .hot-alert-body {
+      width: 100%; }
+      .hot-alert-body span {
+        position: static; }
+      .hot-alert-body button {
+        display: block;
+        width: 73%;
+        height: 27px;
+        margin: 8px auto;
+        background: #f1a703;
+        color: #FFFFFF;
+        text-align: center; }
+        .hot-alert-body button:hover {
+          background: #1a1a1a; }
+        .hot-alert-body button.active {
+          background: #1a1a1a; }
+        .hot-alert-body button.disable {
+          background: #7e7e7e;
+          -ms-text-shadow: 0px 0px 0px transparent;
+          text-shadow: 0px 0px 0px transparent; }
+          .hot-alert-body button.disable:hover {
+            background: #7e7e7e; }
+  .principle-intoOil {
+    width: 20px;
+    height: 16px;
+    left: 295px;
+    top: 84px;
+    position: absolute;
+    background: #000000;
+    opacity: 0; }
+  .principle-intoOil-alert {
+    width: 135px;
+    height: 145px;
+    position: absolute;
+    left: 100px;
+    top: 30px;
+    color: #000000;
+    background: #e1e1e1;
+    border: 1px solid black; }
+    .hot-alert-title {
+      position: static !important;
+      display: block;
+      width: 100%;
+      height: 25px;
+      line-height: 25px;
+      text-align: center; }
+    .hot-alert-body {
+      width: 100%; }
+      .hot-alert-body span {
+        position: static; }
+      .hot-alert-body button {
+        display: block;
+        width: 73%;
+        height: 27px;
+        margin: 8px auto;
+        background: #f1a703;
+        color: #FFFFFF;
+        text-align: center; }
+        .hot-alert-body button:hover {
+          background: #1a1a1a; }
+        .hot-alert-body button.active {
+          background: #1a1a1a; }
+        .hot-alert-body button.disable {
+          background: #7e7e7e;
+          -ms-text-shadow: 0px 0px 0px transparent;
+          text-shadow: 0px 0px 0px transparent; }
+          .hot-alert-body button.disable:hover {
+            background: #7e7e7e; }
+  .principle-acceleratorPedal {
+    width: 80px;
+    height: 76px;
+    left: 738px;
+    top: 372px;
+    position: absolute;
+    background: #000000;
+    opacity: 0; }
+  .principle-acceleratorPedal-alert {
+    width: 135px;
+    height: 145px;
+    position: absolute;
+    left: 599px;
+    top: 315px;
+    color: #000000;
+    background: #e1e1e1;
+    border: 1px solid black; }
+    .hot-alert-title {
+      position: static !important;
+      display: block;
+      width: 100%;
+      height: 25px;
+      line-height: 25px;
+      text-align: center; }
+    .hot-alert-body {
+      width: 100%; }
+      .hot-alert-body span {
+        position: static; }
+      .hot-alert-body button {
+        display: block;
+        width: 73%;
+        height: 27px;
+        margin: 8px auto;
+        background: #f1a703;
+        color: #FFFFFF;
+        text-align: center; }
+        .hot-alert-body button:hover {
+          background: #1a1a1a; }
+        .hot-alert-body button.active {
+          background: #1a1a1a; }
+        .hot-alert-body button.disable {
+          background: #7e7e7e;
+          -ms-text-shadow: 0px 0px 0px transparent;
+          text-shadow: 0px 0px 0px transparent; }
+          .hot-alert-body button.disable:hover {
+            background: #7e7e7e; }
+  .principle-dieselRail {
+    width: 177px;
+    height: 25px;
+    left: 447px;
+    top: 88px;
+    position: absolute;
+    background: #000000;
+    opacity: 0; }
+  .principle-dieselRail-alert {
+    width: 135px;
+    height: 145px;
+    position: absolute;
+    left: 632px;
+    top: 35px;
+    color: #000000;
+    background: #e1e1e1;
+    border: 1px solid black; }
+    .hot-alert-title {
+      position: static !important;
+      display: block;
+      width: 100%;
+      height: 25px;
+      line-height: 25px;
+      text-align: center; }
+    .hot-alert-body {
+      width: 100%; }
+      .hot-alert-body span {
+        position: static; }
+      .hot-alert-body button {
+        display: block;
+        width: 73%;
+        height: 27px;
+        margin: 8px auto;
+        background: #f1a703;
+        color: #FFFFFF;
+        text-align: center; }
+        .hot-alert-body button:hover {
+          background: #1a1a1a; }
+        .hot-alert-body button.active {
+          background: #1a1a1a; }
+        .hot-alert-body button.disable {
+          background: #7e7e7e;
+          -ms-text-shadow: 0px 0px 0px transparent;
+          text-shadow: 0px 0px 0px transparent; }
+          .hot-alert-body button.disable:hover {
+            background: #7e7e7e; }
+  .principle-railSensor {
+    width: 23px;
+    height: 38px;
+    left: 523px;
+    top: 49px;
+    position: absolute;
+    background: #000000;
+    opacity: 0; }
+  .principle-railSensor-alert {
+    width: 135px;
+    height: 145px;
+    position: absolute;
+    left: 632px;
+    top: 15px;
+    color: #000000;
+    background: #e1e1e1;
+    border: 1px solid black; }
+    .hot-alert-title {
+      position: static !important;
+      display: block;
+      width: 100%;
+      height: 25px;
+      line-height: 25px;
+      text-align: center; }
+    .hot-alert-body {
+      width: 100%; }
+      .hot-alert-body span {
+        position: static; }
+      .hot-alert-body button {
+        display: block;
+        width: 73%;
+        height: 27px;
+        margin: 8px auto;
+        background: #f1a703;
+        color: #FFFFFF;
+        text-align: center; }
+        .hot-alert-body button:hover {
+          background: #1a1a1a; }
+        .hot-alert-body button.active {
+          background: #1a1a1a; }
+        .hot-alert-body button.disable {
+          background: #7e7e7e;
+          -ms-text-shadow: 0px 0px 0px transparent;
+          text-shadow: 0px 0px 0px transparent; }
+          .hot-alert-body button.disable:hover {
+            background: #7e7e7e; }
+  .principle-injector {
+    width: 40px;
+    height: 101px;
+    left: 603px;
+    top: 176px;
+    position: absolute;
+    background: #000000;
+    opacity: 0; }
+  .principle-injector-alert {
+    width: 135px;
+    height: 145px;
+    position: absolute;
+    left: 655px;
+    top: 170px;
+    color: #000000;
+    background: #e1e1e1;
+    border: 1px solid black; }
+    .hot-alert-title {
+      position: static !important;
+      display: block;
+      width: 100%;
+      height: 25px;
+      line-height: 25px;
+      text-align: center; }
+    .hot-alert-body {
+      width: 100%; }
+      .hot-alert-body span {
+        position: static; }
+      .hot-alert-body button {
+        display: block;
+        width: 73%;
+        height: 27px;
+        margin: 8px auto;
+        background: #f1a703;
+        color: #FFFFFF;
+        text-align: center; }
+        .hot-alert-body button:hover {
+          background: #1a1a1a; }
+        .hot-alert-body button.active {
+          background: #1a1a1a; }
+        .hot-alert-body button.disable {
+          background: #7e7e7e;
+          -ms-text-shadow: 0px 0px 0px transparent;
+          text-shadow: 0px 0px 0px transparent; }
+          .hot-alert-body button.disable:hover {
+            background: #7e7e7e; }
+  .principle-body .component-alert-component-2 {
+    width: 280px;
+    height: 265px;
+    position: absolute;
+    left: 180px;
+    top: 200px;
+    border: 1px solid black;
+    background: #FFFFFF url(../images/component_alert_component_2.png) no-repeat bottom/100%; }
+  .principle-body .component-alert-component-3 {
+    width: 280px;
+    height: 265px;
+    position: absolute;
+    left: 305px;
+    top: 200px;
+    border: 1px solid black;
+    background: #FFFFFF url(../images/component_alert_component_3.png) no-repeat bottom/100%; }
+  .principle-body .component-alert-component-6 {
+    width: 280px;
+    height: 265px;
+    position: absolute;
+    left: 320px;
+    top: 200px;
+    border: 1px solid black;
+    background: #FFFFFF url(../images/component_alert_component_6.png) no-repeat bottom/100%; }
+  .principle-body .placeImg {
+    background: #FFFFFF;
+    width: 400px;
+    height: 310px;
+    min-height: 310px;
+    position: absolute;
+    left: 196px;
+    top: 178px;
+    border: 1px solid black; }
+    .principle-body .placeImg img {
+      display: block;
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      top: 0px; }
+  .principle-body .failMode {
+    width: 375px;
+    height: 245px;
+    position: absolute;
+    left: 200px;
+    top: 230px;
+    background: #e1e1e1;
+    border: 1px solid black;
+    font: 12px "微软雅黑";
+    color: #000000; }
+    .principle-body .failMode .fail-main {
+      width: 100%; }
+      .principle-body .failMode .fail-main .fail-text {
+        width: 90%;
+        margin: 10px auto; }
+      .principle-body .failMode .fail-main b {
+        text-indent: 18px;
+        font: bold 14px "微软雅黑";
+        line-height: 24px; }
+      .principle-body .failMode .fail-main p {
+        text-indent: 18px;
+        line-height: 22px; }
+      .principle-body .failMode .fail-main img.all {
+        display: inline-block;
+        float: left;
+        margin-right: 10px;
+        width: 100%; }
+      .principle-body .failMode .fail-main img.half {
+        display: inline-block;
+        float: left;
+        margin-right: 10px;
+        width: 50%; }
+
+/*各种热区======================================================================================================================================================*/
+/*万用表热区*/
+.circuit-body a, .principle-body a {
+  display: block;
+  width: 18px;
+  height: 18px;
+  position: absolute;
+  background: url(../images/comm_icon/measureHot.png) no-repeat center; }
+
+.circuit-multimeter-hot {
+  width: 100%;
+  height: 530px;
+  position: absolute;
+  left: 0px;
+  top: 0px; }
+  a#multimeter-hot1 {
+    left: 192px;
+    top: 362px; }
+  a#multimeter-hot2 {
+    left: 272px;
+    top: 33px; }
+  a#multimeter-hot3 {
+    left: 272px;
+    top: 214px; }
+  a#multimeter-hot4 {
+    left: 271px;
+    top: 323px; }
+  a#multimeter-hot5 {
+    left: 271px;
+    top: 388px; }
+  a#multimeter-hot6 {
+    left: 366px;
+    top: 86px; }
+  a#multimeter-hot7 {
+    left: 356px;
+    top: 215px; }
+  a#multimeter-hot8 {
+    left: 376px;
+    top: 153px; }
+  a#multimeter-hot9 {
+    left: 376px;
+    top: 215px; }
+  a#multimeter-hot10 {
+    left: 348px;
+    top: 323px; }
+  a#multimeter-hot11 {
+    left: 373px;
+    top: 323px; }
+  a#multimeter-hot12 {
+    left: 395px;
+    top: 323px; }
+  a#multimeter-hot13 {
+    left: 349px;
+    top: 414px; }
+
+.component-multimeter-hot {
+  width: 100%;
+  height: 530px;
+  position: absolute;
+  left: 0px;
+  top: 0px; }
+  a#multimeter-hot51 {
+    left: 790px;
+    top: 398px; }
+  a#multimeter-hot52 {
+    left: 819px;
+    top: 397px; }
+  a#multimeter-hot53 {
+    left: 303px;
+    top: 280px; }
+  a#multimeter-hot54 {
+    left: 320px;
+    top: 280px; }
+  a#multimeter-hot55 {
+    left: 447px;
+    top: 258px; }
+  a#multimeter-hot61 {
+    left: 487px;
+    top: 258px; }
+  a#multimeter-hot62 {
+    left: 509px;
+    top: 258px; }
+  a#multimeter-hot63 {
+    left: 409px;
+    top: 186px; }
+  a#multimeter-hot64 {
+    left: 426px;
+    top: 186px; }
+  a#multimeter-hot65 {
+    left: 265px;
+    top: 258px; }
+
+/*# sourceMappingURL=template.css.map */

@@ -1,0 +1,367 @@
+@charset "utf-8";
+
+.open-lock-icon{position: absolute; left: 75px;top: 33px;}
+/*系统电路图=========================================================================================================================================================*/
+.circuit-body{height:530px;background: url(../images/bg_circuit.png) no-repeat center/100%;}
+.circuit-body img{display: block;position: absolute;}
+/*.svg{position: absolute;left:50%;top:37px;margin-left:-435.5px;}*/
+
+/*.circuit-body img.appliance-1{width: 17px;right: 221px;top: 225px;}
+.circuit-body img.appliance-2{width: 17px;right: 221px;top: 302px;}
+.circuit-body img.appliance-3{width: 17px;right: 221px;top: 362px;}
+.circuit-body img.appliance-4{width: 17px;right: 223px;top: 423px;}*/
+.circuit-body img.appliance-1{width: 17px;left: 441px;bottom: 174px;}
+.circuit-body img.open-application-line{width: 245px;left: 610px;bottom: 75px;}
+.circuit-body img.lock-application-line{width: 76px;left: 678px;bottom: 99px;}
+.circuit-body img.circuit-switch-1{width: 30px;left:311px;top: 185px;transform: rotate(0deg);-webkit-transform: rotate(0deg);-moz-transform: rotate(0deg);-ms-transform: rotate(0deg);}
+.circuit-body img.circuit-switch-2{width: 30px;left:311px;top: 251px;transform: rotate(0deg);-webkit-transform: rotate(0deg);-moz-transform: rotate(0deg);-ms-transform: rotate(0deg);}
+.circuit-body img.circuit-switch-3{width: 14px;left:592px;top: 180px;}
+.circuit-body img.circuit-switch-4{width: 14px;left:592px;top: 265px;}
+.circuit-body img.circuit-switch-5{width: 30px;left:775px;top: 55px;transform: rotate(0deg);-webkit-transform: rotate(0deg);-moz-transform: rotate(0deg);-ms-transform: rotate(0deg);}
+.circuit-body img.circuit-switch-6{width: 30px;left:765px;top: 202px;transform: rotate(-28deg);-webkit-transform: rotate(-28deg);-moz-transform: rotate(-28deg);-ms-transform: rotate(-28deg);}
+.line-animate{width:924px;height: 470px;position: absolute;left: 50%;top:26px;margin-left: -462px;}
+.line-animate span{display: block;position: absolute;}
+.open-line-animate span{background: #FF0000;}
+.line-animate .line-1{width: 24px;height: 2px;left: 450px;bottom: 174.5px;background: #7030a0;}
+.line-animate .line-2{width: 13px;height: 2px;right: 437px;bottom: 170.2px;background: #DFCD6E;transform: rotate(20deg);-webkit-transform: rotate(20deg);-moz-transform: rotate(20deg);-ms-transform: rotate(20deg);}
+.line-animate .line-3{width: 13px;height: 2px;left: 475px;bottom: 179.2px;background: #DFCD6E;transform: rotate(-20deg);-webkit-transform: rotate(-20deg);-moz-transform: rotate(-20deg);-ms-transform: rotate(-20deg);}
+.line-animate .line-4{width: 2px;height: 20px;left: 485px;bottom: 183px;background: #DFCD6E;}
+.line-animate .line-5{width: 57px;height: 2px;left: 485px;bottom: 201px;background: #DFCD6E;}
+.line-animate .line-6{width: 105px;height: 2px;left: 558px;bottom: 220px;}
+.lock-line-animate span{background: #FF0000;}
+.line-animate .line-7{width: 24px;height: 2px;left: 450px;top: 208.5px;background: #7030a0;}
+.line-animate .line-8{width: 11px;height: 2px;left: 475px;top: 214.2px;background: #DFCD6E;transform: rotate(20deg);-webkit-transform: rotate(20deg);-moz-transform: rotate(20deg);-ms-transform: rotate(20deg);}
+.line-animate .line-9{width: 11px;height: 2px;left: 475px;top: 204.2px;background: #DFCD6E;transform: rotate(-20deg);-webkit-transform: rotate(-20deg);-moz-transform: rotate(-20deg);-ms-transform: rotate(-20deg);}
+.line-animate .line-10{width: 2px;height: 20px;left: 483px;bottom: 266px;background: #DFCD6E;}
+.line-animate .line-11{width: 55px;height: 2px;left: 485px;top: 184px;background: #DFCD6E;}
+.line-animate .line-12{width: 70px;height: 2px;left: 560px;top: 164px;}
+.line-animate .line-13{width: 2px;height: 41px;left: 628px;top: 165px;}
+.open-lock-line-animate span{background: #FF0000;}
+.line-animate .line-14{width: 130px;height: 2px;left: 294px;bottom: 317px;background: #fff100;}
+.line-animate .line-15{width: 130px;height: 2px;left: 294px;bottom: 300px;background: #1AD041;}
+.line-animate .line-16{width: 130px;height: 2px;left: 294px;bottom: 251.5px;background: #fff100;}
+.line-animate .line-17{width: 130px;height: 2px;left: 294px;bottom: 234px;background: #1AD041;}
+.line-animate .line-18{width: 127px;height: 2px;left: 265px;bottom: 145px;background: #fff100;}
+.line-animate .line-19{width: 18px;height: 2px;left: 407px;bottom: 145px;background: #fff100;}
+.line-animate .line-malfunction{width: 7px;height: 2px;left: 294px;bottom: 300px;background: #FFFFFF;}
+.master-line-animate span{background: #00B0F0;}
+.line-animate .line-20{width: 46px;height: 2px;right: 216px;top: 184px;}
+.line-animate .line-21{width: 2px;height: 104px;right: 261px;bottom: 284px;}
+.line-animate .line-22{width: 214px;height: 2px;right: 261px;top: 82px;}
+.ignition-line-animate span{background: #FF0000;}
+.line-animate .line-23{width: 272px;height: 2px;right: 202px;top: 37.3px;}
+
+
+
+	/*系统电路元件----------------------------------------------------------------------------------------*/
+.circuit-lockCtrlSwitch{width: 45px;height: 32px;position:absolute;left: 311px;top: 170px;background: #000000;opacity: 0;}
+.circuit-alert-lockCtrlSwitch{width:135px;height:145px;position: absolute;left: 160px;top: 139px; color: #000000;background: #E1E1E1;border: 1px solid black;}
+
+.circuit-lockAssembly{width: 74px;height: 54px;position:absolute;left: 740px;top: 192px;background: #000000;opacity: 0;}
+.circuit-lockAssembly-copy-1{width: 73px;height: 23px;position:absolute;left: 740px;top: 297px;background: #000000;opacity: 0;}
+.circuit-lockAssembly-copy-2{width: 74px;height: 24px;position:absolute;left: 738px;top: 357px;background: #000000;opacity: 0;}
+.circuit-lockAssembly-copy-3{width: 75px;height: 24px;position:absolute;left: 736px;top: 417px;background: #000000;opacity: 0;}
+.circuit-alert-lockAssembly{width:135px;height:145px;position: absolute;left: 824px;top: 231px; color: #000000;background: #E1E1E1;border: 1px solid black;}
+
+.circuit-keyRecognitionSwitch{width: 44px;height: 20px;position:absolute;left: 333px;top: 114px;background: #000000;opacity: 0;}
+.circuit-alert-keyRecognitionSwitch{width:135px;height:145px;position: absolute;left: 161px;top: 63px; color: #000000;background: #E1E1E1;border: 1px solid black;}
+
+.circuit-doorLightSwitch{width: 46px;height: 21px;position:absolute;left: 334px;top: 55px;background: #000000;opacity: 0;}
+.circuit-alert-doorLightSwitch{width:135px;height:145px;position: absolute;left: 185px;top: 13px; color: #000000;background: #E1E1E1;border: 1px solid black;}
+
+.circuit-alert-title{display:block;width: 100%;height: 25px;line-height: 25px;text-align: center;}
+.circuit-alert-body button{display:block;width: 73%;height: 27px;margin:8px auto;background: #F1A703;color: #FFFFFF;text-align: center;}
+.circuit-alert-body button:hover{background: #1A1A1A;}
+.circuit-alert-body button.active{background: #1a1a1a;}
+.circuit-alert-body button.disable{background:#7e7e7e;-ms-text-shadow: 0px 0px 0px transparent;text-shadow: 0px 0px 0px transparent;}
+.circuit-alert-body button.disable:hover{background: #7e7e7e;}
+
+.circuit-lockCtrlAccept{width: 94px;height: 160px;position:absolute;left: 244px;top: 301px;background: #000000;opacity: 0;}
+.circuit-alert-lockCtrlAccept{width:135px;height:145px;position: absolute;left: 95px;top: 311px; color: #000000;background: #E1E1E1;border: 1px solid black;}
+
+.circuit-lockECU{width: 228px;height: 423px;position:absolute;left: 426px;top: 40px;background: #000000;opacity: 0;}
+.circuit-alert-lockECU{width:135px;height:145px;position: absolute;left: 666px;top: 13px; color: #000000;background: #E1E1E1;border: 1px solid black;}
+	/*弹出框-车上位置----------------------*/
+.circuit-body .placeImg{background: #FFFFFF;width:400px;height: 310px;position: absolute;left: 354px;top: 174px;border: 1px solid black;}
+.circuit-body .placeImg img{width: 100%;position: absolute;left: 0px;top: 0px;}
+	/*弹出框-失效模式----------------------*/
+/*.circuit-body .circuit-fail{width: 375px;height: 245px;position:absolute;left:70px;top: 190px;background: #E1E1E1;border: 1px solid black;font: 12px "微软雅黑";color: #000000;}
+.circuit-body .circuit-fail .circuit-fail-text{width: 90%;margin: 10px auto 0px;}
+.circuit-body .circuit-fail .circuit-fail-text b{text-indent: 18px;font:bold 14px "微软雅黑";line-height: 24px;}
+.circuit-body .circuit-fail .circuit-fail-text p{text-indent: 18px;line-height: 22px;}*/
+
+	/*元件检测*/
+/*.circuit-body .component-ignition-coils{width: 275px;height: 265px;position: absolute;left: 220px;top: 240px;border: 1px solid black;background: #FFFFFF url(../images/component_ignition_coils.png) no-repeat bottom/100%;}
+.circuit-body .component-ignition-coils-text{display:block;width: 96%;margin:0px auto;line-height: 12px;font: 12px "微软雅黑";color: #000000;}
+.circuit-body .component-spark{width: 25px;height: 25px;position:absolute;top: 214px;left: 17px;}
+.circuit-body .big-spark{display:block;width: 75px;height: 75px;position:absolute;top: 100px;left: 15px;background: url(../images/component_spark_big_bg.png) no-repeat center/100%;}
+.circuit-body .component-spark-big{width: 100%;height: 75px;left: 0px;top: 0px;}
+
+.circuit-body .component-knock{width: 275px;height: 243px;position: absolute;left: 683px;top: 145px;border: 1px solid black;background: #FFFFFF url(../images/component_knock.png) no-repeat center/60%;}
+
+.circuit-body .component-crankshaft{width: 275px;height: 243px;position: absolute;left: 175px;top: 110px;border: 1px solid black;background: #FFFFFF url(../images/crankshaft.png) no-repeat center/100%;}*/
+
+/*系统原理图=======================================================================================================================================================*/
+.principle-body{height:530px;background: url(../images/bg_principle.png) no-repeat center/100%;}
+.principle-body img{position: absolute;}
+.principle-body span{display: block;position: absolute;}
+	/*核心动画，拉轴锁杆*/
+.principle-body-lock-lever{width: 305px;height: 118px;position: absolute;left: 131px;top: 242px;/*background: rgba(0,0,0,0.5);*/}
+.principle-body-lock-lever .lock-lever-1{left: 40px;top: 65px;}
+.principle-body-lock-lever .lock-lever-2{left: 141px;top: 37px;transform: rotate(0deg);}
+.principle-body-lock-lever .lock-lever-3{left: 133px;top: 30px;}
+.principle-body-lock-lever .lock-assembly{left: 3px; top: 60px;}
+.principle-body-lock-lever .lock-twist {right: 5px;top: 29px;}
+.principle-body-lock-lever .lock-twist-open-light{right: 57px;top: -5px;}
+.principle-body-lock-lever .lock-twist-lock-light{right: 23px;top: -8px;}
+	/*门控开关*/
+.principle-body-door{width: 54px;height: 54px;position: absolute;left: 378px;top: 312px;background: url(../images/principle_sprite.png) no-repeat -336px -30px;}
+.principle-body-door .door-open-light{width: 30px;height: 30px;left: -4px;top: 4px;background: url(../images/principle_sprite.png) no-repeat -187px -33px;}
+.principle-body-door .door-lock-light{width: 30px;height: 30px;right: -1px;top: 17px;background: url(../images/principle_sprite.png) no-repeat -134px -33px;}
+	/*遥控器*/
+.principle-body-wifi{width: 199px;height: 378px;position: absolute;right: 89px;top: 81px;}
+.principle-body-wifi img.wifi-info-ripple{left: 93px;top: 52px;}
+.principle-body-wifi img.wifi-tail-light{left: -45px;top: 257px;}
+.principle-body-wifi .wifi-open-light{width: 30px;height: 30px;left: 96px;top: 9px;background: url(../images/principle_sprite.png) no-repeat -187px -33px;}
+.principle-body-wifi .wifi-lock-light{width: 30px;height: 30px;left: 118px;top: 22px;background: url(../images/principle_sprite.png) no-repeat -187px -33px;}
+.principle-body-wifi .wifi-open-btn{width: 20px;height: 20px;left: 103px;top: 28px;background: url(../images/principle_sprite.png) no-repeat 3px -68px;}
+.principle-body-wifi .wifi-lock-btn{width: 20px;height: 20px;left: 112px;top: 55px;background: url(../images/principle_sprite.png) no-repeat -51px -69px;}
+.principle-body-wifi .wifi-accpet-light{width: 30px;height: 30px;left: 143px;top: 157px;background: url(../images/principle_sprite.png) no-repeat -247px -34px;}
+	/*车门锁*/
+.principle-body-key{width: 192px;height: 254px;position: absolute;left: 125px;top: 102px;} 
+.principle-body-key .lock-lever-left{left: 7px;top: 169px;}
+.principle-body-key .key-small{width: 35px;height: 27px;right: 8px;top: 55px;background: url(../images/principle_sprite.png) no-repeat -352px -2px;}
+.principle-body-key .key-open-light{width: 30px;height: 30px;right: 12px;top: 17px;background: url(../images/principle_sprite.png) no-repeat -69px -33px;}
+.principle-body-key .key-lock-light{width: 30px;height: 30px;right: 34px;top: 17px;background: url(../images/principle_sprite.png) no-repeat  6px -33px;}
+
+	/*三角箭头*/
+.principle-arrow-flow i{display: block;position: absolute;width: 0px;height: 0px;border-left: 6px solid transparent;border-right: 6px solid transparent;border-top: 10px solid #FF0000;transform: rotate(0deg);}
+.principle-arrow-flow i.flow-arrow-1{left: 113px;top: 355px;transform: rotate(90deg);border-top: 10px solid #7030a0;}
+.principle-arrow-flow i.flow-arrow-2{left: 725px;top: 64px;transform: rotate(-90deg);}
+.principle-arrow-flow i.flow-arrow-3{left: 936px;top: 341px;transform: rotate(90deg);}
+.principle-arrow-flow i.flow-arrow-4{left: 603px;top: 51px;transform: rotate(90deg);}
+.principle-arrow-flow i.flow-arrow-5{left: 481px;top: 365px;transform: rotate(-90deg);border-top: 10px solid #7030a0;}
+.principle-arrow-flow i.flow-arrow-6{left: 826px;top: 288px;transform: rotate(90deg);border-top: 10px solid #7030a0;}
+	/*系统原理元件----------------------------------------------------------------------*/
+.principle-lockCtrlSwitch{width: 48px;height: 48px;position:absolute;left: 375px;top: 327px;background: #000000;opacity: 0;}
+.principle-alert-lockCtrlSwitch{width:135px;height:145px;position: absolute;left: 214px;top: 323px; color: #000000;background: #E1E1E1;border: 1px solid black;}
+
+
+.principle-lockAssembly{width: 56px;height: 72px;position:absolute;left: 129px;top: 297px;background: #000000;opacity: 0;}
+.principle-lockAssembly-copy{width: 56px;height: 72px;position:absolute;left: 866px;top: 326px;background: #000000;opacity: 0;}
+.principle-alert-lockAssembly{width:135px;height:145px;position: absolute;left: 200px;top: 315px; color: #000000;background: #E1E1E1;border: 1px solid black;}
+
+.principle-keyRecognitionSwitch{width: 104px;height: 84px;position:absolute;left: 467px;top: 116px;background: #000000;opacity: 0;}
+.principle-alert-keyRecognitionSwitch{width:135px;height:145px;position: absolute;left: 326px;top: 97px; color: #000000;background: #E1E1E1;border: 1px solid black;}
+
+.principle-doorLightSwitch{width: 48px;height: 39px;position:absolute;left: 611px;top: 407px;background: #000000;opacity: 0;}
+.principle-alert-doorLightSwitch{width:135px;height:145px;position: absolute;left: 460px;top: 340px; color: #000000;background: #E1E1E1;border: 1px solid black;}
+
+.principle-doorCylinder{width:40px;height: 40px;position:absolute;left: 267px;top: 147px;background: #000000;opacity: 0;}
+.principle-alert-doorCylinder{width:135px;height:145px;position: absolute;left: 106px;top: 96px; color: #000000;background: #E1E1E1;border: 1px solid black;}
+
+.principle-lockButton{width: 69px;height: 41px;position:absolute;left: 353px;top: 266px;background: #000000;opacity: 0;}
+.principle-alert-lockButton{width:135px;height:145px;position: absolute;left: 201px;top: 236px; color: #000000;background: #E1E1E1;border: 1px solid black;}
+
+.principle-lockCtrlAccept{width: 57px;height: 71px;position:absolute;left: 865px;top: 236px;background: #000000;opacity: 0;}
+.principle-alert-lockCtrlAccept{width:135px;height:145px;position: absolute;left: 713px;top: 205px; color: #000000;background: #E1E1E1;border: 1px solid black;}
+
+.principle-lockECU{width: 105px;height: 141px;position:absolute;left: 618px;top: 31px;background: #000000;opacity: 0;}
+.principle-alert-lockECU{width:135px;height:145px;position: absolute;left: 747px;top: 75px; color: #000000;background: #E1E1E1;border: 1px solid black;}
+
+.principle-alert-title{position: static !important;display: block;width: 100%;height: 25px;line-height: 25px;text-align: center;}
+.principle-alert-body span{position: static;}
+.principle-alert-body button{display:block;width: 73%;height: 27px;margin:8px auto;background: #F1A703;color: #FFFFFF;text-align: center;}
+.principle-alert-body button:hover{background: #1a1a1a;}
+.principle-alert-body button.active{background: #1a1a1a;}
+.principle-alert-body button.disable{background:#7e7e7e;-ms-text-shadow: 0px 0px 0px transparent;text-shadow: 0px 0px 0px transparent;}
+.principle-alert-body button.disable:hover{background: #7e7e7e;}
+	/*弹出框-失效模式---------------------*/
+/*.principle-body .principle-fail{width: 375px;height: 245px;position:absolute;left:560px;top: 65px;background: #E1E1E1;border: 1px solid black;font: 12px "微软雅黑";color: #000000;}
+.principle-body .principle-fail .principle-fail-text{width: 90%;margin: 10px auto 0px;}
+.principle-body .principle-fail .principle-fail-text b{text-indent: 18px;font:bold 14px "微软雅黑";line-height: 24px;}
+.principle-body .principle-fail .principle-fail-text p{text-indent: 18px;line-height: 22px;}*/
+	/*弹出框-车上位置---------------------*/
+.principle-body .placeImg{background: #FFFFFF;width:400px;height: 310px;min-height: 310px;position: absolute;left: 491px;top: 107px;border: 1px solid black;}
+.principle-body .placeImg img{display:block;width: 100%;position: absolute;left: 0px;top: 0px;}
+	/*弹出框-元件检测---------------------*/
+	/*元件检测*/
+/*.principle-body .component-ignition-coils{width: 280px;height: 265px;position: absolute;left: 105px;top: 165px;border: 1px solid black;background: #FFFFFF url(../images/component_ignition_coils.png) no-repeat bottom/100%;}
+.principle-body .component-ignition-coils-text{display:block;width: 96%;margin:0px auto;line-height: 12px;font: 12px "微软雅黑";color: #000000;}
+.principle-body .component-spark{width: 25px;height: 25px;position:absolute;top: 214px;left: 17px;}
+.principle-body .big-spark{display:block;width: 75px;height: 75px;position:absolute;top: 100px;left: 15px;background: url(../images/component_spark_big_bg.png) no-repeat center/100%;}
+.principle-body .component-spark-big{width: 100%;height: 75px;left: 0px;top: 0px;}
+
+
+.principle-body .component-spark-plugs{width: 275px;height: 243px;position: absolute;left: 387px;top: 145px;border: 1px solid black;background: #FFFFFF url(../images/component_spark_plugs.png) no-repeat center/78%;}*/
+
+/*.principle-body .component-camshaft{width: 275px;height: 243px;position: absolute;left: 390px;top: 235px;border: 1px solid black;background: #FFFFFF url(../images/component_spark_plugs.png) no-repeat center/78%;}*/
+
+/*.principle-body .component-knock{width: 275px;height: 243px;position: absolute;left: 525px;top: 160px;border: 1px solid black;background: #FFFFFF url(../images/component_knock.png) no-repeat center/60%;}
+
+.principle-body .component-crankshaft{width: 275px;height: 243px;position: absolute;left: 545px;top: 240px;border: 1px solid black;background: #FFFFFF url(../images/crankshaft.png) no-repeat center/100%;}*/
+
+
+/*点火开关和面板==============================================================================================================================================*/
+
+
+/*弹出小页面的模板=======================================================================================================*/
+.alertContent{}
+.alert-header{height: 30px;border-bottom: 1px solid #000000;}
+.alert-title{display:block;width: 100%;height:30px;line-height:30px;text-indent: 16px;}
+.alert-header ul.alert-body-navi{display:block;width: 93%;height: 21px;position: absolute;left:10px;top: 9px; text-align: left;}
+.alert-header ul.alert-body-navi li{display:inline-block;width: 81px;height: 21px;line-height: 21px;background: rgba(0,0,0,0);color: #000000;text-align: center;}
+.alert-header ul.alert-body-navi li.active{background:url(../images/comm_icon/alert_nabvi_btn.png) no-repeat center/100%; color: #FFFFFF;}
+.alert-header .alert-title{font-weight:bold;}
+.alert-body{width: 100%;height: 271px;}
+.alert-body-content{margin-top:10px;width: 100%;height:225px;overflow-x: hidden;overflow-y: auto;}
+.alert-body-content-test{height:225px;}
+.alert-footer{width: 100%;height: 30px;position:absolute;bottom:0px;left:0px;}
+.goCheck{display:block;width: 78px;height: 25px;position:absolute;left:60px;top:0px;background: #f1a703;color: #FFFFFF;}
+.goClear{display:block;width: 78px;height: 25px;position:absolute;right:60px;top:0px;background: #f1a703;color: #FFFFFF;}
+.goCheck:hover{background: #000000;}
+.goClear:hover{background: #000000;}
+	/*置灰样式*/
+.goDisable{background: #7e7e7e;}
+.goDisable:hover{background: #7e7e7e;}
+/*元件测量（选择跳转的模板）------------------*/
+.alert-body-choice{width:90%;margin: 0px auto;font-size: 12px;line-height: 22px;}
+.alert-body-choice p{text-indent: 24px;}
+.alert-body-choice b{font-weight: normal;}
+.alert-body-choice span{padding: 0px 24px;color: #305999;text-decoration: underline; cursor: pointer;text-indent: 24px;}
+.alert-body-choice span:visited{color: #FFFFFF;}
+
+.alert-body-choice .sysPrinciple-front{width: 50%;float: left;}
+.alert-body-choice .sysPrinciple-behind{width: 50%;float: right;}
+.alert-body-choice .sysPrinciple-behind::after{content: "";clear: both;}
+/*.alert-body-choice span:hover{color: #305999;}*/
+.alert-body-choice img.systemComposition{width: 100%;}
+.systemCompositionBig{width: 1024px;height: 529px;position: absolute;top:52px;left:3px ;}
+.systemCompositionBig img{width: 1024px;height: 529px;}
+/*碳罐等信息解释页面--------------------------*/
+.alert-body-info{width:90%;margin: 0px auto;}
+.alert-body-info img{display:inline-block;float:left;margin-right:10px;width: 100%;}
+.alert-body-info span{display:inline-block;}
+.alert-body-info span p{text-indent: 18px;font-size: 12px;line-height:22px;}
+.goBack{display: block;width: 70px;height: 25px;position:absolute;right:50px;bottom:2px;background: #f1a703;text-align: center;line-height:25px;color: #FFFFFF;}
+.goBack:hover{background: rgba(0,0,0,0.8);}
+/*文本内容------------------*/
+.alert-body-text{width:90%;margin: 0px auto;}
+.alert-body-text p{text-indent: 18px;font-size: 12px;line-height:22px;}
+/*选择题---------------------*/
+.alert-body-question{width:90%;margin: 0px auto;}
+	/*题目的*/
+.alert-body-question .question{font-size: 12px;line-height:22px;}
+	/*选项的样式*/
+.alert-body-question ul.answerChoice{height:35px;min-height:35px;}
+.alert-body-question ul.answerChoice li{height: 35px;width: 100%;min-height: 35px;}
+.alert-body-question ul.answerChoice button{width:100%;padding: 0px;text-align: left;text-indent: 18px;line-height: 30px;color: #000000;font-size: 12px;}
+/*.alert-body-question ul.answerChoice button.six{line-height: 25px;}*/
+.alert-body-question ul.answerChoice button:hover{background: #7e7e7e;color: #FFFFFF;}
+.alert-body-question ul.answerChoice button.active{background: #7e7e7e;color: #FFFFFF;}
+	/*最后答案的样式*/
+.answer-judge{display:block;width:100%;height: 30px;position: absolute;left:0px;bottom:30px;line-height: 30px;text-align: center;}
+.answer-judge-correct{}
+.answer-judge-wrong{color: #FF0000;}
+	/*下面提交等按钮样式*/
+.question-footer{width:100%;height:44px;position: absolute;left: 0px;bottom: 0px; font-size: 12px;}
+.question-footer button{width: 100px;height: 24px;margin: 0px 2px;background: #F1A703;color: #FFFFFF;line-height: 24px;}
+.question-footer button:hover{background: #000000;}
+.question-footer button.disable{background: #7e7e7e;}
+.chargeQuesetion{width: 215px;margin: 10px auto;}
+button.question-submit{position: absolute;right:0px;bottom:0px;margin: 10px;background: #F1A703;}
+/*各种热区======================================================================================================================================================*/
+.component-eleValve-hot{display:block;width: 70px;height: 130px;position: absolute;left: 15px;top: 60px;background:rgba(0,0,0,0);}
+
+.component-canister-hot-a{display:block;width: 80px;height: 120px;position: absolute;left: 105px;top: 120px;background:rgba(0,0,0,0);}
+.component-canister-hot-b{display:block;width: 55px;height: 50px;position: absolute;left: 130px;top: 10px;background:rgba(0,0,0,0);}
+.component-canister-hot-c{display:block;width: 55px;height: 50px;position: absolute;left: 200px;top: 50px;background:rgba(0,0,0,0);}
+	/*万用表热区*/
+.circuit-body a,.principle-body a{display: block;width: 18px;height: 18px;position: absolute;background: url(../images/comm_icon/measureHot.png) no-repeat center;}
+.circuit-multimeter-hot{width: 100%;height: 530px;position: absolute;left:0px;top:0px;}
+a#multimeter-hot1{left: 324px;top: 57px;}
+a#multimeter-hot2{left: 370px;top: 57px;}
+a#multimeter-hot3{left: 323px;top: 115px;}
+a#multimeter-hot4{left: 367px;top: 116px;}
+a#multimeter-hot5{left: 301px;top: 175px;}
+a#multimeter-hot6{left: 346px;top: 167px;}
+a#multimeter-hot7{left: 346px;top: 185px;}
+a#multimeter-hot8{left: 303px;top: 241px;}
+a#multimeter-hot9{left: 346px;top: 233px;}
+a#multimeter-hot10{left: 346px;top: 251px;}
+
+a#multimeter-hot11{left: 236px;top: 346px;}
+a#multimeter-hot12{left: 329px;top: 340px;}
+a#multimeter-hot13{left: 329px;top: 387px;}
+a#multimeter-hot14{left: 321px;top: 436px;}
+a#multimeter-hot15{left: 416px;top: 57px;}
+a#multimeter-hot16{left: 416px;top: 118px;}
+a#multimeter-hot17{left: 416px;top: 168px;}
+a#multimeter-hot18{left: 416px;top: 186px;}
+a#multimeter-hot19{left: 416px;top: 234px;}
+a#multimeter-hot20{left: 416px;top: 252px;}
+a#multimeter-hot21{left: 416px;top: 339px;}
+a#multimeter-hot22{left: 416px;top: 388px;}
+a#multimeter-hot23{left: 645px;top: 54px;}
+
+a#multimeter-hot24{left: 645px;top: 77px;}
+a#multimeter-hot25{left: 645px;top: 98px;}
+a#multimeter-hot26{left: 645px;top: 181px;}
+a#multimeter-hot27{left: 645px;top: 265px;}
+a#multimeter-hot28{left: 660px;top: 433px;}
+a#multimeter-hot29{left: 811px;top: 102px;}
+a#multimeter-hot30{left: 811px;top: 147px;}
+a#multimeter-hot31{left: 730px;top: 201px;}
+
+a#multimeter-hot32{left: 730px;top: 222px;}
+a#multimeter-hot33{left: 803px;top: 202px;}
+a#multimeter-hot34{left: 803px;top: 222px;}
+a#multimeter-hot35{left: 803px;top: 298px;}
+a#multimeter-hot36{left: 730px;top: 300px;}
+a#multimeter-hot37{left: 728px;top: 359px;}
+a#multimeter-hot38{left:492px;top:123px}
+a#multimeter-hot38{left: 802px;top: 359px;}
+a#multimeter-hot39{left: 726px;top: 420px;}
+a#multimeter-hot40{left: 799px;top: 419px;}
+a#multimeter-hot41{left:867px;top:123px}
+
+a#multimeter-hot42{left:503px;top:343px}
+a#multimeter-hot43{left:535px;top:343px}
+a#multimeter-hot44{left:605px;top:343px}
+a#multimeter-hot45{left:637px;top:343px}
+a#multimeter-hot46{left:707px;top:343px}
+a#multimeter-hot47{left:740px;top:343px}
+a#multimeter-hot48{left:805px;top:343px}
+a#multimeter-hot49{left:842px;top:343px}
+
+a#multimeter-hot50{left:503px;top:404px}
+a#multimeter-hot51{left:535px;top:404px}
+a#multimeter-hot52{left:605px;top:404px}
+a#multimeter-hot53{left:637px;top:404px}
+a#multimeter-hot54{left:707px;top:404px}
+a#multimeter-hot55{left:740px;top:404px}
+a#multimeter-hot56{left:805px;top:404px}
+a#multimeter-hot57{left:842px;top:404px}
+	/*元件上的点，从系统原理界面开始*/
+a#multimeter-hot58{left:117px;top:3px}
+a#multimeter-hot59{left:124px;top:202px}
+a#multimeter-hot60{left:72px;top:148px}
+a#multimeter-hot61{left:94px;top:156px}
+a#multimeter-hot62{left:50px;top:104px}
+a#multimeter-hot63{left:75px;top:74px}
+
+a#multimeter-hot64{left:72px;top:148px}
+a#multimeter-hot65{left:94px;top:156px}
+a#multimeter-hot66{left:50px;top:104px}
+a#multimeter-hot67{left:75px;top:74px}
+
+/*故障工作状态和正常工作状态标示框*/
+.worker-state{display: block;width: 120px;height: 23px;position: absolute;left: 850px;top: 34px;text-align:center;line-height: 23px;color:#FFFFFF;}
+.worker-state-normal{background: #64af1a;}
+.worker-state-malfunction{background: #f86f6f;}
+
+
+
+
+
+

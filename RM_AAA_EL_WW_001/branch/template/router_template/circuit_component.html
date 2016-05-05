@@ -1,0 +1,87 @@
+<!--元件测量-高压油泵==============================================================================================-->
+<div class="component-alert-component-1 radius z-index-10" ng-show="showOrHide.circuitAlertOneComponent">
+	<button class="close cursor-pointer z-index-1" ng-click="closeComponent('component-canister')">X</button>
+	<div class="component-handle"></div>
+	<span class="mist1 test-btn cursor-pointer" ng-mousedown="testMist(1)" ng-mouseup="testMist(0)">
+		<img src="images/btn_mist.png" />
+	</span>
+	<span class="off1 test-btn cursor-pointer btn-active" ng-click="testOff()">
+		<img src="images/btn_off.png" />
+	</span>
+	<span class="int1 test-btn cursor-pointer" ng-click="testInt()">
+		<img src="images/btn_int.png" />
+	</span>
+	<span class="lo1 test-btn cursor-pointer" ng-click="testLower()">
+		<img src="images/btn_lo.png" />
+	</span>
+	<span class="hi1 test-btn cursor-pointer" ng-click="testHigh()">
+		<img src="images/btn_hi.png" />
+
+	</span>
+	<span class="spray1 test-btn cursor-pointer" ng-mousedown="testSpray(1)" ng-mouseup="testSpray(0)">
+		<img src="images/btn_spray.png" />
+	</span>
+</div>
+<div class="component-multimeter-hot z-index-10 hide-important"  ng-show="showOrHide.circuitAlertOneComponent">
+	<a id="multimeter-hot61" wybredPosition="61" wybblackPosition="61" rqPosition="4138" h_left="212" h_top="505" h_href="dhxq_normal1"></a>
+	<a id="multimeter-hot62" wybredPosition="62" wybblackPosition="62" rqPosition="4139" h_left="408" h_top="512" h_href="dhxq_normal1"></a>
+	<a id="multimeter-hot63" wybredPosition="63" wybblackPosition="63" rqPosition="4140" h_left="408" h_top="512" h_href="dhxq_normal1"></a>
+	<a id="multimeter-hot64" wybredPosition="64" wybblackPosition="64" rqPosition="4141" h_left="408" h_top="512" h_href="dhxq_normal1"></a>
+	<a id="multimeter-hot65" wybredPosition="65" wybblackPosition="65" rqPosition="4142" h_left="408" h_top="512" h_href="dhxq_normal1"></a>
+	<a id="multimeter-hot66" wybredPosition="66" wybblackPosition="66" rqPosition="4143" h_left="408" h_top="512" h_href="dhxq_normal1"></a>
+</div>
+<!--元件检测-进油计量比例阀=========================================================================================================-->
+<!--<div class="component-alert-component-2 radius z-index-10" ng-show="showOrHide.circuitAlertTwoComponent">
+	<button class="close cursor-pointer z-index-1" ng-click="closeComponent('component-eleValve')">X</button>
+	<div class="btn8">
+		<span class="btn8-up cursor-pointer"  ng-mousedown="controlBtn8(1,'up')" ng-mouseup="controlBtn8(0,'up')"></span>
+		<span class="btn8-down cursor-pointer"  ng-mousedown="controlBtn8(1,'down')" ng-mouseup="controlBtn8(0,'down')"></span>
+	</div>
+</div>
+<div class="component-multimeter-hot z-index-10 hide-important"  ng-show="showOrHide.circuitAlertTwoComponent">
+	<a id="multimeter-hot61" wybredPosition="61" wybblackPosition="61" rqPosition="4137" h_left="212" h_top="505" h_href="dhxq_normal1"></a>
+	<a id="multimeter-hot62" wybredPosition="62" wybblackPosition="62" rqPosition="4136" h_left="408" h_top="512" h_href="dhxq_normal1"></a>
+	<a id="multimeter-hot63" wybredPosition="63" wybblackPosition="63" rqPosition="4135" h_left="408" h_top="512" h_href="dhxq_normal1"></a>
+	<a id="multimeter-hot64" wybredPosition="64" wybblackPosition="64" rqPosition="4134" h_left="408" h_top="512" h_href="dhxq_normal1"></a>
+	<a id="multimeter-hot65" wybredPosition="65" wybblackPosition="65" rqPosition="4133" h_left="408" h_top="512" h_href="dhxq_normal1"></a>
+</div>-->
+<!--元件检测-加速踏板位置传感器=========================================================================================================-->
+<!--<div class="component-alert-component-3 radius z-index-10" ng-show="showOrHide.circuitAlertThreeComponent">
+	<button class="close cursor-pointer z-index-1" ng-click="closeComponent('component-eleValve')">X</button>
+	<div class="btn9">
+		<span class="btn9-up cursor-pointer"  ng-mousedown="controlBtn9(1,'up')" ng-mouseup="controlBtn9(0,'up')"></span>
+		<span class="btn9-down cursor-pointer"  ng-mousedown="controlBtn9(1,'down')" ng-mouseup="controlBtn9(0,'down')"></span>
+	</div>
+</div>
+<div class="component-multimeter-hot z-index-10 hide-important"  ng-show="showOrHide.circuitAlertThreeComponent">
+	<a id="multimeter-hot66" wybredPosition="66" wybblackPosition="66" rqPosition="4137" h_left="212" h_top="505" h_href="dhxq_normal1"></a>
+	<a id="multimeter-hot67" wybredPosition="67" wybblackPosition="67" rqPosition="4136" h_left="408" h_top="512" h_href="dhxq_normal1"></a>
+	<a id="multimeter-hot68" wybredPosition="68" wybblackPosition="68" rqPosition="4135" h_left="212" h_top="505" h_href="dhxq_normal1"></a>
+	<a id="multimeter-hot69" wybredPosition="69" wybblackPosition="69" rqPosition="4134" h_left="408" h_top="512" h_href="dhxq_normal1"></a>
+	<a id="multimeter-hot70" wybredPosition="70" wybblackPosition="70" rqPosition="4133" h_left="212" h_top="505" h_href="dhxq_normal1"></a>
+</div>-->
+<!--元件检测-燃油共轨=========================================================================================================-->
+<!--<div class="component-alert-component-4 radius z-index-10" ng-show="showOrHide.circuitAlertFourComponent">
+	<button class="close cursor-pointer z-index-1" ng-click="closeComponent('component-eleValve')">X</button>
+	<div class="component-multimeter-hot hide-important">
+		<a id="multimeter-hot66" wybredPosition="66" wybblackPosition="66" rqPosition="4079" h_left="285" h_top="226" h_href="dhxq_normal1"></a>
+		<a id="multimeter-hot67" wybredPosition="67" wybblackPosition="67" rqPosition="4078" h_left="244" h_top="251" h_href="dhxq_normal1"></a>
+	</div>
+</div>-->
+<!--元件检测-共轨压力传感器=========================================================================================================-->
+<!--<div class="component-alert-component-5 radius z-index-10 " ng-show="showOrHide.circuitAlertFiveComponent">
+	<button class="close cursor-pointer z-index-1" ng-click="closeComponent('component-eleValve')">X</button>
+	<div class="component-multimeter-hot hide-important">
+		<a id="multimeter-hot62" wybredPosition="62" wybblackPosition="62" rqPosition="4079" h_left="408" h_top="596" h_href="dhxq_normal1"></a>
+		<a id="multimeter-hot63" wybredPosition="63" wybblackPosition="63" rqPosition="4078" h_left="377" h_top="621" h_href="dhxq_normal1"></a>
+	</div>
+</div>-->
+<!--元件检测-喷油器=========================================================================================================-->
+<!--
+<div class="component-alert-component-6 radius z-index-10 " ng-show="showOrHide.circuitAlertSixComponent">
+	<button class="close cursor-pointer z-index-1" ng-click="closeComponent('component-eleValve')">X</button>
+</div>
+<div class="component-multimeter-hot z-index-10 hide-important"  ng-show="showOrHide.circuitAlertSixComponent">
+	<a id="multimeter-hot71" wybredPosition="71" wybblackPosition="71" rqPosition="1003" h_left="212" h_top="505" h_href="dhxq_normal1"></a>
+	<a id="multimeter-hot72" wybredPosition="72" wybblackPosition="72" rqPosition="1004" h_left="408" h_top="512" h_href="dhxq_normal1"></a>
+</div>-->

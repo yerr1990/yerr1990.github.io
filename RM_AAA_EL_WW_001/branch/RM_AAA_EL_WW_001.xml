@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<fault>
+	<metadata>
+		<schema>XCJ</schema>
+		<schemaversion>1.0</schemaversion>
+	</metadata>
+	<name>雨刮系统</name>
+	<courseNumber>RM_AAA_EL_WW_001</courseNumber>
+	<type>emu</type>
+	<types>emuCourseWare</types>
+	<purpose>技术方案测试</purpose>
+	<require>无</require>
+	<keyword>学习系统</keyword>
+	<language>中文</language>
+	<version>V0.1</version>
+	<description>无</description>
+	<client>PC</client>
+	<entry>RM_AAA_EL_WW_001/index.html</entry>
+	<actions>
+		<action id='A001' discription='结构原理 '/>
+		<action id='A002' discription='诊断测量 '/>
+		<action id='A003' discription='故障排除 '/>
+		<action id='A004' discription='知识拓展 '/>
+		<action id='A005' discription='技能测试 '/>
+		<action id='A006' discription='点火开关ON '/>
+		<action id='A007' discription='点火开关ST '/>
+		<action id='A008' discription='万用表使用'/>
+		<action id='A009' discription='诊断仪使用 '/>
+		<action id='A010' discription='试题1 '/>
+		<action id='A011' discription='试题2 '/>
+		<action id='A012' discription='试题3 '/>
+		<action id='A013' discription='试题4 '/>
+		<action id='A014' discription='试题5 '/>
+		<action id='A015' discription='试题6 '/>
+		<action id='A016' discription='试题7 '/>
+		<action id='A017' discription='试题8 '/>
+		<action id='A018' discription='试题9 '/>
+		<action id='A019' discription='试题10 '/>
+		<action id='A020' discription='提交试题 '/>
+		<action id='A021' discription='系统原理 '/>
+		<action id='A022' discription='系统组成 '/>
+		<action id='A023' discription='系统电路 '/>
+		<action id='A024' discription='电路测量 '/>
+		
+		<!--<action id='B025' discription='故障2 '/>-->
+		<action id='B026' discription='进入故障1 '/>
+		<!--<action id='B027' discription='进入故障2 '/>-->
+		
+		<action id='C028' discription='点击刮水器开关总成 '/>
+		<action id='C029' discription='点击刮水器电动机 '/>
+		<action id='C030' discription='点击喷水电动机 '/>
+		<!--<action id='C031' discription='驾驶员侧电动机 '/>-->
+		<!--<action id='C032' discription='右前侧车窗电动机 '/>-->
+		<!--<action id='C033' discription='左后侧车窗电动机 '/>-->
+	
+		<action id='C034' discription='点击刮水器开关总成 元件检测 '/>
+
+		<action id='C035' discription='点击刮水器开关总成 车上位置 '/>
+		<action id='C036' discription='点击刮水器电动机 车上位置 '/>
+		<action id='C037' discription='点击喷水电动机 车上位置 '/>
+		
+
+		<action id='D040' discription='系统电路 单步刮水'/>
+		<action id='D041' discription='系统电路 雨刮关闭 '/>
+		<action id='D042' discription='系统电路 低速刮水 '/>
+		<action id='D043' discription='系统电路 高速刮水'/>
+		<action id='D042' discription='系统电路 间歇刮水 '/>
+		<action id='D043' discription='系统电路 喷水'/>
+
+		<action id='D046' discription='系统组成 刮水器开关总成'/>
+		<action id='D047' discription='系统组成 雨刷电动机 '/>
+		<action id='D048' discription='系统组成 喷水电动机 '/>
+		<action id='D049' discription='系统组成 刮水器连杆机构'/>
+
+		<action id='D053' discription='元件测量 刮水器开关总成 '/>
+		<action id='D054' discription='元件测量 刮水器电动机'/>
+		<action id='D055' discription='元件测量 喷水电动机和泵总成'/>
+
+
+		<action id='E059' discription='万用表 刮水器开关 '/>
+		<action id='E060' discription='万用表 刮水器电动机 '/>
+		<action id='E061' discription='万用表 喷水电动机 '/>
+		<!--<action id='E062' discription='万用表 主电机电压 测量 '/>-->
+		<!--<action id='E063' discription='万用表 M2电机电压 测量 '/>-->
+		<!--<action id='E064' discription='万用表 M3电机电压 测量 '/>-->
+
+	</actions>
+	
+</fault>

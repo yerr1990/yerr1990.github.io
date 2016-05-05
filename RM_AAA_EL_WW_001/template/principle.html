@@ -1,0 +1,91 @@
+<div class="principle-body">
+	<!--线路-->
+	<div class="line">
+		<div class="line-1-1 height"></div>
+		<div class="line-1-2 height"></div>
+		<div class="line-1-3 width"></div>
+
+	</div>
+	<div>
+		<div class="scroll-con">
+			<div class="principle-scroll"></div>
+		</div>
+		<!--<div class="principle-water-spout"></div>-->
+		<div class="principle-water1"></div>
+		<div class="principle-water2"></div>
+		<div class="principle-handle"></div>
+		<div class="principle-motor1"></div>
+		<div class="principle-motor2"></div>
+		<div class="principle-motor"></div>
+
+
+		<div class="principle-wiper">
+			<div class="center-motor"></div>
+			<!--<div class="red"></div>-->
+			<!--<div class="red1"></div>-->
+			<div class="left-lever"></div>
+			<div class="left-wiper"></div>
+
+			<div class="left-dot"></div>
+			<div class="right-lever"></div>
+			<div class="right-wiper"></div>
+
+		</div>
+	</div>
+
+
+	<script type="text/javascript">
+
+//		arrowColorInitialize("gro");
+	</script>
+	
+	
+	<!--页面中的弹出框--------------------------------------------------->
+	<div>
+		<div class="principle-main-switch z-index-10" ng-class="{'cursor-pointer':(!showOrHide.principleAlertOne)}" ng-click="bodyAlert(1);"></div>
+		<div class="principle-wiper-motor z-index-10" ng-class="{'cursor-pointer':(!showOrHide.principleAlertTwo)}" ng-click="bodyAlert(2);"></div>
+		<div class="principle-spray-motor z-index-10" ng-class="{'cursor-pointer':(!showOrHide.principleAlertThree)}" ng-click="bodyAlert(3);"></div>
+		<!-------------->
+		<div class="principle-mainswitch-alert radius z-index-14" ng-show="showOrHide.principleAlertOne">
+			<button class="close cursor-pointer" ng-click="sysAlertClose();">X</button>
+			<span class="hot-alert-title">刮水器开关总成</span>
+			<div class="hot-alert-body">
+				<button class="radius component" ng-class="{'disable':(!showOrHide.alertComponent),'cursor-pointer':(showOrHide.alertComponent),'active':showOrHide.principleAlertComponentActive}" ng-disabled="(!showOrHide.alertComponent)" ng-click="sysAlertComponent('C034');">元件检测</button>
+				<button class="radius place" ng-class="{'disable':(!showOrHide.alertPlace),'cursor-pointer':(showOrHide.alertPlace),'active':showOrHide.principleAlertPlaceActive}" ng-disabled="(!showOrHide.alertPlace)" ng-click="sysAlertPlace('C035');">车上位置</button>
+				<button class="radius fail" ng-class="{'disable':(!false),'cursor-pointer':(false),'active':showOrHide.principleAlertFailActive}" ng-disabled="(!false)" ng-click="sysAlertFail('');">失效模式</button>
+			</div>
+		</div>
+		<!-------------->
+		<div class="principle-wiperMotor-alert radius z-index-14" ng-show="showOrHide.principleAlertTwo">
+			<button class="close cursor-pointer" ng-click="sysAlertClose();">X</button>
+			<span class="hot-alert-title">刮水电动机</span>
+			<div class="hot-alert-body">
+				<button class="radius component" ng-class="{'disable':(!false),'cursor-pointer':(false),'active':showOrHide.principleAlertComponentActive}" ng-disabled="(!false)" ng-click="sysAlertComponent('C034');">元件检测</button>
+				<button class="radius place" ng-class="{'disable':(!showOrHide.alertPlace),'cursor-pointer':(showOrHide.alertPlace),'active':showOrHide.principleAlertPlaceActive}" ng-disabled="(!showOrHide.alertPlace)" ng-click="sysAlertPlace('C036');">车上位置</button>
+				<button class="radius fail" ng-class="{'disable':(!false),'cursor-pointer':(showOrHide.alertFail),'active':showOrHide.principleAlertFailActive}" ng-disabled="(!false)" ng-click="sysAlertFail('');">失效模式</button>
+			</div>
+		</div>
+		<!-------------->
+		<div class="principle-sprayMotor-alert radius z-index-14" ng-show="showOrHide.principleAlertThree">
+			<button class="close cursor-pointer" ng-click="sysAlertClose();">X</button>
+			<span class="hot-alert-title">喷水电动机</span>
+			<div class="hot-alert-body">
+				<button class="radius component" ng-class="{'disable':(!false),'cursor-pointer':(false),'active':showOrHide.principleAlertComponentActive}" ng-disabled="(!false)" ng-click="sysAlertComponent('C035');">元件检测</button>
+				<button class="radius place" ng-class="{'disable':(!showOrHide.alertPlace),'cursor-pointer':(showOrHide.alertPlace),'active':showOrHide.principleAlertPlaceActive}" ng-disabled="(!showOrHide.alertPlace)" ng-click="sysAlertPlace('C037');">车上位置</button>
+				<button class="radius fail" ng-class="{'disable':(!false),'cursor-pointer':(showOrHide.alertFail),'active':showOrHide.principleAlertFailActive}" ng-disabled="(!false)" ng-click="sysAlertFail('');">失效模式</button>
+			</div>
+		</div>
+		<!--元件测量-->
+		<div class="z-index-10" ng-include="chargeData.principleComponentSrc" ng-show="showOrHide.principleComponent"></div>
+		<!--车上位置-->
+		<div class="placeImg radius z-index-10" ng-show="showOrHide.principlePlace">
+			<button class="close cursor-pointer z-index-1" ng-click="closePlace();">X</button>
+			<img ng-src="{{chargeData.principlePlaceImgSrc}}"/>
+		</div>
+		<!--失效模式-->
+		<div class="failMode z-index-10" ng-include="chargeData.principleFailSrc" ng-show="showOrHide.principleFail"></div>
+	</div>
+</div>
+<script type="text/javascript">
+
+</script>

@@ -1,0 +1,13 @@
+<div class="fail-main radius z-index-10">
+	<button class="close cursor-pointer z-index-1" ng-click="closeFail('component-eleValve')">X</button>
+	<div class="fail-text">
+		<b ng-repeat="title in serviceDataPFail.infoTitle" ng-bind="title"></b>
+		<p ng-repeat="text in serviceDataPFail.infoText">
+			<span ng-class="{red:(text[0]=='1_red'),bold:(text[0]=='1_bold')}" ng-bind="text[1]"></span>
+			<span ng-class="{red:(text[0]=='2_red'),bold:(text[0]=='2_bold')}" ng-bind="text[2]"></span>
+			<span ng-class="{red:(text[0]=='3_red'),bold:(text[0]=='3_bold')}" ng-bind="text[3]"></span>
+		</p>	
+		<img class="all" ng-class="content.imgSrc[1]" ng-src="{{serviceDataPFail.imgSrc[0]}}" ng-show="serviceDataPFail.imgSrc[0]" />
+	</div>
+</div>
+

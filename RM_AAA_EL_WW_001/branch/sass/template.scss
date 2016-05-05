@@ -1,0 +1,778 @@
+@import "_mixin","_variables";
+@charset "utf-8";
+/*系统电路图=========================================================================================================================================================*/
+.circuit-body{
+    height:530px;
+    background: url(../images/bg_circuit.png) no-repeat center/100%;
+    span,div{
+        display: block;
+    }
+
+    /*线路开关*/
+    .line-switch{
+        span{
+            width: 2px;
+            position: absolute;
+            @include circuitUseImg();
+            background-position: 0px 24px;
+            @include attribute(transform,rotate(-20deg))//css3属性加上一些前缀
+        }
+        span.circuit-switch-1{
+            height: 48px;
+            left: 281px;
+            top: 140px;
+        }
+        span.circuit-switch-2{
+            height: 42px;
+            left: 385px;
+            top: 99px;
+        }
+    }
+
+        .line-animate-relay{
+            span.line-8{
+                height: 80px;
+                left: 364px;
+                top: 143px;
+                background: $colorDarkBrown;
+            }
+        }
+        .line-animate-equeous{
+            span.line-9{
+                height: 54px;
+                left: 490px;
+                top: 168px;
+                background: $colorLineBlue;
+            }
+        }
+        .line-animate-inOli{
+            span{
+                height: 77px;
+                top: 145px;
+                background: $colorLineBrown;
+            }
+            span.line-10{
+                left: 639px;
+            }
+            span.line-11{
+                left: 667px;
+                background: $colorLinePurple;
+            }
+        }
+        .line-animate-commRail{
+            span{
+                height: 89px;
+                top: 133px;
+            }
+            span.line-12{
+                left: 743px;
+                background: $colorLineBrown;
+            }
+            span.line-13{
+                left: 784px;
+                background: $colorLineGreen;
+            }
+            span.line-14{
+                left: 830px;
+                background: $colorLinePink;
+            }
+        }
+        .line-animate-accelerator{
+            span{
+                height: 86px;
+                top: 336px;
+                background: $colorLineBrown;
+            }
+            span.line-15{
+                left: 357px;
+                background: $colorLinePink;
+            }
+            span.line-16{
+                left: 381px;
+                background: $colorLineGreen;
+            }
+            span.line-17{
+                left: 404px;
+                background: $colorLineBrown;
+            }
+            span.line-18{
+                left: 435px;
+                background: $colorLinePink;
+            }
+            span.line-19{
+                left: 458px;
+                background: $colorLineBlue;
+            }
+            span.line-20{
+                left: 482px;
+                background: $colorLineBrown;
+            }
+        }
+        .line-animate-injector{
+            span{
+                height: 70px;
+                top: 336px;
+            }
+            span.line-21{
+                left: 571px;
+                background: $colorYellow;
+            }
+            span.line-22{
+                left: 600px;
+                background: $colorLineRed;
+            }
+            span.line-23{
+                left: 647px;
+                background: $colorYellow;
+            }
+            span.line-24{
+                left: 676px;
+                background: $colorLineRed;
+            }
+            span.line-25{
+                left: 723px;
+                background: $colorYellow;
+            }
+            span.line-26{
+                left: 752px;
+                background: $colorLineRed;
+            }
+            span.line-27{
+                left: 798px;
+                background: $colorYellow;
+            }
+            span.line-28{
+                left: 827px;
+                background: $colorLineRed;
+            }
+        }
+    }
+    
+    /*系统电路元件----------------------------------------------------------------------------------------*/
+    /*进油计量比例阀*/
+    @at-root .circuit-intoOil{
+       @include interFaceHot(45px,27px,632px,115px);//元件检测的热区样式，四个参数分别是width，height，left，top
+    }
+    @at-root .circuit-intoOil-alert{
+        @include interFaceHotAlert(584px,151px);//元件检测的菜单弹出框的样式，两个参数分别是left，top
+    }
+    /*加速踏板位置传感器*/
+    @at-root .circuit-acceleratorPedal{
+       @include interFaceHot(136px,51px,352px,424px);
+    }
+    @at-root .circuit-acceleratorPedal-alert{
+        @include interFaceHotAlert(454px,335px);
+    }
+    /*共轨压力传感器*/
+    @at-root .circuit-railSensor{
+       @include interFaceHot(103px,26px,734px,104px);
+    }
+    @at-root .circuit-railSensor-alert{
+        @include interFaceHotAlert(723px,147px);
+    }
+    /*喷油器*/
+    @at-root .circuit-injector{
+       @include interFaceHot(48px,23px,564px,408px);
+    }
+    @at-root .circuit-injector-copy-1{
+       @include interFaceHot(48px,23px,639px,408px);
+    }
+    @at-root .circuit-injector-copy-2{
+       @include interFaceHot(48px,23px,715px,408px);
+    }
+    @at-root .circuit-injector-copy-3{
+       @include interFaceHot(48px,23px,790px,408px);
+    }
+    @at-root .circuit-injector-alert{
+        @include interFaceHotAlert(629px,250px);
+    }
+
+
+
+
+/*系统原理图=======================================================================================================================================================*/
+.principle-body{
+    height:530px;
+    background: url(../images/bg_principle.png) no-repeat center/100%;
+    img{
+        position: absolute;
+    }
+    span,div{
+        display: block;
+    }
+    /*核心动画，发动机缸运动*/
+    @at-root .principle-body-engine{
+        width: 160px;
+        height: 312px;
+        position: absolute;
+        right:325px ;
+        top: 150px;
+        div,span{
+           position: absolute; 
+        }
+        div.left-outValve{
+            width: 74px;
+            height: 98px;
+            right: 73px;
+            top: 35px;
+            img.engine-left-valve{
+                width: 45px;
+                left: 18px;
+                top: 28px;
+            }
+            span.engine-left-cover{
+                width: 53px;
+                height: 67px;
+                left: 0px;
+                top: 4px;
+                @include principleUseImg();
+                background-position: 0px 0px;
+            }
+        }
+        div.right-inValve{
+            width: 65px;
+            height: 98px;
+            right: 20px;
+            top: 35px;
+            img.engine-right-valve{
+                width: 45px;
+                right: 12px;
+                top: 28px;
+            }
+            span.engine-right-camshaft{
+                width: 18px;
+                height: 14px;
+                right: 9px;
+                top: 20px;
+                @include attribute(transform,rotate(0deg));
+                @include principleUseImg();//系统原理使用精灵图
+                background-position: 0px -101px;
+            }
+        }
+        div.engine-vat{
+            width: 50px;
+            height: 146px;
+            left: 55px;
+            top: 130px;
+            span.engine-vat-pole{
+                width: 15px;
+                height: 138px;
+                left: 17px;
+                top:-45px;
+                @include principleUseImg();
+                background-position: -279px 63px;
+                @include attribute(transform,rotate(0deg)); 
+            }
+            span.engine-vat-camshaft{
+                width: 50px;
+                height: 42px;
+                left: 0px;
+                top:0px;
+                @include principleUseImg();
+                background-position: -91px 0px;
+            }
+        }
+        div.engine-turbo{
+            width: 79px;
+            height: 79px;
+            left: 42px;
+            top: 205px;
+            @include principleUseImg;
+            background-position: -172px  0px;
+        }
+        div.engine-gas{
+            width: 50px;
+            height: 50px;
+            border-radius: 20px 0px 0px 20px;
+            span.engine-gas-in{
+                width: 113px;
+                height: 58px;
+                left: 23px;
+                top: 108px;
+                @include principleUseImg;
+                background-position: -725px 1px;
+            }
+            span.engine-oil-spray{
+                width: 50px;
+                height: 42px;
+                left: 55px;
+                top: 124px;
+                @include principleUseImg;
+                background-position: -1030px  0px;
+            }
+            span.engine-gas-fire{
+                width: 50px;
+                height: 42px;
+                left: 55px;
+                top: 124px;
+                @include principleUseImg;//系统原理使用精灵图
+                background-position: -642px  0px;
+            }
+            span.engine-gas-out{
+                width: 113px;
+                height: 58px;
+                left: 23px;
+                top: 108px;
+                @include principleUseImg;//系统原理使用精灵图
+                background-position: -898px 0px;
+            }
+        }
+    }
+    /*高压油泵齿轮*/
+    @at-root .principle-body-pump{
+        width: 14px;
+        height: 74px;
+        position: absolute; 
+        left: 247px;
+        top: 110px;
+        border: 1px solid $colorBlack;
+        overflow: hidden;
+        span{
+            display: block;
+            width: 14px;
+            height: 150px;
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            @include principleUseImg();//系统原理使用精灵图
+            background-position: -360px -1px;
+        }
+        
+    }
+    /*油路*/
+    @at-root .principle-body-road{
+        div,span{
+           position: absolute; 
+        }
+        .oil-road{
+            position: relative;
+            height:530px;
+            .height{
+               width: 3px;
+            }
+            .width{
+                height: 3px;
+            }
+        }
+        .high-oil{
+            span{
+              background: $colorHighOilFlow;  
+              border-radius: 3px; 
+            }
+            .oil-rail{
+                width: 174px;
+                height: 58px;
+                left: 447px;
+                top: 73px;
+                @include principleUseImg();
+                background-position: -432px -5px;
+            }
+            .oil-road-1{
+               height: 31px;
+               left: 320px;
+               bottom: 448px;
+            }
+            .oil-road-2{
+               width: 183px;
+               left: 321px;
+               bottom: 477.6px;
+            }
+            .oil-road-3{
+               height: 20px;
+               left: 502px;
+               top: 49px;
+            }
+            .oil-road-4{
+               height: 83px;
+               left: 604px;
+               top: 135px;
+            }
+        }
+        .return-oil{
+            span{
+              background: $colorReturnOilFlow;  
+              border-radius: 3px; 
+            }
+           .oil-road-1{
+               height: 11px;
+               left: 351px;
+               bottom: 412px;
+            }
+            .oil-road-2{
+               width: 55px;
+               left: 353px;
+               bottom: 421px;
+            }
+            .oil-road-3{
+               height: 310px;
+               left: 406px;
+               top: 109px;
+            }
+            .oil-road-4{
+               span{
+                   width: 3px;
+                   height:0px;
+                   right: -620px;
+                   bottom: -178px;
+               }
+            }
+        }
+    }
+    /*三角箭头*/
+    @at-root .principle-arrow-flow{
+        i{
+            display: block;
+            position: absolute;
+            width: 0px;
+            height: 0px;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            @include attribute(transform,rotate(0deg)); //给一些css3的属性加上前缀
+        }
+        i.flow-arrow-1{
+           @include principleArrow(831px,255px,180deg,"out");//四个参数分别是：left，top，旋转角度，进箭头还是出箭头的识别（或者是什么颜色的箭头）
+        };
+        i.flow-arrow-2{
+           @include principleArrow(841px,255px,false,"in");
+        };
+        i.flow-arrow-3{
+           @include principleArrow(851px,255px,180deg,"out");
+        };
+        i.flow-arrow-4{
+           @include principleArrow(861px,255px,false,"in");
+        };
+        i.flow-arrow-5{
+           @include principleArrow(872px,255px,false,"in");
+        };
+        i.flow-arrow-6{
+           @include principleArrow(882px,255px,false,"in");
+        };
+        i.flow-arrow-7{
+           @include principleArrow(892px,255px,false,"in");
+        };
+        i.flow-arrow-8{
+           @include principleArrow(902px,255px,false,"in");
+        };
+    }
+    /*彩色箭头*/
+    @at-root .principle-arrow-color{
+        span{
+            display: block;
+            position: absolute;
+            width: 12px;
+            height: 20px;
+            @include attribute(transform,rotate(0deg));//给一些css3的属性加上前缀
+        }
+        div{
+            position: absolute;
+//          background: rgba(0,0,0,0.4);
+            overflow: hidden;
+        }
+        div.color-arrow-1{
+            width: 12px;
+            height: 177px;
+            top: 227px;
+            left: 376px;
+            span{
+                @include principleArrow(0px,177px,false,"g");//四个参数分别是：left，top，旋转角度，进箭头还是出箭头的识别（或者是什么颜色的箭头）
+            }
+        };
+        div.color-arrow-2{
+            width: 37px;
+            height: 12px;
+            top: 223px;
+            left: 347px;
+            span{
+                @include principleArrow(40px,-4px,-90deg,"g");
+            }
+        };
+        div.color-arrow-3{
+            width: 12px;
+            height: 52px;
+            top: 162px;
+            left: 377px;
+            span{
+                @include principleArrow(0px,52px,false,"g");
+            }
+        };
+        div.color-arrow-4{
+            width: 12px;
+            height: 40px;
+            top: 58px;
+            left: 327px;
+            span{
+                @include principleArrow(0px,40px,false,"r");
+            }
+        }
+        div.color-arrow-5{
+            width: 165px;
+            height: 12px;
+            top: 55px;
+            left: 331px;
+            span{
+                @include principleArrow(-15px,-4px,90deg,"r");
+            }
+        }
+        div.color-arrow-6{
+            width: 12px;
+            height: 78px;
+            top: 110px;
+            left: 587px;
+           span{
+                @include principleArrow(0px,-20px,180deg,"r");
+            }
+        };
+        div.color-arrow-7{
+            width: 162px;
+            height: 12px;
+            top: 151px;
+            left: 425px;
+            span{
+                @include principleArrow(165px,-4px,-90deg,"o");
+            }
+        };
+        div.color-arrow-8{
+            width: 68px;
+            height: 12px;
+            top: 91px;
+            left: 354px;
+            span{
+                @include principleArrow(-15px,-4px,90deg,"o");
+            }
+        };
+        div.color-arrow-9{
+            width: 12px;
+            height: 298px;
+            top: 95px;
+            left: 413px;
+            span{
+                @include principleArrow(0px,-20px,180deg,"o");
+            }
+        };
+//      div.color-arrow-8{
+//          
+//         @include principleArrow(415px,260px,180deg,"o");
+//      };
+    }
+    
+    /*元件检测===============================================*/
+    /*高压油泵*/
+    @at-root .principle-highPump{
+       @include interFaceHot(112px,94px,247px,103px);//元件检测的热区样式，四个参数分别是width，height，left，top
+    }
+    @at-root .principle-highPump-alert{
+        @include interFaceHotAlert(100px,28px);//元件检测的弹出菜单样式，两个参数分别是left，top
+    }
+    /*进油计量比例阀*/
+    @at-root .principle-intoOil{
+       @include interFaceHot(20px,16px,295px,84px);
+    }
+    @at-root .principle-intoOil-alert{
+        @include interFaceHotAlert(100px,30px);
+    }
+    /*加速踏板位置传感器*/
+    @at-root .principle-acceleratorPedal{
+       @include interFaceHot(80px,76px,738px,372px);
+    }
+    @at-root .principle-acceleratorPedal-alert{
+        @include interFaceHotAlert(599px,315px);
+    }
+    /*燃油共轨*/
+    @at-root .principle-dieselRail{
+       @include interFaceHot(177px,25px,447px,88px);
+    }
+    @at-root .principle-dieselRail-alert{
+        @include interFaceHotAlert(632px,35px);
+    }
+    /*共轨压力传感器*/
+    @at-root .principle-railSensor{
+       @include interFaceHot(23px,38px,523px,49px);
+    }
+    @at-root .principle-railSensor-alert{
+        @include interFaceHotAlert(632px,15px);
+    }
+    /*喷油器*/
+    @at-root .principle-injector{
+       @include interFaceHot(40px,101px,603px,176px);
+    }
+    @at-root .principle-injector-alert{
+        @include interFaceHotAlert(655px,170px);
+    }
+    /*弹出框-元件检测---------------------*/
+//  .component-alert-component-1{
+//      @include component(165px,200px);
+//      background: #FFFFFF url(../images/component_alert_component_1.png) no-repeat bottom/100%;
+//  }
+    .component-alert-component-2{
+        @include component(180px,200px);//元件检测的 元件检测 弹出框样式，两个参数是left，top
+        background: #FFFFFF url(../images/component_alert_component_2.png) no-repeat bottom/100%;
+    }
+    .component-alert-component-3{
+        @include component(305px,200px);
+        background: #FFFFFF url(../images/component_alert_component_3.png) no-repeat bottom/100%;
+    }
+//  .component-alert-component-4{
+//      @include component(180px,200px);
+//      background: #FFFFFF url(../images/component_alert_component_4.png) no-repeat bottom/100%;
+//  }
+//  .component-alert-component-5{
+//      @include component(180px,200px);
+//      background: #FFFFFF url(../images/component_alert_component_5.png) no-repeat bottom/100%;
+//  }
+    .component-alert-component-6{
+        @include component(320px,200px);
+        background: #FFFFFF url(../images/component_alert_component_6.png) no-repeat bottom/100%;
+    }
+    
+    /*弹出框-车上位置---------------------*/
+    .placeImg{
+       @include placeImg(196px,178px);//元件检测的 车上位置 弹出框样式，两个参数是left，top
+       img{
+           display:block;
+           width: 100%;
+           position: absolute;
+           left: 0px;
+           top: 0px;
+        }
+    }
+
+    /*弹出框-失效模式---------------------*/
+    .failMode{
+        @include fail(200px,230px);//元件检测的 失效模式 弹出框样式，两个参数是left，top
+    }
+
+
+}
+
+
+
+
+
+
+/*各种热区======================================================================================================================================================*/
+    /*万用表热区*/
+.circuit-body a,.principle-body a{
+    display: block;
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    background: url(../images/comm_icon/measureHot.png) no-repeat center;
+}
+.circuit-multimeter-hot{
+    width: 100%;
+    height: 530px;
+    position: absolute;
+    left:0px;top:0px;
+    @at-root a#multimeter-hot1 {
+      left: 192px;
+      top: 362px;
+    }
+    @at-root a#multimeter-hot2 {
+      left: 272px;
+      top: 33px;
+    }
+    @at-root a#multimeter-hot3 {
+      left: 272px;
+      top: 214px;
+    }
+    @at-root a#multimeter-hot4 {
+      left: 271px;
+      top: 323px;
+    }
+    @at-root a#multimeter-hot5 {
+      left: 271px;
+      top: 388px;
+    }
+    @at-root a#multimeter-hot6 {
+      left: 366px;
+      top: 86px;
+    }
+    @at-root a#multimeter-hot7 {
+      left: 356px;
+      top: 215px;
+    }
+    @at-root a#multimeter-hot8 {
+      left: 376px;
+      top: 153px;
+    }
+    @at-root a#multimeter-hot9 {
+      left: 376px;
+      top: 215px;
+    }
+    @at-root a#multimeter-hot10 {
+      left: 348px;
+      top: 323px;
+    }
+    @at-root a#multimeter-hot11 {
+      left: 373px;
+      top: 323px;
+    }
+    @at-root a#multimeter-hot12 {
+      left: 395px;
+      top: 323px;
+    }
+    
+    @at-root a#multimeter-hot13 {
+      left: 349px;
+      top: 414px;
+    }
+
+
+}
+//元件检测中的热区---------------------------------------
+.component-multimeter-hot{
+    width: 100%;
+    height: 530px;
+    position: absolute;
+    left:0px;top:0px;
+    @at-root a#multimeter-hot51 {
+        left: 790px;
+        top: 398px;
+    }
+    @at-root a#multimeter-hot52 {
+        left: 819px;
+        top: 397px;
+    }
+    @at-root a#multimeter-hot53 {
+      left: 303px;
+      top: 280px;
+    }
+    @at-root a#multimeter-hot54 {
+      left: 320px;
+      top: 280px;
+    }
+    @at-root a#multimeter-hot55 {
+      left: 447px;
+      top: 258px;
+    }
+
+
+    @at-root a#multimeter-hot61 {
+      left: 487px;
+      top: 258px;
+    }
+    @at-root a#multimeter-hot62 {
+      left: 509px;
+      top: 258px;
+    }
+    @at-root a#multimeter-hot63 {
+      left: 409px;
+      top: 186px;
+    }
+    @at-root a#multimeter-hot64 {
+      left: 426px;
+      top: 186px;
+    }
+    @at-root a#multimeter-hot65 {
+      left: 265px;
+      top: 258px;
+    }
+
+}
+
+
+
+
+
+
+

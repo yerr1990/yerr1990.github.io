@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html ng-app="mainModule">
+	<head>
+		<meta charset="utf-8" />
+		<title>软教具学习器，谁用谁知道</title>
+		<link rel="stylesheet" href="css/comm.css" />
+		<!--<link rel="stylesheet" href="css/template.css" />-->
+		<link rel="stylesheet" href="framework/multimeter/css/multimeter.css"/><!--万用表的样式-->
+		<link rel="stylesheet"  href="framework/obdscan/css/style.css"/><!--诊断仪的样式-->
+		<link rel="stylesheet" href="framework/dashboard/css/template.css" />
+		<link rel="stylesheet" href="css/template_yerr.css" />
+
+		<link rel="stylesheet" href="css/introjs.css" />
+	</head>
+	<body ng-controller="mainCtrl">
+		<div class="container">
+			<div class="header z-index-12">
+				<button class="header-navi-bg cursor-pointer" ng-click="chargeSrc(1);">系统原理</button>
+				<button class="cursor-pointer" ng-click="chargeSrc(0);">系统电路</button>
+				<div class="sys-button">
+					<span class="header-help cursor-pointer" onclick="startIntro();">帮助</span>
+					<span class="header-exit cursor-pointer" ng-click="exitStudy();">退出</span>
+				</div>
+			</div>
+			<div class="main">
+				<!--右上角工作状态标志-->
+				<span class="worker-state radius z-index-10" onclick="principleAnimateRunAll();" ng-class="{'worker-state-normal':(showOrHide.workState),'worker-state-malfunction':(!showOrHide.workState)}">正常工作状态下</span>
+				<!--系统原理和系统电路页面切换-->
+				<div class="system-model-circuit" ng-include="chargeData.systemCircuitSrc" ng-show="showOrHide.circuitOrPrinciple"></div>
+				<div class="system-model-principle" ng-include="chargeData.systemPrincipleSrc" ng-show="(!showOrHide.circuitOrPrinciple)"></div>
+				<!--左侧导航弹出框-->
+				<div class="alert-contain radius z-index-50 dragSource-alert hide-important" ui-view ng-show="showOrHide.alertContain"></div>
+				<!--左侧导航-->
+				<div class="sideBar-navi" id="step1">
+					<button class="sideBar-navi-button cursor-pointer z-index-99" onclick="sideNaviToggle(this)" name="0"></button>
+					<div class="sideBar-navi-panel z-index-99">
+						<ul>
+							<li ng-class="{active:(sNaviText==chargeData.aNaviBlock[0])}"><button class="radius cursor-pointer" ng-click="chargeLeftNavi(chargeData.aNaviBlock[0]);" ><i></i>{{chargeData.aNaviBlock[0]}}</button></li>
+							<li ng-class="{active:(sNaviText==chargeData.aNaviBlock[1])}"><button class="radius cursor-pointer" ng-click="chargeLeftNavi(chargeData.aNaviBlock[1]);" ><i></i>{{chargeData.aNaviBlock[1]}}</button></li>
+							<li ng-class="{active:(sNaviText==chargeData.aNaviBlock[2])}"><button class="radius cursor-pointer" ng-click="chargeLeftNavi(chargeData.aNaviBlock[2]);" ><i></i>{{chargeData.aNaviBlock[2]}}</button></li>						
+							<li ng-class="{active:(sNaviText==chargeData.aNaviBlock[3])}"><button class="radius cursor-pointer" ng-click="chargeLeftNavi(chargeData.aNaviBlock[3]);" ><i></i>{{chargeData.aNaviBlock[3]}}</button></li>						
+							<li ng-class="{active:(sNaviText==chargeData.aNaviBlock[4])}"><button class="radius cursor-pointer" ng-click="chargeLeftNavi(chargeData.aNaviBlock[4]);" ><i></i>{{chargeData.aNaviBlock[4]}}</button></li>						
+						</ul>
+					</div>
+				</div>
+				<!--右侧工具-->
+				<div class="sideBar-tool" id="step2">
+					<button class="sideBar-tool-button cursor-pointer z-index-99" onclick="sideToolToggle(this);" name="0"></button>
+					<div class="sideBar-tool-panel z-index-99">
+						<ul>
+							<li><button class="radius  right-diagnostic" ng-controller="obdscanCtrl" ng-click=""></button></li>
+							<li><button class="radius cursor-pointer right-multimeter" ng-controller="multimeterCtrl" ng-click="multimeter();"></button></li>
+							<li><button class="radius right-vacuumPump"></button></li>
+							<li><button class="radius right-airGun"></button></li>
+							<li><button class="radius right-wireCutter"></button></li>
+							<li><button class="radius right-pinchClamp"></button></li>
+							<li><button class="radius right-cylinderPressure"></button></li>
+							<li><button class="radius right-fuelPressure"></button></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<!--下面控制中心的工具======================================================-->
+			<div class="bottomBar-lock" id="step3">
+				<button class="bottomBar-lock-button radius cursor-pointer z-index-99" onclick="bottomLockToggle(this);" name="0">控制中心</button>
+				<div class="bottomBar-lock-panel z-index-99">
+					<ul>
+						<li><button class="radius cursor-pointer door-switch" ng-click="openSwitchPanel(1);"></button></li>
+						<!--<li><button class="radius cursor-pointer wifi-switch" ng-click="openSwitchPanel(2);"></button></li>-->
+						<!--<li><button class="radius cursor-pointer key-switch" ng-click="openSwitchPanel(3);"></button></li>-->
+					</ul>
+				</div>
+			</div>
+			<!--显示点出的钥匙界面-->
+			<!--门控开关-->
+			<div class="door-switch-panel radius dragSource z-index-14 hide-important">
+				<button class="close cursor-pointer" ng-click="closeSwitchPanel(1);">X</button>
+				<!--y雨刷按钮-->
+				<div class="wiper-btn">
+
+					<div class="wiper-cover"></div>
+					<div class="wiper-handle"></div>
+					<span class="mist handle-btn "  ng-mousedown="miststalls(1)"  ng-mouseup="miststalls(0)" >
+						<img src="images/btn_mist.png" />
+					</span>
+					<span class="off handle-btn  btn-active"   ng-click="offstalls()">
+						<img src="images/btn_off.png" />
+					</span>
+					<span class="int handle-btn "  ng-click="intstalls()">
+						<img src="images/btn_int.png" />
+					</span>
+					<span class="lo handle-btn "  ng-click="loStalls()">
+						<img src="images/btn_lo.png" />
+					</span>
+					<span class="hi handle-btn "  ng-click="hiStalls()">
+						<img src="images/btn_hi.png" />
+					</span>
+					<span class="spray handle-btn "  ng-mousedown="waterStalls(1)" ng-mouseup="waterStalls(0)" >
+						<img src="images/btn_spray.png" />
+					</span>
+				</div>
+				<div class="switch-panel-mask z-index-14"></div>
+			</div>
+
+
+
+
+			<!--万用表-->
+			<ng-include src="'framework/multimeter/template/multimeterSvg.html'"></ng-include>
+			<multimeter></multimeter>
+			<!--诊断仪-->
+			<obdscan></obdscan>
+			<!--仪表-->
+			<div ng-controller="dashboardCtrl">
+				<div class="switch-meter " ng-include="switchMeterSrc"></div>
+			</div>
+			<!--加载与仿真模型通讯的ctrl-->
+			<div ng-controller="dataCtrl" ></div>
+			<object class="hide-important" id="plugin0" type="application/x-xiaochejiangnew" width="10" height="10">
+				<param name="onload" value="pluginLoaded" />
+			</object>
+			<!--后台通信的ctrl-->
+			<div ng-controller="toBackDataCtrl"></div>
+			<!--包含住弹出警告框的div-->
+			<div class="alert-container"></div>
+		</div>
+		<!--<div class="systemCompositionBig z-index-100"><img src="images/systemComposition.jpg" /><button class="close cursor-pointer z-index-1" ng-click="closeSystemComposition();">X</button></div><-->
+		<!--<div class="resistanceWarn z-index-100"><span class="resistanceWarn-alert cursor-pointer radius"><p>此功能不能用</p><button class="cursor-pointer radius" onclick="removeResistanceWarn();">确定</button></span></div>-->
+		<!--<div class="resistanceWarn z-index-100 hide-important" ng-show="showOrHide.ResistanceWarn">
+			<span class="resistanceWarn-alert cursor-pointer radius">
+				<p>此功能不能用</p><button class="cursor-pointer radius" ng-click="removeResistanceWarn();">确定</button>
+			</span>
+		</div>-->
+	</body>
+	<script type="text/javascript" src="framework/jquery-1.11.1.min.js" ></script>
+	<script type="text/javascript" src="framework/jquery-ui.min.js" ></script>
+	<script type="text/javascript" src="js/img_preload.js" ></script>
+	
+	<script type="text/javascript" src="framework/angular-1.3.0.js" ></script>
+	<script type="text/javascript" src="framework/angular-ui-router.js" ></script>
+	<script type="text/javascript" src="js/angularjs/apps.js" ></script>
+	<script type="text/javascript" src="js/angularjs/controllers.js" ></script>
+	<script type="text/javascript" src="js/angularjs/to_back_data_ctrl.js"></script><!--后台通讯单独独立出来的js-->
+	<script type="text/javascript" src="js/angularjs/directives.js" ></script>
+	<script type="text/javascript" src="js/angularjs/filters.js" ></script>
+	<script type="text/javascript" src="js/angularjs/routers.js" ></script>
+	<script type="text/javascript" src="js/angularjs/services.js" ></script>
+	
+	<script type="text/javascript" src="js/angularjs/emu_services.js" ></script>
+	<script type="text/javascript" src="js/angularjs/validate.js" ></script>
+	
+	<script type="text/javascript" src="js/animate.js" ></script>
+	
+	<script type="text/javascript" src="js/main.js" ></script>
+
+	<script type="text/javascript" src="framework/obdscan/js/app.js"></script><!--诊断仪的app-->
+	<script type="text/javascript" src="framework/obdscan/js/controller.js"></script><!--诊断仪的controller-->
+	<script type="text/javascript" src="framework/obdscan/js/service.js"></script><!--诊断仪的Service-->
+
+	<script type="text/javascript" src="framework/multimeter/js/angularjs/app.js"></script><!--万用表的app-->
+	<script type="text/javascript" src="framework/multimeter/js/angularjs/controller.js"></script><!--万用表的controller-->
+	<script type="text/javascript" src="framework/multimeter/js/angularjs/service.js"></script><!--万用表的Service-->
+	<script type="text/javascript" src="framework/dashboard/js/controller.js" ></script>
+	<script type="text/javascript" src="framework/dashboard/js/service.js" ></script>
+	
+	<script type="text/javascript" src="js/angularjs/page_service.js" ></script>
+	<script type="text/javascript" src="js/angularjs/data_controller.js" ></script>
+	
+	<script type="text/javascript" src="js/intro.js" ></script><!--显示用户提示-->
+	<script type="text/javascript" src="/resources/web/js/common_test.js"></script>
+</html>

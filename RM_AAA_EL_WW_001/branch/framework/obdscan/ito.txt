@@ -1,0 +1,12 @@
+在所用页面引入
+<link rel="stylesheet" href="framework/obdscan/css/style.css"/><!--诊断仪的样式-->
+<script type="text/javascript" src="framework/obdscan/js/app.js"></script><!--诊断仪的app-->
+<script type="text/javascript" src="framework/obdscan/js/controller.js"></script><!--诊断仪的controllers-->
+<script type="text/javascript" src="framework/obdscan/js/Service.js"></script><!--诊断仪的Services-->
+
+在主模块依赖注入obdscanModule模块
+
+点击出现诊断仪 ng-controller="obdscanCtrl" ng-click="obdscan();"
+
+点火后诊断仪才能打开
+在点火系统中依赖注入obdscanService，然后obdscanService.Zdata.obdscanOpen=true

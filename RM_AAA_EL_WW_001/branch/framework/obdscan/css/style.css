@@ -1,0 +1,541 @@
+@charset "utf-8";
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, button, textarea, blockquote, th, td, p {
+    margin: 0;
+    padding: 0
+}
+
+input, button, select, textarea {
+    outline: none
+}
+
+li {
+    list-style: none
+}
+
+img {
+    border: none
+}
+
+textarea {
+    resize: none
+}
+
+body {
+    font-family: "微软雅黑";
+    color: #666;
+    background: #fff;
+}
+
+body, input, textarea {
+    font-size: 12px;
+    word-break: break-all;
+    word-wrap: break-word;
+}
+
+li {
+    list-style: none;
+}
+
+.obdscanabs {
+    position: absolute;
+}
+
+.obdscan {
+    z-index: 16;
+    width: 402px;
+    height: 363px;
+    
+    left: 160px;
+    top: 100px;
+}
+.mask-obdscan{
+	/*z-index: 12;*/
+    width: 402px;
+    height: 363px;
+    left: 0px;
+    top: 0px;
+	background: url("../images/obdscan.png") no-repeat center/100%;
+}
+.obdscan .active {
+    margin-right: 10px;
+    cursor: pointer;
+    background: #f1a703;
+}
+
+.obdscan .inactive {
+    background: #dcdcdc;
+    overflow: hidden;
+}
+
+.power, .obdscan-return, .close {
+    position: absolute;
+    cursor: pointer;
+    z-index: 1000;
+    line-height: 20px;
+}
+
+.obdscan .close {
+    width: 25px;
+    right: 25px;
+    top: 25px;
+    line-height: 25px;
+    text-align: center;
+    /*background: url(img/close.png) no-repeat 10px 4px;*/
+}
+
+.obdscan .power {
+    left: 59px;
+    bottom: 50px;
+    width: 28px;
+    height: 29px;
+
+}
+
+.obdscan .obdscan-return {
+    right: 49px;
+    bottom: 53px;
+    width: 53px;
+    height: 26px;
+}
+
+.obdscan span {
+    display: block;
+    font-size: 16px;
+    border-radius: 4px;
+}
+
+.obdscan .car {
+    position: absolute;
+    top: 40px;
+    left: 28px;
+    width: 77px;
+    height: 56px;
+    background: #555f73;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.obdscan .car:hover {
+    position: absolute;
+    top: 40px;
+    left: 28px;
+    width: 77px;
+    height: 56px;
+    text-align: center;
+    padding-top: 5px;
+    background: #f08200;
+}
+
+.obdscan .sby {
+    position: absolute;
+    top: 40px;
+    left: 126px;
+    width: 77px;
+    height: 56px;
+    text-align: center;
+    padding-top: 5px;
+    background: #555f73;
+}
+
+.obdscan .set {
+    position: absolute;
+    top: 110px;
+    left: 74px;
+    width: 77px;
+    height: 56px;
+    text-align: center;
+    padding-top: 5px;
+    background: #555f73;
+}
+
+.obdscan .wxzd {
+    position: absolute;
+    top: 40px;
+    left: 222px;
+    width: 77px;
+    height: 56px;
+    text-align: center;
+    padding-top: 5px;
+    background: #555f73;
+}
+
+.obdscan .help {
+    position: absolute;
+    top: 110px;
+    left: 171px;
+    width: 77px;
+    height: 56px;
+    text-align: center;
+    padding-top: 5px;
+    background: #555f73;
+}
+
+.obdscan .header, .header1, .header2, .body {
+    z-index: 999;
+}
+
+.obdscan .header1, .header2 {
+    height: 25px;
+    line-height: 25px;
+}
+
+.obdscan .header1 {
+    padding-left: 60px;
+    width: 272px;
+    background: #fff url("img/logo.png") 4px 4px no-repeat;
+}
+
+.obdscan .header2 {
+    left: 0px;
+    padding-left: 8px;
+    width: 324px;
+    top: 25px;
+    color: #fff;
+    background: #f6a520;
+    font-size: 14px;
+}
+
+.obdscan .body {
+    top:50px;
+    width: 332px;
+    height: 162px;
+    overflow: auto;
+    background-color: #fff;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.obdscan .car-list li {
+    padding-left: 10px;
+    height: 30px;
+    line-height: 30px;
+    background: #ddd;
+    margin-top: 1px;
+    font-size: 12px;
+}
+
+.obdscan .obdscanInclude {
+    width: 332px;
+    height: 214px;
+    position: absolute;
+    left: 37px;
+    top: 68px;
+    -moz-border-radius: 13px;
+    -webkit-border-radius: 13px;
+    border-radius:13px;
+    background: #353535;
+    overflow: hidden;
+}
+
+.obdscan .is-off {
+    width: 317px;
+    height: 198px;
+    position: absolute;
+    left: 36px;
+    top: 68px;
+    z-index: 1121;
+    background: #353535;
+    border: 8px solid #353535;
+    -moz-border-radius: 13px;
+    -webkit-border-radius: 13px;
+    border-radius:13px;
+}
+
+
+.obdscan-bottom-bell {
+    float: left;
+    width: 323px;
+    height: 24px;
+    border-bottom: 1px solid #fff;
+    text-align: left;
+    padding-left: 10px;
+    line-height: 24px;
+    background: #ddd;
+}
+
+.obdscan-bottom-bell .ac {
+    float: left;
+    width: 204px;
+    height: 24px;
+    text-decoration: none;
+}
+
+.obdscan-bottom-bell span {
+    float: left;
+    text-align: right;
+    width: 95px;
+    height: 24px;
+    text-decoration: none;
+    color: #000;
+    font-size: 12px;
+    margin-right: 3px;
+}
+
+.pai{width:415px;height:270px;background: #ddd;}
+.tab_menu { clear:both;}
+.tab_menu li {width: 135px;font-size:15px;float:left; text-align:center; cursor:pointer; list-style:none;background:#aaa;color:#fff;}
+.tab_menu li.hover { background:#DFDFDF;}
+.tab_menu li.selected { color:#000; background: #ddd;}
+.tab_box { clear:both;height:220px;}
+.tab_box>div>ul>li{float: left;width: 68px;height: 52px;text-align: center;}
+.tab_box>div>ul>li>img{}
+/*.tab_box img{height:29px}*/
+.tk-1 , .tk-5{
+    width: 268px;
+    height: 55px;
+    top: 190px;
+    left: 127px;
+    background: url('../images/tk-1.png') no-repeat;
+    z-index: 1000;
+
+}
+.tk-1-zuo , .tk-5-zuo{
+    width: 16px;
+    height: 16px;
+    top: 28px;
+    left: 146px;
+    cursor: pointer;
+    background: url('../images/pylces/5.png') no-repeat;
+    z-index: 1000;
+}
+.tk-1-you , .tk-5-you{
+    width: 16px;
+    height: 16px;
+    top: 28px;
+    left: 244px;
+    cursor: pointer;
+    background: url('../images/pylces/4.png') no-repeat;
+    z-index: 1000;
+}
+.tk-1-cha ,.tk-5-cha{
+    width: 18px;
+    height: 12px;
+    top: 10px;
+    left: 241px;
+    background: url('../images/19.png') no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.tk-1-gun, .tk-5-gun{
+    width: 6px;
+    height: 14px;
+    top: 28px;
+ /*   left: 202px;*/
+    background: url('../images/pylces/2.png') no-repeat;
+    z-index: 1000;
+}
+.tk-1-text , .tk-5-text{
+    width: 128px;
+    height: 18px;
+    top:27px;
+    left:10px;
+    text-align: center;
+    line-height: 18px;
+    z-index: 1000;
+}
+.tk-2-text{
+    width: 128px;
+    height: 18px;
+    top:27px;
+    left:10px;
+    text-align: center;
+    line-height: 18px;
+    z-index: 1000;
+}
+.tk-3-text{
+    width: 128px;
+    height: 18px;
+    top:27px;
+    left:10px;
+    text-align: center;
+    line-height: 18px;
+    z-index: 1000;
+}
+.tk-4-text{
+    width: 100px;
+    height: 14px;
+    top:57px;
+    left:10px;
+    text-align: center;
+    line-height: 14px;
+    z-index: 1000;
+}
+.tk-2{
+    width: 268px;
+    height: 69px;
+    top: 165px;
+    left: 127px;
+    background: url('../images/tk-2.png') no-repeat;
+    z-index: 1000;
+    /*display: none;*/
+}
+.draghandle .title{
+    top: 0px;
+    margin-left:10px;
+    width:252px;
+    height:22px;
+    line-height:26px;
+    color: #ffffff;
+}
+.tk-2-zuo{
+    width: 61px;
+    height: 14px;
+    top: 49px;
+    left: 10px;
+    cursor: pointer;
+    background: url('../images/krbcgq/zuo.png') no-repeat;
+    z-index: 1000;
+}
+.tk-2-you{
+    width: 62px;
+    height: 14px;
+    top: 49px;
+    left: 197px;
+    cursor: pointer;
+    background: url('../images/krbcgq/you.png') no-repeat;
+    z-index: 1000;
+}
+.tk-2-cha{
+    width: 18px;
+    height: 12px;
+    top: 10px;
+    left: 241px;
+    background: url('../images/19.png') no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+.tk-2-zhong{
+    width: 62px;
+    height: 14px;
+    top: 49px;
+    left: 106px;
+    cursor: pointer;
+    background: url('../images/krbcgq/zhong.png') no-repeat;
+    z-index: 1000;
+}
+.tk-3{
+    width: 268px;
+    height: 55px;
+    top: 171px;
+    left: 127px;
+    background: url('../images/tk-3.png') no-repeat;
+    z-index: 1000;
+}
+.tk-3-zuo{
+    width: 52px;
+    height: 14px;
+    top: 30px;
+    left: 157px;
+    background: url('../images/tgdcf/zuo.png') no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+.tk-3-you{
+    width: 52px;
+    height: 14px;
+    top: 30px;
+    left: 209px;
+    background: url('../images/tgdcf/you.png') no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+.tk-3-cha{
+    width: 18px;
+    height: 12px;
+    top: 10px;
+    left: 241px;
+    background: url('../images/19.png') no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+
+.tk-4{
+    width: 268px;
+    height: 80px;
+    top: 171px;
+    left: 127px;
+    background: url('../images/tk-4.png') no-repeat;
+    z-index: 1000;
+    /*display: none;*/
+}
+.tk-4-zuo{
+    width: 61px;
+    height: 14px;
+    top: 57px;
+    left: 136px;
+    background: url('../images/qgan/zuo.png') no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+.tk-4-you{
+    width: 61px;
+    height: 14px;
+    top: 57px;
+    left: 199px;
+    background: url('../images/qgan/you.png') no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+.tk-4-cha{
+    width: 18px;
+    height: 12px;
+    top: 10px;
+    left: 241px;
+    background: url('../images/19.png') no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+}
+.tk-4-shu{
+    width: 61px;
+    height: 14px;
+    background: url('../images/qgan/9.png') no-repeat;
+    z-index: 1000;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+.btnwrap{float:right;margin:2px 12px 0px 0px;}
+.confirm{width: 37px;height: 17px;background: url("img/confirm.png") no-repeat;border:none;}
+.cancel{width: 37px;height: 17px;background: url("img/cancel.png") no-repeat;border:none;}
+.hide{display:none}
+.sub-header{color:#000000;padding-left:7px;margin-left:-1px;border-top:1px solid #FFFFFF;height: 27px;line-height: 27px;background:#a4a4a3;width:413px;}
+.action-box{height:55px;line-height:22px;overflow: auto;background:#d7d6d5;border-top: 1px solid #fff;padding-left:6px;}
+
+
+/*for ie*/
+.obdscan .body{
+	border-radius: 0px 0px 13px 13px;
+}
+
+/*主动测试*/
+#draggable3 {
+    position: absolute;
+    width: 250px;
+    height: 75px;
+    background: url(../images/zdy_off.png) no-repeat;
+    top: 64px;
+    left: 40px;
+}
+#gooff {
+    position: absolute;
+    top: 28px;
+    left: 12px;
+    color: #3e3e3e;
+    width: 70px;
+    height: 30px;
+    text-align: center;
+    line-height: 30px;
+}
+.gooff_left {
+    position: absolute;
+    top: 20px;
+    left: 140px;
+}
+.gooff_right {
+    position: absolute;
+    top: 20px;
+    left: 194px;
+}

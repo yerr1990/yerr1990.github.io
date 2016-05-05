@@ -1,0 +1,41 @@
+@charset "utf-8";
+/*总的蒙版*/
+.intro-mask-background{width:100%;height:100%;position:absolute;left:0px;top:0px;background: rgba(0,0,0,0.6);z-index: 999999;display: none;}
+/*选择部件*/
+.intro-show-box{position:absolute;border-radius:0px 3px 3px 0px;background: #FFFFFF;box-shadow: 0 1px 10px rgba(0,0,0,.4);}
+	/*for animation*/
+.intro-show-box-animation{transition: all .2s ease-in 0s;-webkit-transition: all .2s ease-in 0s;-ms-transition: all .2s ease-in 0s;-moz-transition: all .2s ease-in 0s;}
+/*选择部件的蒙版*/
+.intro-show-box-mark{opacity: 0;z-index: 999999;}
+/*引导框信息*/
+.intro-show-box-info{position: absolute;font:16px "microsoft yahei";padding:10px;border-radius:3px;background: #FFFFFF;box-shadow: 0 1px 10px rgba(0,0,0,.4);}
+.intro-show-box-info:before{content: "";display: block;position: absolute;border-top:10px solid transparent;border-right: 10px solid #FFFFFF;border-bottom: 10px solid transparent;}
+/*第几步的标记*/
+i.intro-step-sign{display:block;width: 30px;height:30px;position:absolute;font-style:normal;border-radius:30px;background: #fdb513;font: bold 16px "microsoft yahei";text-align: center;line-height: 30px;color: #FFFFFF;box-shadow: 1px 1px 1px rgba(0,0,0,.3);}
+/*选择按钮*/
+.intro-select{height: 30px;text-align: right;}
+.intro-select button{display: inline-block;width: 80px;height: 24px;margin-top: 6px;border-radius:3px;text-align:center;font: 12px "微软雅黑";line-height: 24px;color: #FFFFFF; background: #fdb513;cursor:pointer}
+.intro-select button:hover{background: #353535;}
+.intro-select-stop{margin-right: 10px;}
+.intro-select-prev{margin-right: 10px;}
+.intro-select-next{margin-right: 22px;}
+.intro-select button.intro-select-disable{background: #7E7E7E;cursor: default;}
+/*放右边的走向*/
+.intro-right{width: 800px;left: 185px;}
+.intro-right:before{left: -10px;top: 35px;} 
+.intro-right .intro-step-sign{left: -25px;top: 0px;}
+/*放左边的走向*/
+.intro-left{width: 800px;right: 190px;}
+.intro-left:before{right: -10px;top: 35px;transform: rotate(180deg);-webkit-transform: rotate(180deg);-ms-transform: rotate(180deg);-moz-transform: rotate(180deg);} 
+.intro-left .intro-step-sign{right: -25px;top: 0px;}
+/*放上边右边的走向*/
+.intro-top-right{width: 800px;bottom: 195px;right: 0px;}
+.intro-top-right:before{right: 50px;bottom: -15px;transform: rotate(-90deg);-webkit-transform: rotate(-90deg);-ms-transform: rotate(-90deg);-moz-transform: rotate(-90deg);} 
+.intro-top-right .intro-step-sign{right: 0px;bottom: -25px;}
+/*放上边左边的走向*/
+.intro-top-left{width: 800px;bottom: 122px;left: 0px;}
+.intro-top-left:before{left: 35px;bottom: -15px;transform: rotate(-90deg);-webkit-transform: rotate(-90deg);-ms-transform: rotate(-90deg);-moz-transform: rotate(-90deg);} 
+.intro-top-left .intro-step-sign{left: 0px;bottom: -25px;}
+
+
+

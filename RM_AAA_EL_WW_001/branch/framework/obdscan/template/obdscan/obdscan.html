@@ -1,0 +1,8 @@
+<div id='mask-obdscan' ng-controller="obdscanCtrl" class="obdscanabs obdscan" ng-show="obdscanServiceZdata.obdscanStatus">
+    <div class="mask-obdscan obdscanabs"></div>
+    <div class="close" ng-click="closedobdscan()">X</div>
+    <div class="is-off" ng-hide="obdscanServiceZdata.isPower"></div>
+    <div ng-include="obdscanServiceZdata.url" class="obdscanInclude"></div>
+    <div class="power" ng-click="obdscanPower()"></div>
+    <div class="obdscan-return" ng-click="obdscanReturn()"></div>
+</div>
